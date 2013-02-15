@@ -676,62 +676,30 @@ system is wholly integrated, wehere sandwich testing lies inbetween big bang and
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
-strategies (Moll & Ammer) where the hierarchy of integrations is built selectively.
-
-% introduction of stubs and drivers
-Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
-
-\section{Regression in integration testing}
-% models and unified framework
-UML sequences outline tests and enable automated testing (hura dimmich)
-
-
-% Regression testing / test cases
-
-HUANG ET AL and LIU ET AL offer a unified testing framework for testing integration. The 
-
-frameworks contain a generator for test cases, an execution engine, a surrogate engine 
-
-simulating unavaialbe systems. 
-
-
-
- This involves creating a set of test cases to be executed on the system under test (SUT). 
-
-<FIGURE> Testing is executed on a continous basis (CIT) to systematically uncover defects. To 
-
-enable integration testing, the model suggests using surrogate systems to stand in for 
-
-incomplete ones.
-
-Model driven integration, Wieczorek & found savings of 50 % .
-
-Testing have been proposed, such as mutation testing (delamaro). In mutation 
-testing test set quality is evaluated by creating variations of the tested programs and 
-
-unning cases against them. If the cases succeed in the mutated program Q, it is considered 
-
-live. Ideally, cases will fail when run against modified, erronous code.
+strategies (Moll & Ammer) where the hierarchy of integrations is built selectively. 
 
 Carey and Bendick discuss build testing [4]. Beizer introduces a
 "mixed bag" strategy which combines bottom-up, top-down, big-bang
 and build testing [2]. (Lueng & White)
 
+% introduction of stubs and drivers
+Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+
+\section{Automated testing Regression testing}
+
+UML sequences outline tests and enable automated testing (hura dimmich)
+
 primer: automation has its faults
-Tasks (C. India)
 
 Test case creation is perhaps the most time-consuming task in automated testing. 
-Tsai et al. (2001) also presented an XML-based framework for automtaed test case generation 
+Tsai et al. (2001) also presented an XML-based framework for automtaed test case generation from WSDL service descriptions.
 
-from WSDL service descriptions.
+Testing have been proposed, such as mutation testing (delamaro). In mutation 
+testing test set quality is evaluated by creating variations of the tested programs and
+unning cases against them. If the cases succeed in the mutated program Q, it is considered 
+live. Ideally, cases will fail when run against modified, erronous code.
 
 Bai et al., M Di Penta in chaturvedi automated test case generation out of WSDL
-
-As changes are introduced into the systems and code, related test cases must examined, their 
-
-reusability ascertained, out-of-date cases should be discarded, and new cases created where 
-
-necessary (Zhang Zheng).
 
 Selective regression testing
 - Test only a part of the system (changed part)
@@ -757,6 +725,38 @@ Model based regression testing
 - code unavailable
 - UML class and sequence diagrams are used to implement Model Based Regression Testing
 
+
+As changes are introduced into the systems and code, related test cases must examined, their 
+reusability ascertained, out-of-date cases should be discarded, and new cases created where 
+necessary (Zhang Zheng).
+
+Regresssion Testing Challenges 
+- Lack of observability of Service code and structure
+- Dynamism and adaptiveness
+- Lack of control
+- Cost of testing
+
+
+\section{Towards a model-based approach}
+% add CIT definition earlier
+
+
+HUANG ET AL and LIU ET AL offer a unified testing framework for testing integration. The 
+frameworks contain a generator for test cases, an execution engine, a surrogate engine 
+simulating unavaialbe systems. 
+
+This involves creating a set of test cases to be executed on the system under test (SUT). 
+<FIGURE> Testing is executed on a continous basis (CIT) to systematically uncover defects. To 
+enable integration testing, the model suggests using surrogate systems to stand in for 
+incomplete ones.
+
+Model driven integration, Wieczorek & found savings of 50 % .
+
+
+\section{integration testing pitfalls}
+
+
+
 % List of integration failure points (moll and ammerlaan), add hulburt and typical errors
 1. Testing not given importance. Testing considered done when systems connected.
 2. No overall integration responsibility. Workflow should identify responsibility and accountability.
@@ -769,11 +769,6 @@ Model based regression testing
 9. Failing incident management, add this to test workflow in thesis? Use old?
 10. Unclear lines of reporting and escalation
 
-Regresssion Testing Challenges 
-- Lack of observability of Service code and structure
-- Dynamism and adaptiveness
-- Lack of control
-- Cost of testing
 
 Model-based test case generation can help reduce the costs involved and enable systematic 
 
@@ -783,14 +778,8 @@ Reid evaluates that about 50% of system development time and more than 50% of co
 
 on testing.
 
-% framework
-
-% continuous integration
-
 % coverage
-
 There are many strategies for selecting test cases. Ideally the case set is provides minimum 
-
 reqiured coverage based on selected strategy criteria. Benz lists
 - Manual selection
 - Task coverage (each task performed at least once)
