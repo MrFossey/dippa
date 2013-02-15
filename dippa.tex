@@ -713,8 +713,7 @@ The test set quality itself can be evalauted quantitively and 'tested'. In Delam
 % add CIT definition earlier
 
 Modeling is essential to understand and communicate system and component dependencies in 
-integration. What connections are there to test? Hewett & Kijsanayothin (2009) persuade testers to lay out and
-quantify components and their connections in a graph and use this information to design the 
+integration and determining which connections are there to test. Hewett & Kijsanayothin (2009) persuade testers to lay out andquantify components and their connections in a graph and use this information to design the 
 most efficient order for testing, with a minimal need for creating test stubs. Likewise, Lueng & White (1990) and Abdullah et al. (1995) endorse the concept of a firewall, which draws a line between 
 components and systems that are to be tested, and those that need not, based on where changes 
 in code or specifications have occurred. Modelling can therefore point to systems that should 
@@ -725,11 +724,14 @@ entire process chains.
  
 In particular researchers advocate the creation of a call graph (Lueng & White 1990; Hulburt 2012, Linnenkugel & Müllerburg 1990), which explicitly maps intearactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
 
+The graph can serve as a foundation for setting test coverage criteria and strategy (Linnenkuge & Müllerburg 1990; Benz 2008) or test case creation (Hura & Dimmich). Using model-driven integration Wieczorek et al. () estimated savings of 50\% in both costs and time.
+
 Testing hierarchy and coverage among nodes and links (linnenkugel and mullerburg).
 UML sequences outline tests and enable automated testing (hura dimmich)
 Model driven integration, Wieczorek & found savings of 50 % .
 
 \section{Piecing together a testing framework}
+
 HUANG ET AL and LIU ET AL offer a unified testing framework for testing integration. The 
 frameworks contain a generator for test cases, an execution engine, a surrogate engine 
 simulating unavaialbe systems. 
