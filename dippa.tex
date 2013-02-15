@@ -647,22 +647,21 @@ The empirical part of the study evaluates a limited set of testing frameworks an
 
 Testing is an essential part of software engineering. Without a degree of confidence of sound 
 operation and functional integrity, systems accumulate great risk and may ultimately produce more 
-problems than benefit. Testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risk involved. 
-% TODO add references above
+harm than benefit. Controlled testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risks involved in IT applications and services.
 
-% Clause about functional and non-functional testing, performance and availability testing
-Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test.
+% TODO add references above chapters
+Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
 
-% What to test, cit huang et al, liu et al
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008).
+% What to test
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008). Testing is a continous, and time-consuming, process.
 
 % testing strategy
 \section{Ttesting strategy}
 Traditionally, testing is grouped to unit, integration, and system 
 levels. Unit testing is assuring that individual software components and functions perform to 
-specifications. When components are paired or grouped, the resulting integrations must also 
+specifications. When components are paired or grouped, the resulting connections must also 
 be tested. Finally, system testing refers to testing the finished software suite with 
-a wide array of use cases.
+a suitable array of use cases.
 
 The way integration testing is conducted is linked to the integration strategy. Service-
 Oriented Architecture especially blurs the line between development and integration (Huang et al. 2008; Weiczorek et al. 2010). Myers (1976) introduces six integration strategies: bottom-up, top-down,
