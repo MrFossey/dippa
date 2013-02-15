@@ -680,7 +680,7 @@ strategies (Moll & Ammerlaan 2008) where the system connections and hierarchy ar
 % introduction of stubs and drivers
 Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option maight to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests (TODO).
 
-\section{Automated testing}
+\section{Automation in testing}
 
 Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang & Zheng)
 
@@ -707,10 +707,7 @@ Before test cases are produced a strategy for their selection should be selected
 
 Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best covereage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al 2012)
 
-measures of test effectivess and testability
-(how many test cases were executed out of necessary and how many test cases are necessary for 
-%TODO 
-satifying a criterion)
+The results of test effectiveness can be measured by how many cases were exected out of the set of necessary cases and testability by how many test cases are necessary for satisfyig a criterion (Linnenkugel & Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
 
 The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
 
