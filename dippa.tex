@@ -688,7 +688,7 @@ As changes are introduced into the systems and code, related test cases must exa
 reusability ascertained, out-of-date cases should be discarded, and new cases created where 
 necessary (Zhang & Zheng 2008).
 
-Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presents an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL-based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
+Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presents an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
 
 \section{Evaluating testing}
 
@@ -696,13 +696,13 @@ Before test cases are produced a strategy for their selection should be selected
 
 The test set quality can be evalauted by quantitively, too. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluatied by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
 
-
+Bhuyan et al 2012
 Selective regression testing
 - Test only a part of the system (changed part)
 - takes less time
 - "control flow graph" to identify suitable test scope
 
-Bhuyan et al 2012
+
 Code based regression testing
 - modified code and code associated to that are subject to testing
 - better for unit test
