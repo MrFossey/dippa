@@ -707,6 +707,11 @@ Before test cases are produced a strategy for their selection should be selected
 
 Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best covereage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al 2012)
 
+measures of test effectivess and testability
+(how many test cases were executed out of necessary and how many test cases are necessary for 
+%TODO 
+satifying a criterion)
+
 The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
 
 \section{Towards a model-based approach}
@@ -730,30 +735,15 @@ The graph can serve as a foundation for setting test coverage criteria and strat
 
 Huang et al. (2008) and Liu et al. (2009) offer a unified testing framework for testing integration. The 
 frameworks contain a generator for test cases, an execution engine, a surrogate engine 
-simulating unavailalbe systems, and . Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. 
+simulating unavailalbe systems, and . Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Testing is done on a continous basis
 
-This involves creating a set of test cases to be executed on the system under test. 
-<FIGURE> Testing is executed on a continous basis (CIT) to systematically uncover defects. To 
-enable integration testing, the model suggests using surrogate systems to stand in for 
-incomplete ones.
+.
 
 
 est case creation through finite state machine, (markov chains) implementation
 
-Thin threads, groupin into a tree (tsai et al)
-
-Test data difficult to select (linnenkugel mullburg)
-
-measures of test effectivess and testability
-(how many test cases were executed out of necessary and how many test cases are necessary for 
-
-satifying a criterion)
-
-
-
-% Chapter on and introduction to modelling
-
-
+% Thin threads, groupin into a tree (tsai et al)
+% Test data difficult to select (linnenkugel mullburg)
 
 
 
