@@ -656,8 +656,6 @@ Along with the functionality of the system, tests should also be applied on non-
 % What to test, cit huang et al, liu et al
 Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environement, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced nre errors to previously functional code is called regression testing. The execution of regression stests is typically automated. A nearby concept, \texit{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008).
 
-Similar to regression testing is continous integration testing (CIT), which advocates early integration testing.
-
 % testing strategy
 \section{Integration testing strategy}
 Traditionally, testing is grouped to unit, integration, and system 
@@ -675,14 +673,14 @@ system is wholly integrated, wehere sandwich testing lies inbetween big bang and
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
-strategies (Moll & Ammerlaan 2008) where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
+strategies (Moll \& Ammerlaan 2008) where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
 
 % introduction of stubs and drivers
-Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option maight to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests (TODO).
+Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option maight to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
 
 \section{Automation in testing}
 
-Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang & Zheng)
+Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang \& Zheng)
 
 As changes are introduced into the systems and code, related test cases must examined, their 
 reusability ascertained, out-of-date cases should be discarded, and new cases created where 
@@ -705,18 +703,18 @@ Before test cases are produced a strategy for their selection should be selected
 \item Pre- and post-condition based path coverages
 \end{itemize}
 
-Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best covereage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al 2012)
+Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best covereage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al. 2012)
 
-The results of test effectiveness can be measured by how many cases were exected out of the set of necessary cases and testability by how many test cases are necessary for satisfyig a criterion (Linnenkugel & Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
+The results of test effectiveness can be measured by how many cases were exected out of the set of necessary cases and testability by how many test cases are necessary for satisfyig a criterion (Linnenkugel \& Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
 
-The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
+The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro and Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
 
 \section{Towards a model-based approach}
 % add CIT definition earlier
 
 Modeling is essential to understand and communicate system and component dependencies in 
-integration and determining which connections are there to test. Hewett & Kijsanayothin (2009) persuade testers to lay out andquantify components and their connections in a graph and use this information to design the 
-most efficient order for testing, with a minimal need for creating test stubs. Likewise, Lueng & White (1990) and Abdullah et al. (1995) endorse the concept of a firewall, which draws a line between 
+integration and determining which connections are there to test. Hewett and Kijsanayothin (2009) persuade testers to lay out andquantify components and their connections in a graph and use this information to design the 
+most efficient order for testing, with a minimal need for creating test stubs. Likewise, Lueng and White (1990) and Abdullah et al. (1995) endorse the concept of a firewall, which draws a line between 
 components and systems that are to be tested, and those that need not, based on where changes 
 in code or specifications have occurred. Modelling can therefore point to systems that should 
 be checked \textit{and} those that should be left out of testing scope. This both strenghtens 
@@ -724,7 +722,7 @@ understanding of the inner workings of the tested system set-up and reduces test
 This kind of testing goes through the system(s) piece by piece while it disregards testing 
 entire process chains.
  
-In particular researchers advocate the creation of a call graph (Lueng & White 1990; Hulburt 2012, Linnenkugel & Müllerburg 1990), which explicitly maps intearactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
+In particular researchers advocate the creation of a call graph (Lueng \& White 1990; Hulburt 2012, Linnenkugel \& Müllerburg 1990), which explicitly maps intearactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
 
 The graph can serve as a foundation for setting test coverage criteria and strategy or test case creation (Benz 2008; Hura & Dimmich 2011; Linnenkugel & Müllerburg 1990). Using model-driven integration Wieczorek et al. (2010) estimated savings of 50\% in time for test generation and concretization tasks.
 
@@ -744,7 +742,7 @@ This type of framework combines a solid foundation understanding the integration
 
 ERRORS: wrong function, extra function, missing function 
 Miscoded call eroor
-Intarface error (Lueng & white)
+Intarface error (Lueng \& white)
 
 
 % List of integration failure points (moll and ammerlaan), add hulburt and typical errors
