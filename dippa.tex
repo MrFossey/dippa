@@ -692,9 +692,24 @@ Test case creation is perhaps the most time-consuming task in automated testing.
 
 \section{Evaluating testing}
 
-Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. Benz (2007) lists different schemes for testing strategy and case coverage. 
+Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. Benz (2007) lists different schemes for testing strategy and case coverage:
+- Manual selection
+- Task coverage (each task performed at least once)
+- Simple Temporal Relationship Coverage
+- Complete Temporal Relationship Coverage
+- n-Task combination coverage
+- Interruption coverage (interruption of task by ther task)
+- random selection
+- n-m-Concurrency-Coverage
+- path coverage
+- transition coverage
+- shortest path
 
-The test set quality can be evalauted by quantitively, too. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluatied by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
+Bhuyn et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests looks for modified and related code that is tested, typically in unit tests. Testing can also be risk based, not unlike the criticality 
+
+The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro & Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
+
+
 
 Bhuyan et al 2012
 Selective regression testing
@@ -728,17 +743,7 @@ Regresssion Testing Challenges
 % coverage
 There are many strategies for selecting test cases. Ideally the case set is provides minimum 
 reqiured coverage based on selected strategy criteria. Benz lists
-- Manual selection
-- Task coverage (each task performed at least once)
-- Simple Temporal Relationship Coverage
-- Complete Temporal Relationship Coverage
-- n-Task combination coverage
-- Interruption coverage (interruption of task by ther task)
-- random selection
-- n-m-Concurrency-Coverage
-- path coverage
-- transition coverage
-- shortest path
+
 
 \section{Towards a model-based approach}
 % add CIT definition earlier
