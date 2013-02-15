@@ -650,7 +650,7 @@ operation and functional integrity, systems accumulate great risk and may ultima
 problems than benefit. Testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and information requests. At the very least testing helps decision makers understand the risk involved. (understanding RISK)
 
 % Clause about functional and non-functional testing, performance and availability testing
-Along with the functionality of the system, tests should also be applied on non-functional measures such as performance and usability, because these also determine the .
+Along with the functionality of the system, tests should also be applied on non-functional measures such as performance and usability, because these also determine the validity of the system under test.
 
 % What to test, cit huang et al, liu et al
 Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environement, testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes have not introduced errors to previously functional code is called regression testing. The execution of regression stests is typically automated. A nearby concept, retesting refers to examining if a fix has resolved an incident.
@@ -665,9 +665,6 @@ specifications. When compenents are paired or grouped, the resulting integration
 be tested. Finally, system testing refers to testing the finished software suite with 
 a wide array of use cases.
 
-% testing strategy at wärtsilä, introduction of stubs and drivers
-Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. Integration-by-integration testing requires  drivers and stubs to make up for the absence of actual systems needed for tests.
-
 The way integration testing is conducted is linked to the integration strategy. Service-
 Oriented Architectures, which is also a key part of Wärtsilä's information architecture, 
 esepcially blurs the line between development and integration (HUANG ET AL, weiczorek 
@@ -680,6 +677,9 @@ down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
 strategies (Moll & Ammer) where the hierarchy of integrations is built selectively.
+
+% introduction of stubs and drivers
+Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
 
 \section{Regression in integration testing}
 % models and unified framework
