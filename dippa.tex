@@ -647,13 +647,14 @@ The empirical part of the study evaluates a limited set of testing frameworks an
 
 Testing is an essential part of software engineering. Without a degree of confidence of sound 
 operation and functional integrity, systems accumulate great risk and may ultimately produce more 
-problems than benefit. Testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and information requests. At the very least testing helps decision makers understand the risk involved. (understanding RISK)
+problems than benefit. Testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risk involved. 
+% TODO add references above
 
 % Clause about functional and non-functional testing, performance and availability testing
-Along with the functionality of the system, tests should also be applied on non-functional measures such as performance and usability, because these also determine the validity of the system under test.
+Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test.
 
 % What to test, cit huang et al, liu et al
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environement, testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes have not introduced errors to previously functional code is called regression testing. The execution of regression stests is typically automated. A nearby concept, retesting refers to examining if a fix has resolved an incident.
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environement, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced nre errors to previously functional code is called regression testing. The execution of regression stests is typically automated. A nearby concept, \emph{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008).
 
 Similar to regression testing is continous integration testing (CIT), which advocates early integration testing.
 
@@ -666,9 +667,7 @@ be tested. Finally, system testing refers to testing the finished software suite
 a wide array of use cases.
 
 The way integration testing is conducted is linked to the integration strategy. Service-
-Oriented Architectures, which is also a key part of Wärtsilä's information architecture, 
-esepcially blurs the line between development and integration (HUANG ET AL, weiczorek 
-stefanescu roth). Myers introduces six integration strategies: bottom-up, top-down,
+Oriented Architecture esepcially blurs the line between development and integration (Huang et al. 2008; Weiczorek et al. 2010). Myers (1976) introduces six integration strategies: bottom-up, top-down,
 modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, 
 integrations are put together and tested one by one, starting from either low-level systems 
 or the the most important system, whereas in big bang testing testing is delayed until the 
@@ -676,27 +675,20 @@ system is wholly integrated, wehere sandwich testing lies inbetween big bang and
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
-strategies (Moll & Ammer) where the hierarchy of integrations is built selectively. 
-
-Carey and Bendick discuss build testing [4]. Beizer introduces a
-"mixed bag" strategy which combines bottom-up, top-down, big-bang
-and build testing [2]. (Lueng & White)
+strategies (Moll & Ammerlaan 2008) where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
 
 % introduction of stubs and drivers
-Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option maight to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests (TODO).
 
 \section{Automated testing}
 
 Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes.
 
-
 As changes are introduced into the systems and code, related test cases must examined, their 
 reusability ascertained, out-of-date cases should be discarded, and new cases created where 
 necessary (Zhang Zheng).
 
-Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation, Tsai et al. (2001) and  presented an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al., M Di Penta in chaturvedi automated test case generation out of WSDL. For regression testing, cases and related test data can also be produced by recording actual use cases from production.
-
-
+Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presented an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al. and M Di Penta have similarly offered WSDL-based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
 
 \section{Evaluating testing}
 
@@ -732,6 +724,20 @@ Regresssion Testing Challenges
 - Lack of control
 - Cost of testing
 
+% coverage
+There are many strategies for selecting test cases. Ideally the case set is provides minimum 
+reqiured coverage based on selected strategy criteria. Benz lists
+- Manual selection
+- Task coverage (each task performed at least once)
+- Simple Temporal Relationship Coverage
+- Complete Temporal Relationship Coverage
+- n-Task combination coverage
+- Interruption coverage (interruption of task by ther task)
+- random selection
+- n-m-Concurrency-Coverage
+- path coverage
+- transition coverage
+- shortest path
 
 \section{Towards a model-based approach}
 % add CIT definition earlier
@@ -775,20 +781,7 @@ Reid evaluates that about 50% of system development time and more than 50% of co
 
 on testing.
 
-% coverage
-There are many strategies for selecting test cases. Ideally the case set is provides minimum 
-reqiured coverage based on selected strategy criteria. Benz lists
-- Manual selection
-- Task coverage (each task performed at least once)
-- Simple Temporal Relationship Coverage
-- Complete Temporal Relationship Coverage
-- n-Task combination coverage
-- Interruption coverage (interruption of task by ther task)
-- random selection
-- n-m-Concurrency-Coverage
-- path coverage
-- transition coverage
-- shortest path
+
 
 
 % \input{2background.tex}
