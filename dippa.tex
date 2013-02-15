@@ -692,18 +692,20 @@ Test case creation is perhaps the most time-consuming task in automated testing.
 
 \section{Evaluating testing}
 
-Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. Benz (2007) lists different schemes for testing strategy and case coverage:
-- Manual selection
-- Task coverage (each task performed at least once)
-- Simple Temporal Relationship Coverage
-- Complete Temporal Relationship Coverage
-- n-Task combination coverage
-- Interruption coverage (interruption of task by ther task)
-- random selection
-- n-m-Concurrency-Coverage
-- path coverage
-- transition coverage
-- shortest path
+Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. Benz (2007) lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
+\begin{list_type}
+\item Manual selection
+\item Task coverage (each task performed at least once)
+\item Simple Temporal Relationship Coverage
+\item Complete Temporal Relationship Coverage
+\item n-Task combination coverage
+\item Interruption coverage (interruption of task by ther task)
+\item Random selection
+\item n-m-Concurrency-Coverage
+\item Path coverage
+\item Transition coverage
+\item Shortest path
+\end{list_type}
 
 Bhuyn et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests looks for modified and related code that is tested, typically in unit tests. Testing can also be risk based, recalling the selective integration strategies. Risk areas are ones subjected to changes require more covereage. State, model, regression.
 
