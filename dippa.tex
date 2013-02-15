@@ -705,24 +705,24 @@ Before test cases are produced a strategy for their selection should be selected
 
 Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al. 2012)
 
-The results of test effectiveness can be measured by how many cases were exected out of the set of necessary cases and testability by how many test cases are necessary for satisfyig a criterion (Linnenkugel \& Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
+The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion (Linnenkugel \& Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
 
-The test set quality itself can be evalauted quantitively and 'tested'. In Delamaro and Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erronous code.
+The test set quality itself can be evaluated quantitatively and 'tested'. In Delamaro and Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erroneous code.
 
 \section{Towards a model-based approach}
 % add CIT definition earlier
 
 Modeling is essential to understand and communicate system and component dependencies in 
-integration and determining which connections are there to test. Hewett and Kijsanayothin (2009) persuade testers to lay out andquantify components and their connections in a graph and use this information to design the 
+integration and determining which connections are there to test. Hewett and Kijsanayothin (2009) persuade testers to lay out and quantify components and their connections in a graph and use this information to design the 
 most efficient order for testing, with a minimal need for creating test stubs. Likewise, Lueng and White (1990) and Abdullah et al. (1995) endorse the concept of a firewall, which draws a line between 
 components and systems that are to be tested, and those that need not, based on where changes 
-in code or specifications have occurred. Modelling can therefore point to systems that should 
-be checked \textit{and} those that should be left out of testing scope. This both strenghtens 
+in code or specifications have occurred. Modeling can therefore point to systems that should 
+be checked \textit{and} those that should be left out of testing scope. This both strengthens 
 understanding of the inner workings of the tested system set-up and reduces testing costs. 
 This kind of testing goes through the system(s) piece by piece while it disregards testing 
 entire process chains.
  
-In particular researchers advocate the creation of a call graph (Lueng \& White 1990; Hulburt 2012, Linnenkugel \& Müllerburg 1990), which explicitly maps intearactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
+In particular researchers advocate the creation of a call graph (Lueng \& White 1990; Hulburt 2012, Linnenkugel \& Müllerburg 1990), which explicitly maps interactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
 
 The graph can serve as a foundation for setting test coverage criteria and strategy or test case creation (Benz 2008; Hura & Dimmich 2011; Linnenkugel & Müllerburg 1990). Using model-driven integration Wieczorek et al. (2010) estimated savings of 50\% in time for test generation and concretization tasks.
 
@@ -730,7 +730,7 @@ The graph can serve as a foundation for setting test coverage criteria and strat
 
 Huang et al. (2008) and Liu et al. (2009) offer a unified testing framework for testing integration. The 
 frameworks contain a generator for test cases, an execution engine, a surrogate engine 
-simulating unavailalbe systems, and . Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
+simulating unavailable systems, and . Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
 
 INSERT FIGURE HERE
 % Thin threads, groupin into a tree (tsai et al)
@@ -752,7 +752,7 @@ Intarface error (Lueng \& white)
 4. Poor documentation and document management. Essential in enabling good testing.
 5. Lack of knowledge. Expert availability.
 6. System integration testing as the project's 'crushable zone'
-7. Absense of a system integration strategy.
+7. Absence of a system integration strategy.
 8. Failing configuration management
 9. Failing incident management, add this to test workflow in thesis? Use old?
 10. Unclear lines of reporting and escalation
