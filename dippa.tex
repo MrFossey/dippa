@@ -677,11 +677,12 @@ strategies (Moll \& Ammerlaan 2008) where the system connections and hierarchy a
 % introduction of stubs and drivers
 Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
 
+% Out of scope?
 \section{Integration testing pitfalls}
 
 \section{Automation in testing}
 
-Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang \& Zheng)
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang \& Zheng)
 
 As changes are introduced into the systems and code, related test cases must examined, their 
 reusability ascertained, out-of-date cases should be discarded, and new cases created where 
