@@ -718,6 +718,8 @@ Regresssion Testing Challenges
 \section{Towards a model-based approach}
 % add CIT definition earlier
 
+Models can serve as basis for testing
+
 UML sequences outline tests and enable automated testing (hura dimmich)
 
 HUANG ET AL and LIU ET AL offer a unified testing framework for testing integration. The 
@@ -730,6 +732,85 @@ enable integration testing, the model suggests using surrogate systems to stand 
 incomplete ones.
 
 Model driven integration, Wieczorek & found savings of 50 % .
+
+
+
+est case creation through finite state machine, (markov chains) implementation
+
+Thin threads, groupin into a tree (tsai et al)
+
+Test data difficult to select (linnenkugel mullburg)
+
+measures of test effectivess and testability
+(how many test cases were executed out of necessary and how many test cases are necessary for 
+
+satifying a criterion)
+
+
+
+% Chapter on and introduction to modelling
+
+Modeling is essential to understand and communicate system and component dependencies in 
+
+integration. what connections are there to test? Hewett et al persuades one to lay out and 
+
+quantify components and their connections in a graph and use this information to design the 
+
+most efficient order for testing, with a minimal need for creating test stubs. Not 
+
+dissimilarly, Abdullah et al endorse the concept of a firewall, which draws a line between 
+
+components and systems that are to be tested, and those that need not, based on where changes 
+
+in code or specifications have occurred. Modelling can therefore point to systems that should 
+
+be checked AND those that should be left out of testing scope. This both strenghtens 
+
+understainding of the innerworkings of the tested system set-up and reduces testing costs. 
+
+This kind of testing goes through the system(s) piece by piece while it disregards testing 
+
+entire process chains.
+
+    % add lueng and white for firewall
+
+In particular researchers advocate the creation of a call graph (lueng white, Hulburt, 
+
+linnenkugel), which explicitly maps intearactions and relationships between integrated system 
+
+components. The call graph can be used as a tool to communicate integration structures and 
+
+schemes, and to organize testing. A systematic sweep of components and component connections 
+
+is used to uncover any defects in the integration phase. 
+
+Testing hierarchy and coverage among nodes and links (linnenkugel and mullerburg).
+
+The graph model can also help minimize the resources needed for testing, for example the 
+
+number of stubs (Hewett & Kijsayothin).
+
+-best practice way of visualizing integrations
+	existing tool?
+	uml
+	visio
+	bpmn
+
+"Given one or more modules which
+have been changed, the firewall encloses the set of
+modules that must be retested. The firewull is an
+imaginary boundary that limits the amount of retesting
+for modified software which contains errors introduced
+during the revision process 8,10."
+
+% Chapter on integration errors
+
+Abdullah, 
+
+
+ERRORS: wrong function, extra function, missing function 
+Miscoded call eroor
+Intarface error (Lueng & white)
 
 
 \section{integration testing pitfalls}
