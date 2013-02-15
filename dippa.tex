@@ -657,7 +657,7 @@ Along with the functionality of the system, tests should also be applied on non-
 Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008).
 
 % testing strategy
-\section{Integration testing strategy}
+\section{Ttesting strategy}
 Traditionally, testing is grouped to unit, integration, and system 
 levels. Unit testing is assuring that individual software components and functions perform to 
 specifications. When components are paired or grouped, the resulting integrations must also 
@@ -677,6 +677,8 @@ strategies (Moll \& Ammerlaan 2008) where the system connections and hierarchy a
 
 % introduction of stubs and drivers
 Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option might to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+
+\section{Integration testing pitfalls]
 
 \section{Automation in testing}
 
@@ -738,33 +740,6 @@ INSERT FIGURE HERE
 
 This type of framework combines a solid foundation understanding the integration set-up,  and automatically producing test cases.
 
-\section{integration testing pitfalls}
-
-ERRORS: wrong function, extra function, missing function 
-Miscoded call eroor
-Intarface error (Lueng \& white)
-
-
-% List of integration failure points (moll and ammerlaan), add hulburt and typical errors
-1. Testing not given importance. Testing considered done when systems connected.
-2. No overall integration responsibility. Workflow should identify responsibility and accountability.
-3. Physically separated locations.
-4. Poor documentation and document management. Essential in enabling good testing.
-5. Lack of knowledge. Expert availability.
-6. System integration testing as the project's 'crushable zone'
-7. Absence of a system integration strategy.
-8. Failing configuration management
-9. Failing incident management, add this to test workflow in thesis? Use old?
-10. Unclear lines of reporting and escalation
-
-
-Model-based test case generation can help reduce the costs involved and enable systematic 
-
-selection of cases (Benz).
-
-Reid evaluates that about 50% of system development time and more than 50% of costs are spent 
-
-on testing.
 
 
 
