@@ -689,23 +689,19 @@ Delaying testing to the Big Bang is not ideal for a large and complex integratio
 
 Automating testing has obvious benefits, but is not without fault. Implementing automated tests takes a significant investment of time and effort, cannot match the intelligence and intuition of an experienced tester, while some systems undergo so many changes that automation makes little sense. Automation also does not counter inherently flawed software development processes.
 
-primer: automation has its faults
 
-Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Tsai et al. (2001) presented an XML-based framework for automtaed test case generation from WSDL service descriptions.
+As changes are introduced into the systems and code, related test cases must examined, their 
+reusability ascertained, out-of-date cases should be discarded, and new cases created where 
+necessary (Zhang Zheng).
 
+Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation, Tsai et al. (2001) and  presented an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al., M Di Penta in chaturvedi automated test case generation out of WSDL
 
 \section{Evaluating testing}
-
-
-
-
 
 Testing have been proposed, such as mutation testing (delamaro). In mutation 
 testing test set quality is evaluated by creating variations of the tested programs and
 unning cases against them. If the cases succeed in the mutated program Q, it is considered 
 live. Ideally, cases will fail when run against modified, erronous code.
-
-Bai et al., M Di Penta in chaturvedi automated test case generation out of WSDL
 
 Selective regression testing
 - Test only a part of the system (changed part)
@@ -717,24 +713,16 @@ Code based regression testing
 - better for unit test
 
 Risk based regression testing
-- A risk area is identified which is considered as the most coverage area that get affected 
-
-by the changes made in the system.
+- A risk area is identified which is considered as the most coverage area that get affected by the changes made in the system.
 
 State based regression testing
-- A set of coverage criteria is proposed based on control and data flow in UML state diagram 
-
-and it is shown how to generate test cases satisfying these criteria from UML state diagrams.
+- A set of coverage criteria is proposed based on control and data flow in UML state diagram and it is shown how to generate test cases satisfying these criteria from UML state diagrams.
 - Control flow diagram
 
 Model based regression testing
 - code unavailable
 - UML class and sequence diagrams are used to implement Model Based Regression Testing
 
-
-As changes are introduced into the systems and code, related test cases must examined, their 
-reusability ascertained, out-of-date cases should be discarded, and new cases created where 
-necessary (Zhang Zheng).
 
 Regresssion Testing Challenges 
 - Lack of observability of Service code and structure
