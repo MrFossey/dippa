@@ -665,18 +665,18 @@ be tested. Finally, system testing refers to testing the finished software suite
 a wide array of use cases.
 
 The way integration testing is conducted is linked to the integration strategy. Service-
-Oriented Architecture esepcially blurs the line between development and integration (Huang et al. 2008; Weiczorek et al. 2010). Myers (1976) introduces six integration strategies: bottom-up, top-down,
+Oriented Architecture especially blurs the line between development and integration (Huang et al. 2008; Weiczorek et al. 2010). Myers (1976) introduces six integration strategies: bottom-up, top-down,
 modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, 
 integrations are put together and tested one by one, starting from either low-level systems 
-or the the most important system, whereas in big bang testing testing is delayed until the 
-system is wholly integrated, wehere sandwich testing lies inbetween big bang and top-
+or the most important system, whereas in big bang testing is delayed until the 
+system is wholly integrated, where sandwich testing lies in between big bang and top-
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
 strategies (Moll \& Ammerlaan 2008) where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
 
 % introduction of stubs and drivers
-Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option maight to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option might to test little by little and employ one of the other schemes. However, Integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
 
 \section{Automation in testing}
 
@@ -686,7 +686,7 @@ As changes are introduced into the systems and code, related test cases must exa
 reusability ascertained, out-of-date cases should be discarded, and new cases created where 
 necessary (Zhang & Zheng 2008).
 
-Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presents an XML-based framework for automtaed test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
+Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presents an XML-based framework for automated test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
 
 \section{Evaluating testing}
 
@@ -703,7 +703,7 @@ Before test cases are produced a strategy for their selection should be selected
 \item Pre- and post-condition based path coverages
 \end{itemize}
 
-Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best covereage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al. 2012)
+Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al. 2012)
 
 The results of test effectiveness can be measured by how many cases were exected out of the set of necessary cases and testability by how many test cases are necessary for satisfyig a criterion (Linnenkugel \& Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
 
