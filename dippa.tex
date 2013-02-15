@@ -649,6 +649,9 @@ Testing is an essential part of software engineering. Without a degree of confid
 operation or functional integrity, systems accumulate great risk and may ultimately produce more 
 problems than benefit. Testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems and their use can be improved. A system that is easy to use does not incur service and information requests. (understanding RISK)
 
+% What to test
+Naturally, software has to be tested to after development , but there are other triggers, too. Any change in code or specifications, the environement, testing policy or plans can act a . Continously repeating tests, or regression testing, is i. The repeated and unchanged tests' execution is often automated.
+
 % testing strategy
 Traditionally, testing is grouped to unit, integration, and system 
 levels. Unit testing is assuring that individual software components and functions perform to 
@@ -659,8 +662,19 @@ a wide array of use cases.
 % testing strategy at wärtsilä, introduction of stubs and drivers
 Delaying testing to the Big Bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing discovered defects is difficult. A better option is to test little by little and employ one of the other schemes. This is also the case at Wärtsilä. Integration-by-integration testing requires  drivers and stubs to make up for the absence of actual systems needed for tests.
 
-% What to test
-Naturally, software has to be tested to after development , but there are other triggers, too. Any change in code or specifications, the environement, testing policy or plans can act a . Continously repeating tests, or regression testing, is i. The repeated and unchanged tests' execution is often automated.
+The way integration testing is conducted is linked to the integration strategy. Service-
+Oriented Architectures, which is also a key part of Wärtsilä's information architecture, 
+esepcially blurs the line between development and integration (HUANG ET AL, weiczorek 
+stefanescu roth). Myers introduces six integration strategies: bottom-up, top-down,
+modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, 
+integrations are put together and tested one by one, starting from either low-level systems 
+or the the most important system, whereas in big bang testing testing is delayed until the 
+system is wholly integrated, wehere sandwich testing lies inbetween big bang and top-
+down/bottom-up testing.
+
+Other incremental testing methods include delivery, criticality, or functionality based 
+strategies (Moll & Ammer) where the hierarchy of integrations is built selectively.
+
 
 % List of integration failure points
 1. Testing not given importance. Testing considered done when systems connected.
