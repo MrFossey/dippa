@@ -680,6 +680,20 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % Out of scope?
 \section{Integration testing pitfalls}
 
+Integration testing can fail in many ways. Testing may be overlooked as a non-value adding activity and integration considered done, when systems have been connected. 
+% List of integration failure points (moll and ammerlaan), add hulburt and typical errors
+1. Testing not given importance. Testing considered done when systems connected.
+2. No overall integration responsibility. Workflow should identify responsibility and accountability.
+3. Physically separated locations.
+4. Poor documentation and document management. Essential in enabling good testing.
+5. Lack of knowledge. Expert availability.
+6. System integration testing as the project's 'crushable zone'
+7. Absence of a system integration strategy.
+8. Failing configuration management
+9. Failing incident management, add this to test workflow in thesis? Use old?
+10. Unclear lines of reporting and escalation
+
+
 \section{Automation in testing}
 
 Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary (Zhang \& Zheng 2008). Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang \& Zheng)
