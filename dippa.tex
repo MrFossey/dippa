@@ -684,9 +684,35 @@ Testing management is no light matter: Reid (2005) evaluated that about 50\% of 
 
 Lueng and White present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors.
 
+\begin{center}
+    \begin{tabular}{ | l | l | l | p{5cm} |}
+    \hline
+     & Interpretation error & Miscoded call error & Interface error \\ \hline
+    Wrong & Unspecified function & Call at wrong location & Stardards or agreements are violated \\ \hline
+    Missing & Not all necessary functionality implemented & Call instruction missing & Stardards or agreements are       violated \\ \hline
+    Extra & Function performs more than what is expected/needed & Call instruction on a path which should not have it & Stardards or agreements are violated \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
+
+\begin{comment}
+Interpretation
+    wrong function - something else than specified
+    extra function - more than what is expected/needed
+    missing function - not all that is specified
+Miscoded call (error which causes the developer to place the call instruction at the wrong point in the program)
+    Extra instruction fault: the call instruction is on a path which should not have the call.
+    Wrong placement fault: the call is at the wrong location on the path which should have the call instruction.
+    Missing instruction fault: the call instruction is missing on the path which should have the call.
+Interface error
+    When stardards or agreements are violated
+
 ERRORS: wrong function, extra function, missing function 
 Miscoded call error
 Interface error (Lueng \& white)
+\end{comment}
 
 \section{Automation in testing}
 
