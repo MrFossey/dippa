@@ -653,7 +653,7 @@ harm than benefit. Controlled testing reduces the number of incidents that would
 Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
 
 % What to test
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident (Jenkins 2008). Testing is a continous, and time-consuming, process.
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2208software}. Testing is a continous, and time-consuming, process.
 
 % testing strategy
 \section{Ttesting strategy}
@@ -664,7 +664,7 @@ be tested. Finally, system testing refers to testing the finished software suite
 a suitable array of use cases.
 
 The way integration testing is conducted is linked to the integration strategy. Service-
-Oriented Architecture especially blurs the line between development and integration (Huang et al. 2008; Weiczorek et al. 2010). Myers (1976) introduces six integration strategies: bottom-up, top-down,
+Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate; wieczorek2010model}. \citet{myers1976} introduces six integration strategies: bottom-up, top-down,
 modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, 
 integrations are put together and tested one by one, starting from either low-level systems 
 or the most important system, whereas in big bang testing is delayed until the 
