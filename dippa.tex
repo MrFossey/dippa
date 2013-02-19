@@ -680,7 +680,7 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % Out of scope?
 \section{Integration testing pitfalls}
 
-Testing management is no light matter: Reid (2005) evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways (Moll \& Ammerlaan). Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to Moll and Ammerlaan, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. (Moll \& Ammerlaan).
+Testing management is no light matter: Reid (2005) evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008dentifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to Moll and Ammerlaan, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008dentifying}.
 
 Lueng and White present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups. The error types are presented in Figure X.
 
@@ -715,13 +715,13 @@ Interface error (Lueng \& white)
 
 \section{Automation in testing}
 
-Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary (Zhang \& Zheng 2008). Automation also does not counter inherently flawed software development processes. (Jenkins 2008; Zhang \& Zheng)
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
 
-Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. Tsai et al. (2001) presents an XML-based framework for automated test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
+Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} presents an XML-based framework for automated test case generation from WSDL service descriptions. Bai et al. and M Di Penta similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
 
 \section{Evaluating testing}
 
-Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. Benz (2007) lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
+Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. \citet{Benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
 \begin{itemize}
 \item Manual selection
 \item Task coverage (each task performed once)
@@ -734,13 +734,13 @@ Before test cases are produced a strategy for their selection should be selected
 \item Pre- and post-condition based path coverages
 \end{itemize}
 
-Linnenkugel and Müllerburg present a similar coverage hierarchy of node, relation, call, sequence, and loop coverage measures.
+\citet{linnenkuger1990test} present a similar coverage hierarchy of node, relation, call, sequence, and loop coverage measures.
 
 Bhuyan et al (2012) present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. (Bhuyan et al. 2012)
 
-The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion (Linnenkugel \& Müllerburg 1990). Attention must be spent on both selecting the method of execution and test criteria. 
+The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Attention must be spent on both selecting the method of execution and test criteria. 
 
-The test set quality itself can be evaluated quantitatively and 'tested'. In Delamaro and Maldonado's (2001) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erroneous code.
+The test set quality itself can be evaluated quantitatively and 'tested'. In \citet{delmaro2011interface) mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erroneous code.
 
 \section{Towards a model-based approach}
 % add CIT definition earlier
