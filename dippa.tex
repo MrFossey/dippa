@@ -664,7 +664,7 @@ be tested. Finally, system testing refers to testing the finished software suite
 a suitable array of use cases.
 
 The way integration testing is conducted is linked to the integration strategy. Service-
-Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate; wieczorek2010model}. citet{myers1976} introduces six integration strategies: bottom-up, top-down,
+Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. citet{myers1976} introduces six integration strategies: bottom-up, top-down,
 modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, 
 integrations are put together and tested one by one, starting from either low-level systems 
 or the most important system, whereas in big bang testing is delayed until the 
@@ -672,7 +672,7 @@ system is wholly integrated, where sandwich testing lies in between big-bang and
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
-strategies (Moll \& Ammerlaan 2008) where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
+strategies \citep{mo} where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
 
 % introduction of stubs and drivers
 Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
