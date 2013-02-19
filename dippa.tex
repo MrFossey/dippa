@@ -653,10 +653,10 @@ harm than benefit. Controlled testing reduces the number of incidents that would
 Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
 
 % What to test
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2208software}. Testing is a continous, and time-consuming, process.
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
 % testing strategy
-\section{Ttesting strategy}
+\section{Testing strategy}
 Traditionally, testing is grouped to unit, integration, and system 
 levels. Unit testing is assuring that individual software components and functions perform to 
 specifications. When components are paired or grouped, the resulting connections must also 
@@ -672,7 +672,7 @@ system is wholly integrated, where sandwich testing lies in between big-bang and
 down/bottom-up testing.
 
 Other incremental testing methods include delivery, criticality, or functionality based 
-strategies \citep{van2008dentifying} where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
+strategies \citep{van2008identifying} where the system connections and hierarchy are built selectively an integration at a time. Further, Carey and Bendick (1977) discuss build testing. Beizer (1984) introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
 
 % introduction of stubs and drivers
 Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
@@ -680,7 +680,7 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % Out of scope?
 \section{Integration testing pitfalls}
 
-Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008dentifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to \citet{van2008identifying}, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
+Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008identifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to \citet{van2008identifying}, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
 
 \citet{leung1990study} present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups. The error types are presented in Figure X.
 
@@ -734,9 +734,9 @@ Before test cases are produced a strategy for their selection should be selected
 \item Pre- and post-condition based path coverages
 \end{itemize}
 
-\citet{linnenkuger1990test} present a similar coverage hierarchy of node, relation, call, sequence, and loop coverage measures.
+\citet{linnenkugel1990test} present a similar coverage hierarchy of node, relation, call, sequence, and loop coverage measures.
 
-\citet{bhuyan2012surbey} present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. \citep{bhuyan2012survey}
+\citet{bhuyan2012survey} present selection strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. \citep{bhuyan2012survey}
 
 The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Attention must be spent on both selecting the method of execution and test criteria. 
 
@@ -753,7 +753,7 @@ in code or specifications have occurred. Modeling can therefore point to systems
 be checked \textit{and} those that should be left out of testing scope (resembling Bhuyan's et al. selective testing). This both strengthens understanding of the inner workings of the tested system set-up and reduces testing costs. 
 This kind of testing goes through the system(s) piece by piece while it disregards testing entire process chains.
  
-In particular researchers advocate the creation of a call graph \citep{leung1990test, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
+In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The call graph can be used as a tool to communicate integration structures and schemes, and to organize testing. A systematic sweep of components and component connections is used to uncover any defects in the integration phase. 
 
 The graph can serve as a foundation for setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
