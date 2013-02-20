@@ -808,8 +808,8 @@ INSERT FIGURE HERE
 % Start by placing the nodes
 \node [system] (s0) {Production};
 % Use join to connect a node to the previous one 
-\node [file] (f0) {Model};
-\node [process] (p0) {Test case generation};
+\node [file, join] (f0) {Model};
+\node [process, join] (p0) {Test case generation};
 %\node [file] (f1) {Integration test case};
 %\node [process] (p1) {Verification};
 %\node [engine] (e0) {Test case execution engine};
