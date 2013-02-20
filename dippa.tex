@@ -809,18 +809,18 @@ INSERT FIGURE HERE
 \node [system] (p0) {Production};
 % Use join to connect a node to the previous one 
 \node [file]      {Model/diagram};
-\node [proc, join] (p1) {Get quota $k > 1$};
-\node [proc, join]      {Open queue};
-\node [proc, join]      {Dispatch message};
-\node [test, join] (t1) {Got msg?};
+\node [proc, join] (p1) {Test case generation};
+\node [proc, join]      {Integration test case};
+\node [proc, join]      {Verification};
+\node [test, join] (t1) {Test case execution engine};
 % No join for exits from test nodes - connections have more complex
 % requirements
 % We continue until all the blocks are positioned
-\node [proc] (p2) {$k \mathbin{{-}{=}} 1$};
-\node [proc, join] (p3) {Dispatch message};
-\node [test, join] (t2) {Got msg?};
-\node [test] (t3) {Capacity?};
-\node [test] (t4) {$k \mathbin{{-}{=}} 1$};
+\node [proc] (p2) {SUT};
+\node [proc, join] (p3) {Surrogate engine};
+\node [test, join] (t2) {Execution trace};
+\node [test] (t3) {Trace transformation};
+\node [test] (t4) {Trace collecting};
 % We position the next block explicitly as the first block in the
 % second column.  The chain 'comes along with us'. The distance
 % between columns has already been defined, so we don't need to
