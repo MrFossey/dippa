@@ -806,21 +806,21 @@ INSERT FIGURE HERE
 }
 % -------------------------------------------------
 % Start by placing the nodes
-\node [system] (p0) {Production};
+\node [system] (s0) {Production};
 % Use join to connect a node to the previous one 
-\node [file]      {Model/diagram};
-\node [proc, join] (p1) {Test case generation};
-\node [proc, join]      {Integration test case};
-\node [proc, join]      {Verification};
-\node [test, join] (t1) {Test case execution engine};
+\node [file] (f0) {Model/diagram};
+\node [process] (p0) {Test case generation};
+\node [file] (f1) {Integration test case};
+\node [process] (p1) {Verification};
+\node [engine] (e0) {Test case execution engine};
 % No join for exits from test nodes - connections have more complex
 % requirements
 % We continue until all the blocks are positioned
-\node [proc] (p2) {SUT};
-\node [proc, join] (p3) {Surrogate engine};
-\node [test, join] (t2) {Execution trace};
-\node [test] (t3) {Trace transformation};
-\node [test] (t4) {Trace collecting};
+\node [system] (s1) {SUT};
+\node [engine] (e1) {Surrogate engine};
+\node [file] (f2) {Execution trace};
+\node [process] (p2) {Trace transformation};
+\node [process] (p3) {Trace collecting};
 % -------------------------------------------------
 % A couple of boxes have annotations
 % \node [above=0mm of p4, it] {(Queue was empty)};
@@ -829,16 +829,10 @@ INSERT FIGURE HERE
 % First, the straight north-south connections. In each case, we first
 % draw a path with a (consistently positioned) annotation node, then
 % we draw the arrow itself.
-\path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
-  \draw [*->,lcnorm] (t1.south) -- (p2);
-\path (t2.south) to node [near start, xshift=1em] {$y$} (t3); 
-  \draw [*->,lcnorm] (t2.south) -- (t3);
-\path (t3.south) to node [near start, xshift=1em] {$y$} (t4); 
-  \draw [*->,lcnorm] (t3.south) -- (t4);
-\path (t5.south) to node [near start, xshift=1em] {$y$} (t6); 
-  \draw [*->,lcfree] (t5.south) -- (t6);
-\path (t6.south) to node [near start, xshift=1em] {$y$} (t7); 
-  \draw [*->,lcfree] (t6.south) -- (t7); 
+\path (s0.south) to node [near start, xshift=1em] {$y$} (p0);
+  \draw [*->,lcnorm] (s0.south) -- (p2);
+
+\begin{comment}
 % ------------------------------------------------- 
 % Now the straight east-west connections. To provide consistent
 % positioning of the test exit annotations, we have positioned
@@ -873,6 +867,7 @@ INSERT FIGURE HERE
   |- node [black, near end, yshift=0.75em, it]
     {(When message + resources available)} (p0);
 % -------------------------------------------------
+\end{comment}
 \end{tikzpicture}
 
 % Thin threads, groupin into a tree (tsai et al)
