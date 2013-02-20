@@ -821,31 +821,6 @@ INSERT FIGURE HERE
 \node [test, join] (t2) {Execution trace};
 \node [test] (t3) {Trace transformation};
 \node [test] (t4) {Trace collecting};
-% We position the next block explicitly as the first block in the
-% second column.  The chain 'comes along with us'. The distance
-% between columns has already been defined, so we don't need to
-% specify it.
-\node [proc, fill=lcfree!25, right=of p1] (p4) {Reset congestion};
-\node [proc, join=by free] {Set \textsc{mq} wait flag};
-\node [proc, join=by free] (p5) {Dispatch message};
-\node [test, join=by free] (t5) {Got msg?};
-\node [test] (t6) {Capacity?};
-% Some more nodes specifically positioned (we could have avoided this,
-% but try it and you'll see the result is ugly).
-\node [test] (t7) [right=of t2] {$k \mathbin{{-}{=}} 1$};
-\node [proc, fill=lccong!25, right=of t3] (p8) {Set congestion};
-\node [proc, join=by cong, right=of t4] (p9) {Close queue};
-\node [term, join] (p10) {Exit trigger message thread};
-% -------------------------------------------------
-% Now we place the coordinate nodes for the connectors with angles, or
-% with annotations. We also mark them for debugging.
-\node [coord, right=of t1] (c1)  {}; \cmark{1}   
-\node [coord, right=of t3] (c3)  {}; \cmark{3}   
-\node [coord, right=of t6] (c6)  {}; \cmark{6}   
-\node [coord, right=of t7] (c7)  {}; \cmark{7}   
-\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
-\node [coord, right=of t4] (c4r) {}; \cmark[r]{4}
-\node [coord, left=of t7]  (c5)  {}; \cmark{5}   
 % -------------------------------------------------
 % A couple of boxes have annotations
 \node [above=0mm of p4, it] {(Queue was empty)};
