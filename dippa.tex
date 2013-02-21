@@ -788,7 +788,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \begin{tikzpicture}[%
     >=triangle 60,              % Nice arrows; your taste may be different
     start chain=going below,    % General flow is top-to-bottom
-    node distance=6mm and 6mm, % Global setup of box spacing
+    node distance=6mm and 60mm, % Global setup of box spacing
     every join/.style={norm},   % Default linetype for connecting boxes
     ]
 % ------------------------------------------------- 
@@ -864,6 +864,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % we draw the arrow itself.
 \path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
   \draw [*->,lcnorm] (t1.south) -- (p2);
+\path (p0.south) to node [near start, xshift=1em] {$y$} (p1);
+  \draw [*->,lcnorm] (p0.south) -- (p1);
 \path (t2.south) to node [near start, xshift=1em] {$y$} (t3); 
   \draw [*->,lcnorm] (t2.south) -- (t3);
 \path (t3.south) to node [near start, xshift=1em] {$y$} (t4); 
