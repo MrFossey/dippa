@@ -819,7 +819,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \node [syst, join] (e0) {Test case execution engine};
 \node [syst, join] (s1) {SUT};
 \node [syst, join] (e1) {Surrogate engine};
-\node [file, right=of s0, join] (f0) {Model};
+\node [file, right=of s0] (f0) {Model};
 \node [proc, right=of f1, join] (p1) {Verification};
 \node [file, join] (f2) {Execution trace};
 \node [proc] (p2) {Trace collecting};
