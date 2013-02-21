@@ -846,13 +846,13 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % -------------------------------------------------
 % Now we place the coordinate nodes for the connectors with angles, or
 % with annotations. We also mark them for debugging.
-%\node [coord, right=of t1] (c1)  {}; \cmark{1}   
-%\node [coord, right=of t3] (c3)  {}; \cmark{3}   
-%\node [coord, right=of t6] (c6)  {}; \cmark{6}   
-%\node [coord, right=of t7] (c7)  {}; \cmark{7}   
-%\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
-%\node [coord, right=of t4] (c4r) {}; \cmark[r]{4}
-%\node [coord, left=of t7]  (c5)  {}; \cmark{5}   
+\node [coord, right=of t1] (c1)  {}; \cmark{1}   
+\node [coord, right=of t3] (c3)  {}; \cmark{3}   
+\node [coord, right=of t6] (c6)  {}; \cmark{6}   
+\node [coord, right=of t7] (c7)  {}; \cmark{7}   
+\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
+\node [coord, right=of t4] (c4r) {}; \cmark[r]{4}
+\node [coord, left=of t7]  (c5)  {}; \cmark{5}   
 % -------------------------------------------------
 % A couple of boxes have annotations
 \node [above=0mm of p4, it] {(Queue was empty)};
@@ -864,6 +864,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % we draw the arrow itself.
 \path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
   \draw [*->,lcnorm] (t1.south) -- (p2);
+\path (p0.south) to node [near start, xshift=1em] {$y$} (p1); % added
+  \draw [*->,lcnorm] (p0.south) -- (p1);
 \path (t2.south) to node [near start, xshift=1em] {$y$} (t3); 
   \draw [*->,lcnorm] (t2.south) -- (t3);
 \path (t3.south) to node [near start, xshift=1em] {$y$} (t4); 
