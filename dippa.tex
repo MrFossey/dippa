@@ -799,7 +799,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, text width=8em},
   syst/.style={base, cylinder, text width=5em}, % aspect = 2
-  term/.style={proc, rounded corners},
+  file/.style={proc, rounded corners},
   % coord node style is used for placing corners of connecting lines
   coord/.style={coordinate, on chain, on grid, node distance=6mm and 25mm},
   % nmark node style is used for coordinate debugging marks
@@ -815,16 +815,16 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % Start by placing the nodes
 
 
-\node [system] (s0) {Production};
+\node [syst] (s0) {Production};
 
-\node [base, join] (f0) {Model};
+\node [file] (f0) {Model};
 \node [proc, join] (p0) {Test case generation};
-\node [term] (f1) {Integration test case};
+\node [file] (f1) {Integration test case};
 \node [proc] (p1) {Verification};
 \node [syst] (e0) {Test case execution engine};
 \node [syst] (s1) {SUT};
 \node [syst] (e1) {Surrogate engine};
-\node [term,] (f2) {Execution trace};
+\node [file,] (f2) {Execution trace};
 \node [proc] (p2) {Trace transformation};
 \node [proc] (p3) {Trace collecting};
 \begin{comment}
@@ -880,6 +880,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % we draw the arrow itself.
 \path (s0.south) to node [near start, xshift=1em] {$y$} (p0);
   \draw [*->,lcnorm] (s0.south) -- (p0);
+  \path (f0.south) to node [near start, xshift=1em] {$y$} (p0);
+  \draw [*->,lcnorm] (f0.south) -- (p0);
 %\path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
 %  \draw [*->,lcnorm] (t1.south) -- (p2);
 %\path (p0.south) to node [near start, xshift=1em] {$y$} (p1);
