@@ -787,7 +787,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % Start the picture
 \begin{tikzpicture}[%
     >=triangle 60,              % Nice arrows; your taste may be different
-    start chain=going right,    % General flow is top-to-bottom
+    start chain=going below,    % General flow is top-to-bottom
     node distance=6mm and 6mm, % Global setup of box spacing
     every join/.style={norm},   % Default linetype for connecting boxes
     ]
@@ -846,13 +846,13 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % -------------------------------------------------
 % Now we place the coordinate nodes for the connectors with angles, or
 % with annotations. We also mark them for debugging.
-\node [coord, right=of t1] (c1)  {}; \cmark{1}   
-\node [coord, right=of t3] (c3)  {}; \cmark{3}   
-\node [coord, right=of t6] (c6)  {}; \cmark{6}   
-\node [coord, right=of t7] (c7)  {}; \cmark{7}   
-\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
-\node [coord, right=of t4] (c4r) {}; \cmark[r]{4}
-\node [coord, left=of t7]  (c5)  {}; \cmark{5}   
+%\node [coord, right=of t1] (c1)  {}; \cmark{1}   
+%\node [coord, right=of t3] (c3)  {}; \cmark{3}   
+%\node [coord, right=of t6] (c6)  {}; \cmark{6}   
+%\node [coord, right=of t7] (c7)  {}; \cmark{7}   
+%\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
+%\node [coord, right=of t4] (c4r) {}; \cmark[r]{4}
+%\node [coord, left=of t7]  (c5)  {}; \cmark{5}   
 % -------------------------------------------------
 % A couple of boxes have annotations
 \node [above=0mm of p4, it] {(Queue was empty)};
