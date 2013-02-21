@@ -813,11 +813,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 }
 % -------------------------------------------------
 % Start by placing the nodes
-
-
 \node [syst] (s0) {Production};
-
-\node [file] (f0) {Model};
+\node [file right=of s0] (f0) {Model};
 \node [proc, join] (p0) {Test case generation};
 \node [file] (f1) {Integration test case};
 \node [proc] (p1) {Verification};
