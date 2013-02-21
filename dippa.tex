@@ -798,7 +798,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, text width=8em},
-  test/.style={base, cylinder, aspect=2, text width=5em},
+  syst/.style={base, cylinder, text width=5em}, % aspect = 2
   term/.style={proc, rounded corners},
   % coord node style is used for placing corners of connecting lines
   coord/.style={coordinate, on chain, on grid, node distance=6mm and 25mm},
@@ -819,15 +819,15 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \node [proc, join] (p1) {Get quota $k > 1$};
 \node [proc, join]      {Open queue};
 \node [proc, join]      {Dispatch message};
-\node [test, join] (t1) {Got msg?};
+\node [syst, join] (t1) {Got msg?};
 % No join for exits from test nodes - connections have more complex
 % requirements
 % We continue until all the blocks are positioned
 \node [proc] (p2) {$k \mathbin{{-}{=}} 1$};
 \node [proc, join] (p3) {Dispatch message};
-\node [test, join] (t2) {Got msg?};
-\node [test] (t3) {Capacity?};
-\node [test] (t4) {$k \mathbin{{-}{=}} 1$};
+\node [syst, join] (t2) {Got msg?};
+\node [syst] (t3) {Capacity?};
+\node [syst] (t4) {$k \mathbin{{-}{=}} 1$};
 % We position the next block explicitly as the first block in the
 % second column.  The chain 'comes along with us'. The distance
 % between columns has already been defined, so we don't need to
@@ -835,11 +835,11 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \node [proc, fill=lcfree!25, right=of p1] (p4) {Reset congestion};
 \node [proc, join=by free] {Set \textsc{mq} wait flag};
 \node [proc, join=by free] (p5) {Dispatch message};
-\node [test, join=by free] (t5) {Got msg?};
-\node [test] (t6) {Capacity?};
+\node [syst, join=by free] (t5) {Got msg?};
+\node [syst] (t6) {Capacity?};
 % Some more nodes specifically positioned (we could have avoided this,
 % but try it and you'll see the result is ugly).
-\node [test] (t7) [right=of t2] {$k \mathbin{{-}{=}} 1$};
+\node [syst] (t7) [right=of t2] {$k \mathbin{{-}{=}} 1$};
 \node [proc, fill=lccong!25, right=of t3] (p8) {Set congestion};
 \node [proc, join=by cong, right=of t4] (p9) {Close queue};
 \node [term, join] (p10) {Exit trigger message thread};
