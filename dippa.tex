@@ -819,9 +819,9 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \node [syst, join] (e0) {Test case execution engine};
 \node [syst, join] (s1) {SUT};
 \node [syst, join] (e1) {Surrogate engine};
-\node [file, right=of s0] (f0) {Model};
-\node [proc, right=of f1] (p1) {Verification};
-\node [file] (f2) {Execution trace};
+\node [file, right=of s0, join] (f0) {Model};
+\node [proc, right=of f1, join] (p1) {Verification};
+\node [file, join] (f2) {Execution trace};
 \node [proc] (p2) {Trace collecting};
 \begin{comment}
 \node [proc, densely dotted, it] (p0) {New trigger message thread};
@@ -876,27 +876,29 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % we draw the arrow itself.
 \path (s0.south) to node [near start, xshift=1em] (p0);
   \draw [*->,lcnorm] (s0.south) -- (p0);
-\path (f0.south) to node [near start, xshift=1em] (p0);
-  \draw [*->,lcnorm] (f0.south) -- (p0);
 \path (p0.south) to node [near start, xshift=1em] (f1);
   \draw [*->,lcnorm] (p0.south) -- (f1); 
-\path (f1.south) to node [near start, xshift=1em] (p1);
-  \draw [*->,lcnorm] (f1.south) -- (p1);
-\path (f1.east) to node [near start, xshift=1em] (p1);
-  \draw [*->,lcnorm] (f1.east) -- (p1); 
-\path (p1.south) to node [near start, xshift=1em] (e0);
-  \draw [*->,lcnorm] (p1.south) -- (e0); 
+\path (f1.south) to node [near start, xshift=1em] (e0);
+  \draw [*->,lcnorm] (f1.south) -- (e0); 
 \path (e0.south) to node [near start, xshift=1em] (s1);
   \draw [*->,lcnorm] (e0.south) -- (s1); 
 \path (s1.south) to node [near start, xshift=1em] (e1);
   \draw [*->,lcnorm] (s1.south) -- (e1);
+
+\path (f0.south) to node [near start, xshift=1em] (p0);
+  \draw [*->,lcnorm] (f0.south) -- (p0);
+\path (f1.east) to node [near start, xshift=1em] (p1);
+  \draw [*->,lcnorm] (f1.east) -- (p1);
 \path (s1.east) to node [near start, xshift=1em] (p2);
   \draw [*->,lcnorm] (s1.east) -- (p2); 
+\path (p1.south) to node [near start, xshift=1em] (e0);
+  \draw [*->,lcnorm] (p1.south) -- (e0);
+
 \path (p2.north) to node [near start, xshift=1em] (f2);
   \draw [*->,lcnorm] (p2.north) -- (f2); 
 \path (f2.north) to node [near start, xshift=1em] (p1);
   \draw [*->,lcnorm] (f2.north) -- (p1);
-
+  
 %\path (s0.east) to node [near start, yshift=1em] {$n$} (c1); 
 %  \draw [o->,lcfree] (s0.east) -- (c1);
 
