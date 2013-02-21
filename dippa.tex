@@ -817,16 +817,16 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 
 \node [system] (s0) {Production};
 
-\node [file, join] (f0) {Model};
-\node [process, join] (p0) {Test case generation};
-\node [file] (f1) {Integration test case};
-\node [process] (p1) {Verification};
-\node [engine] (e0) {Test case execution engine};
-\node [system] (s1) {SUT};
-\node [engine] (e1) {Surrogate engine};
-\node [file] (f2) {Execution trace};
-\node [process] (p2) {Trace transformation};
-\node [process] (p3) {Trace collecting};
+\node [base, join] (f0) {Model};
+\node [proc, join] (p0) {Test case generation};
+\node [term] (f1) {Integration test case};
+\node [proc] (p1) {Verification};
+\node [syst] (e0) {Test case execution engine};
+\node [syst] (s1) {SUT};
+\node [syst] (e1) {Surrogate engine};
+\node [term,] (f2) {Execution trace};
+\node [proc] (p2) {Trace transformation};
+\node [proc] (p3) {Trace collecting};
 \begin{comment}
 \node [proc, densely dotted, it] (p0) {New trigger message thread};
 % Use join to connect a node to the previous one 
@@ -878,51 +878,53 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % First, the straight north-south connections. In each case, we first
 % draw a path with a (consistently positioned) annotation node, then
 % we draw the arrow itself.
-\path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
-  \draw [*->,lcnorm] (t1.south) -- (p2);
-\path (p0.south) to node [near start, xshift=1em] {$y$} (p1);
-  \draw [*->,lcnorm] (p0.south) -- (p1);
-\path (t2.south) to node [near start, xshift=1em] {$y$} (t3); 
-  \draw [*->,lcnorm] (t2.south) -- (t3);
-\path (t3.south) to node [near start, xshift=1em] {$y$} (t4); 
-  \draw [*->,lcnorm] (t3.south) -- (t4);
-\path (t5.south) to node [near start, xshift=1em] {$y$} (t6); 
-  \draw [*->,lcfree] (t5.south) -- (t6);
-\path (t6.south) to node [near start, xshift=1em] {$y$} (t7); 
-  \draw [*->,lcfree] (t6.south) -- (t7); 
+\path (s0.south) to node [near start, xshift=1em] {$y$} (p0);
+  \draw [*->,lcnorm] (s0.south) -- (p0);
+%\path (t1.south) to node [near start, xshift=1em] {$y$} (p2);
+%  \draw [*->,lcnorm] (t1.south) -- (p2);
+%\path (p0.south) to node [near start, xshift=1em] {$y$} (p1);
+%  \draw [*->,lcnorm] (p0.south) -- (p1);
+%\path (t2.south) to node [near start, xshift=1em] {$y$} (t3); 
+%  \draw [*->,lcnorm] (t2.south) -- (t3);
+%\path (t3.south) to node [near start, xshift=1em] {$y$} (t4); 
+%  \draw [*->,lcnorm] (t3.south) -- (t4);
+%\path (t5.south) to node [near start, xshift=1em] {$y$} (t6); 
+%  \draw [*->,lcfree] (t5.south) -- (t6);
+%\path (t6.south) to node [near start, xshift=1em] {$y$} (t7); 
+%  \draw [*->,lcfree] (t6.south) -- (t7); 
 % ------------------------------------------------- 
 % Now the straight east-west connections. To provide consistent
 % positioning of the test exit annotations, we have positioned
 % coordinates for the vertical part of the connectors. The annotation
 % text is positioned on a path to the coordinate, and then the whole
 % connector is drawn to its destination box.
-\path (t3.east) to node [near start, yshift=1em] {$n$} (c3); 
-  \draw [o->,lccong] (t3.east) -- (p8);
-\path (t4.east) to node [yshift=-1em] {$k \leq 0$} (c4r); 
-  \draw [o->,lcnorm] (t4.east) -- (p9);
+%\path (t3.east) to node [near start, yshift=1em] {$n$} (c3); 
+%  \draw [o->,lccong] (t3.east) -- (p8);
+%\path (t4.east) to node [yshift=-1em] {$k \leq 0$} (c4r); 
+%  \draw [o->,lcnorm] (t4.east) -- (p9);
 % -------------------------------------------------
 % Finally, the twisty connectors. Again, we place the annotation
 % first, then draw the connector
-\path (t1.east) to node [near start, yshift=1em] {$n$} (c1); 
-  \draw [o->,lcfree] (t1.east) -- (c1) |- (p4);
-\path (t2.east) -| node [very near start, yshift=1em] {$n$} (c1); 
-  \draw [o->,lcfree] (t2.east) -| (c1);
-\path (t4.west) to node [yshift=-1em] {$k>0$} (c4); 
-  \draw [*->,lcnorm] (t4.west) -- (c4) |- (p3);
-\path (t5.east) -| node [very near start, yshift=1em] {$n$} (c6); 
-  \draw [o->,lcfree] (t5.east) -| (c6); 
-\path (t6.east) to node [near start, yshift=1em] {$n$} (c6); 
-  \draw [o->,lcfree] (t6.east) -| (c7); 
-\path (t7.east) to node [yshift=-1em] {$k \leq 0$} (c7); 
-  \draw [o->,lcfree] (t7.east) -- (c7)  |- (p9);
-\path (t7.west) to node [yshift=-1em] {$k>0$} (c5); 
-  \draw [*->,lcfree] (t7.west) -- (c5) |- (p5);
+%\path (t1.east) to node [near start, yshift=1em] {$n$} (c1); 
+%  \draw [o->,lcfree] (t1.east) -- (c1) |- (p4);
+%\path (t2.east) -| node [very near start, yshift=1em] {$n$} (c1); 
+%  \draw [o->,lcfree] (t2.east) -| (c1);
+%\path (t4.west) to node [yshift=-1em] {$k>0$} (c4); 
+%  \draw [*->,lcnorm] (t4.west) -- (c4) |- (p3);
+%\path (t5.east) -| node [very near start, yshift=1em] {$n$} (c6); 
+%  \draw [o->,lcfree] (t5.east) -| (c6); 
+%\path (t6.east) to node [near start, yshift=1em] {$n$} (c6); 
+%  \draw [o->,lcfree] (t6.east) -| (c7); 
+%\path (t7.east) to node [yshift=-1em] {$k \leq 0$} (c7); 
+%  \draw [o->,lcfree] (t7.east) -- (c7)  |- (p9);
+%\path (t7.west) to node [yshift=-1em] {$k>0$} (c5); 
+%  \draw [*->,lcfree] (t7.west) -- (c5) |- (p5);
 % -------------------------------------------------
 % A last flourish which breaks all the rules
-\draw [->,MediumPurple4, dotted, thick, shorten >=1mm]
-  (p9.south) -- ++(5mm,-3mm)  -- ++(27mm,0) 
-  |- node [black, near end, yshift=0.75em, it]
-    {(When message + resources available)} (p0);
+%\draw [->,MediumPurple4, dotted, thick, shorten >=1mm]
+%  (p9.south) -- ++(5mm,-3mm)  -- ++(27mm,0) 
+%  |- node [black, near end, yshift=0.75em, it]
+ %   {(When message + resources available)} (p0);
 % -------------------------------------------------
 \end{tikzpicture}
 % =================================================
