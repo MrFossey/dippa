@@ -813,7 +813,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 }
 % -------------------------------------------------
 % Start by placing the nodes
-\node [syst] (s0) {Production};
+\node [syst, join] (s0) {Production};
 \node [proc, join] (p0) {Test case generation};
 \node [file, join] (f1) {Integration test case};
 \node [syst, join] (e0) {Test case execution engine};
