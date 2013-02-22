@@ -875,6 +875,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % First, the straight north-south connections. In each case, we first
 % draw a path with a (consistently positioned) annotation node, then
 % we draw the arrow itself.
+
+\begin{comment}
 \path (s0.south) to node [near start, xshift=1em] (p0);
   \draw [*->,lcnorm] (s0.south) -- (p0);
 \path (p0.south) to node [near start, xshift=1em] (f1);
@@ -885,7 +887,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
   \draw [*->,lcnorm] (e0.south) -- (s1); 
 \path (s1.south) to node [near start, xshift=1em] (e1);
   \draw [*->,lcnorm] (s1.south) -- (e1);
-\begin{comment}
+
 \path (f0.south) to node [near start, xshift=1em] (p0);
   \draw [*->,lcnorm] (f0.south) -- (p0);
 \path (f1.east) to node [near start, xshift=1em] (p1);
