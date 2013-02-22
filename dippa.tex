@@ -822,7 +822,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \node [file, right=of s0] (f0) {Model};
 \node [proc, right=of f1, join] (p1) {Verification};
 \node [file, join] (f2) {Execution trace};
-\node [proc] (p2) {Trace collecting};
+\node [proc right=of s1] (p2) {Trace collecting};
 \begin{comment}
 \node [proc, densely dotted, it] (p0) {New trigger message thread};
 % Use join to connect a node to the previous one 
