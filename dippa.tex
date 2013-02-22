@@ -723,24 +723,8 @@ frameworks contain a generator for test cases, an execution engine, a surrogate 
 simulating unavailable systems, and execution monitoring. Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
 
 % =================================================
-% Set up a few colours
-%\colorlet{lcfree}{Green3}
-%\colorlet{lcnorm}{Blue3}
-%\colorlet{lccong}{Red3}
-% -------------------------------------------------
-% Set up a new layer for the debugging marks, and make sure it is on
-% top
 \pgfdeclarelayer{marx}
 \pgfsetlayers{main,marx}
-% A macro for marking coordinates (specific to the coordinate naming
-% scheme used here). Swap the following 2 definitions to deactivate
-% marks.
-%\providecommand{\cmark}[2][]{%
-%  \begin{pgfonlayer}{marx}
-%    \node [nmark] at (c#2#1) {#2};
-%  \end{pgfonlayer}{marx}
-%  } 
-%\providecommand{\cmark}[2][]{\relax} 
 % -------------------------------------------------
 % Start the picture
 \begin{tikzpicture}[
@@ -781,6 +765,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \path [line] (f2) -- (p1);
 
 \end{tikzpicture}
+% =================================================
 
 % Thin threads, groupin into a tree (tsai et al)
 % Test data difficult to select (linnenkugel mullburg)
