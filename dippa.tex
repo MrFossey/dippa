@@ -818,8 +818,8 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 % -------------------------------------------------
 % Now we place the coordinate nodes for the connectors with angles, or
 % with annotations. We also mark them for debugging.
-\node [coord, right=of p0] (c1)  {}; %\cmark{1}   
-\node [coord, right=of e0] (c3)  {}; \cmark{3}   
+%\node [coord, right=of p0] (c1)  {}; %\cmark{1}   
+%\node [coord, right=of e0] (c3)  {}; \cmark{3}   
 %\node [coord, right=of t6] (c6)  {}; \cmark{6}   
 %\node [coord, right=of t7] (c7)  {}; \cmark{7}   
 %\node [coord, left=of t4]  (c4)  {}; \cmark{4}   
@@ -850,12 +850,18 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 
 %\path (f0.south) to node [near start, xshift=1em] (p0);
 %  \draw [*->,lcnorm] (f0.south) -- (p0);
-\path (f0.south) to node [near start, xshift=1em] (p0);
-  \draw [*->,lcnorm] (f0.south) -- (p0);
-\path (p1.west) to node [near start, xshift=1em] (e0);
-  \draw [*->,lcnorm] (p1.west) -- (e0);
+%\path (f0.south) to node [near start, xshift=1em] (p0);
+%  \draw [*->,lcnorm] (f0.south) -- (p0);
+%\path (p1.west) to node [near start, xshift=1em] (e0);
+%  \draw [*->,lcnorm] (p1.west) -- (e0);
 
+\path [line] (f0) -- (p0);
+\path [line] (f1) -- (p1);
+\path [line] (p1) -- (e0);
+\path [line] (s1) -- (p2);
 \path [line] (p2) -- (f2);
+\path [line] (f2) -- (p1);
+
   
   \begin{comment}
 \path (s1.east) to node [near start, xshift=1em] (p2);
