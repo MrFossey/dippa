@@ -738,17 +738,17 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
   sut/.style={base, circle, text width=5em},
   syst/.style={base, cylinder, shape border rotate=90,  aspect=.2, minimum height=5em, text width=5em},
   file/.style={base, rectangle, shape border rotate=90, minimum height=5em, text width=3em},
-  eng/.style={base, trapezium, trapezium left angle=70, trapezium right angle=-70, minimum height=1cm}, 
+  data/.style={base, trapezium, trapezium left angle=70, trapezium right angle=-70, minimum height=1cm}, 
   line/.style={draw, thick, -latex'}
 }
 % -------------------------------------------------
 % Placing the nodes
-\node [syst] (s0) {Production};
+\node [data] (s0) {Production};
 \node [proc] (p0) {Integration test case generation};
 \node [file] (f1) {Test case};
 \node [syst] (e0) {Test case execution engine};
 \node [sut] (s1) {SUT};
-\node [eng] (e1) {Surrogate engine};
+\node [syst] (e1) {Surrogate engine};
 \node [file, right=of s0] (f0) {Model};
 \node [proc, right=of f1] (p1) {Verification};
 \node [file, right=of e0] (f2) {Exe-cution trace};
