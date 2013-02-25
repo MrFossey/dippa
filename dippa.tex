@@ -716,13 +716,16 @@ In particular researchers advocate the creation of a call graph \citep{leung1990
 The graph can serve as a foundation for setting test coverage criteria and strategy or test case creation 
 \citep{benz2007combining, hura2011method, linnenkugel1990test}. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
-\section{Piecing together a testing framework}
+\chapter{Piecing together a testing framework}
+\label{chapter:framework}
 
 \citet{huang2008surrogate} and \citet{liu2009unified} offer a unified testing framework for testing integration. The 
 frameworks contain a generator for test cases, an execution engine, a surrogate engine 
 simulating unavailable systems, and execution monitoring. Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
 
-The figure below synthesizes integration testing theories and techniques introduced in the chapter. The model is based on the \citet{liu2009unified} unified testing framework model and adapted to Wärtsilä's integration testing needs. 
+The figure below synthesizes integration testing theories and techniques introduced in the chapter. The model is based on the \citet{liu2009unified} unified testing framework model and adapted to Wärtsilä's integration testing needs. The model is technology-agnostic, and only presents the steps, systems, and processes required on an abstract level.
+
+First off, production records are used for the genration of new test cases. This means that there must be some way to capture and record behaviour in the production environment and save the information in a database. In the generation step, the records are turned into an executable test case. The cases are then run by a testing engine. Different types of services must be turned into cases in a way that the engine can run them. 
 
 \begin{figure}
 \centering
