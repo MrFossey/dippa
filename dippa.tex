@@ -728,6 +728,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \pgfdeclarelayer{marx}
 \pgfsetlayers{main,marx}
 \xdefinecolor{lightgrey}{RGB}{220,220,220}
+\xdefinecolor{blackish}{RGB}{20,20,20}
 % -------------------------------------------------
 % Start the picture
 \begin{tikzpicture}[
@@ -738,7 +739,7 @@ simulating unavailable systems, and execution monitoring. Both frameworks are gr
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, minimum height=4em, text width=7em},
-  sut/.style={base, circle, text width=5em},
+  sut/.style={base, circle, text width=5em, fill = black},
   syst/.style={base, cylinder, shape border rotate=90,  aspect=.2, minimum height=5em, text width=5em},
   file/.style={base, rectangle, shape border rotate=90, minimum height=5em, text width=3em, fill = lightgrey},
   data/.style={base, trapezium, trapezium left angle=70, trapezium right angle=-70, minimum height=1cm}, 
