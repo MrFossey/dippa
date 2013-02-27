@@ -635,29 +635,31 @@ Huang et al's model, a precursor to the authors unified testing framework presen
 This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in general in respect to frameworks. Then the requirements for the framework are defined. Next, the framework's testing process and outcomes . The final subchapter looks at common integration testing pitfalls and how they can be avoided.
 
 Funnel.
-\begin{tikzpicture}
-    % \draw[semithick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
+\begin{figure}
+\centering
+\begin{tikzpicture} [
+   start chain=going below,    % General flow is top-to-bottom
+    node distance=6mm and 50mm, % Global setup of box spacing
+    ]
+% ------------------------------------------------- 
+\tikzset{
+  base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
+  rect/.style={base, rectangle, minimum height=4em, text width=7em},
+  line/.style={draw, thick, -latex'}
+}
+
     \draw[semithick] (0,0) ellipse (4 and 0.5);
     \draw[semithick] (4,0) -- (1,-7);
     \draw[semithick] (-4,0) -- (-1,-7);
     \draw[dashed,color=gray] (-1,-7) arc (180:0:1 and 0.25);% right half of the left ellipse
     \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25);% left half of the left ellipse
-    \node
     
-    \begin{comment}
-    \draw[dashed,color=gray] (-1,0) arc (-180:0:2.5 and 2.5);% right half of the left ellipse
-	\draw[semithick] (0,0) -- (1,4);% bottom line
-	\draw[semithick] (0,3) -- (2,4);% top line
-	\draw[semithick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
-
-	\draw (-1,1.5) node {$\varnothing d_1$};
-	\draw (3.3,1.5) node {$\varnothing d_2$};
-	\draw[|-,semithick] (0,-0.5) -- (4,-0.5);
-	\draw[|->,semithick] (4,-0.5) -- (4.5,-0.5);
-	\draw (0,-1) node {$x=0$};
-	\draw (4,-1) node {$x=l$};
-    \end{comment}
+    \node [rect] (stg) {Strategy};
+    \node [rect] (fmw) {Framework};
+    \path [line] (stg) -- (fmw); 
+    
 \end{tikzpicture}
+\end{figure}
 
 % Framework
 % Integration and testing strategy
