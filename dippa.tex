@@ -632,9 +632,22 @@ The \citet{liu2009unified} model covers test case generation, case execution, an
 
 Huang et al's model, a precursor to the authors unified testing framework presented above, is more concerned with the testing environment arrangements, but \ref{fig:huang} already shows a clear framework structure spanning from test case generation to verification of functionality. 
 
-This chapter explores the theoretical base for a framewor. First it examines integration and testing strategies in general in respect to frameworks. Then the requirements for the framework are defined. Next, the framework's testing process and outcomes . The final subchapter looks at common integration testing pitfalls and how they can be avoided. 
+This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in general in respect to frameworks. Then the requirements for the framework are defined. Next, the framework's testing process and outcomes . The final subchapter looks at common integration testing pitfalls and how they can be avoided.
 
 Funnel.
+\begin{tikzpicture}
+    \draw[dashed,color=gray] (0,0) arc (-90:90:0.5 and 1.5);% right half of the left ellipse
+	\draw[semithick] (0,0) -- (4,1);% bottom line
+	\draw[semithick] (0,3) -- (4,2);% top line
+	\draw[semithick] (0,0) arc (270:90:0.5 and 1.5);% left half of the left ellipse
+	\draw[semithick] (4,1.5) ellipse (0.166 and 0.5);% right ellipse
+	\draw (-1,1.5) node {$\varnothing d_1$};
+	\draw (3.3,1.5) node {$\varnothing d_2$};
+	\draw[|-,semithick] (0,-0.5) -- (4,-0.5);
+	\draw[|->,semithick] (4,-0.5) -- (4.5,-0.5);
+	\draw (0,-1) node {$x=0$};
+	\draw (4,-1) node {$x=l$};
+\end{tikzpicture}
 
 % Framework
 % Integration and testing strategy
@@ -642,16 +655,8 @@ Funnel.
 % Testing process - verification, the framework verifying non-functionalities
 % Testing outcome
 % Testing pitfalls
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Testing framework synthesis
-
-Testing is an essential part of software engineering. Without a degree of confidence of sound operation and functional integrity, systems accumulate great risk and may ultimately produce more harm than benefit. Controlled testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risks involved in IT applications and services.
-
-% TODO add references above chapters
-Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
-
-% What to test
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
 % testing strategy
 \section{Testing strategy}
@@ -665,6 +670,15 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 
 % introduction of stubs and drivers
 Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+
+
+Testing is an essential part of software engineering. Without a degree of confidence of sound operation and functional integrity, systems accumulate great risk and may ultimately produce more harm than benefit. Controlled testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risks involved in IT applications and services.
+
+% TODO add references above chapters
+Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
+
+% What to test
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
 % Out of scope?
 \section{Integration testing pitfalls}
