@@ -655,10 +655,11 @@ Funnel.
     \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25);
     
     \node [rect] (stg) {Strategy};
-    \node [rect, right=of stg] (fmw) {Framework};
     \node [rect] (req) {Requirements};
     \node [rect] (prc) {Process};
     \node [rect] (out) {Outcomes};
+    \node [rect, right=of stg] (fmw) {Framework};
+    
     \path [line] (stg) -- (fmw); 
     \path [line] (req) -- (prc);
     \path [line] (prc) -- (out); 
