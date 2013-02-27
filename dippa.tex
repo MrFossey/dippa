@@ -656,7 +656,13 @@ Funnel.
     
     \node [rect] (stg) {Strategy};
     \node [rect] (fmw) {Framework};
+    \node [rect] (req) {Requirements};
+    \node [rect] (prc) {Process};
+    \node [rect] (out) {Outcomes};
     \path [line] (stg) -- (fmw); 
+    \path [line] (req) -- (prc);
+    \path [line] (prc) -- (out); 
+    
     
 \end{tikzpicture}
 \end{figure}
