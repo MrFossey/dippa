@@ -644,7 +644,7 @@ Funnel.
 % ------------------------------------------------- 
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
-  rect/.style={base, rectangle, minimum height=4em, text width=7em},
+  rect/.style={base, rectangle, minimum height=2em, text width=5em},
   line/.style={draw, thick, -latex'}
 }
 
@@ -655,7 +655,7 @@ Funnel.
     \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25);
     
     \node [rect] (stg) {Strategy};
-    \node [rect right of=stg] (fmw) {Framework};
+    \node [rect right=of stg] (fmw) {Framework};
     \node [rect] (req) {Requirements};
     \node [rect] (prc) {Process};
     \node [rect] (out) {Outcomes};
