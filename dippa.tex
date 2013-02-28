@@ -650,12 +650,12 @@ Funnel.
 % ------------------------------------------------- 
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
-  rect/.style={base, rectangle, minimum height=2em, text width=5em},
+  rect/.style={base, rectangle, minimum height=2em, text width=6em},
   line/.style={draw, thick, -latex'}
 }
 
-    \node [rect, xshift=-1.3cm, yshift=1.5cm] (stg) {Strategy};
-    \node [rect, xshift=1.3cm, yshift=0.25cm] (req) {Requirements};
+    \node [rect, xshift=-1.5cm, yshift=1.5cm] (stg) {Strategy};
+    \node [rect, xshift=1.5cm, yshift=0.25cm] (req) {Requirements};
     \node [rect, yshift=-0.75cm] (prc) {Process};
     \node [rect, yshift=-1.4cm] (out) {Outcomes};
     \node [rect, right=of stg, fill= white] (fmw) {Framework};
