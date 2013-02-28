@@ -657,11 +657,11 @@ Funnel.
 }
 
    % \draw[semithick] (0,0) ellipse (4 and 0.5); % funnel top
-    \node [rect] (stg) {Strategy};
-  \node [rect] (req) {Requirements};
+    \node [rect, xshift=-2.0cm] (stg) {Strategy};
+    \node [rect] (req) {Requirements};
     \node [rect] (prc) {Process};
     \node [rect] (out) {Outcomes};
-     \node [rect, right=of stg, fill= white] (fmw) {Framework};
+    \node [rect, right=of stg, fill= white] (fmw) {Framework};
      
     \draw[semithick] (-4,0) arc (180:0:4 and 0.5);                  % top ellipse top arc
 
