@@ -119,7 +119,7 @@
 % are better options for those too)
 % </rant>
 
-\usepackage{tgcursor}
+%\usepackage{tgcursor}
 
 %\usepackage{nimbus}
 %\usepackage[scaled]{helvet}
@@ -660,13 +660,13 @@ Funnel.
     \node [rect, yshift=-2.0cm] (out) {Outcomes};
     \node [rect, right=of stg, fill= white] (fmw) {Framework};
      
-    \draw[semithick] (-4,0) arc (180:0:3 and 0.5);                  % top ellipse top arc
+    \draw[semithick] (-3,0) arc (180:0:3 and 0.5);                  % top ellipse top arc
 
-    \draw[dashed,color=gray] (-1,-7) arc (180:0:1 and 0.25);        % bottom ellipse top arc
-    \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25);               % bottom ellipse bottom arc
-    \draw[semithick] (-4,0) arc (-180:0:3 and 0.5);                 % top ellipse bottom arc
-    \draw[semithick] (4,0) -- (1,-7);                               % funnel right side
-    \draw[semithick] (-4,0) -- (-1,-7);                             % funnel left side
+    \draw[dashed,color=gray] (-1,-5) arc (180:0:1 and 0.25);        % bottom ellipse top arc
+    \draw[semithick] (-1,-5) arc (-180:0:1 and 0.25);               % bottom ellipse bottom arc
+    \draw[semithick] (-3,0) arc (-180:0:3 and 0.5);                 % top ellipse bottom arc
+    \draw[semithick] (3,0) -- (1,-5);                               % funnel right side
+    \draw[semithick] (-3,0) -- (-1,-5);                             % funnel left side
     
     \path [line] (stg) -- (fmw);
     \path [line] (fmw) -- (stg);
