@@ -667,7 +667,7 @@ Funnel.
     \draw[semithick] (-3,0) arc (-180:0:3 and 0.5);                 % top ellipse bottom arc
     \draw[semithick] (3,0) -- (1,-5);                               % funnel right side
     \draw[semithick] (-3,0) -- (-1,-5);                             % funnel left side
-    
+    \path [line] (fmw) -- (req);
     \path [line] (stg) -- (fmw);
     \path [line] (fmw) -- (stg);
     \path [line] (req) -- (prc);
