@@ -660,7 +660,7 @@ Funnel.
     \node [rect, yshift=-1.4cm] (out) {Outcomes};
     \node [rect, right=of stg] (fmw) {Framework};
     \node [rect, right=of out] (pit) {Pitfalls};
-     
+    
     \draw[semithick] (-3,0) arc (180:0:3 and 0.5);                  % top ellipse top arc
 
     \draw[dashed,color=gray] (-1,-5) arc (180:0:1 and 0.25);        % bottom ellipse top arc
@@ -671,7 +671,7 @@ Funnel.
    
     \path [line] (stg) -- (fmw);
     \path [line] (fmw) -- (stg);
-     \path [line] (fmw) -- (req);
+    \path [line] (fmw) -- (req);
     \path [line] (req) -- (prc);
     \path [line] (prc) -- (out); 
 
