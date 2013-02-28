@@ -673,7 +673,8 @@ Funnel.
     \draw[semithick] (4,0) -- (1,-7);                               % funnel right side
     \draw[semithick] (-4,0) -- (-1,-7);                             % funnel left side
     
-    \path [line] (stg) -- (fmw); 
+    \path [line] (stg) -- (fmw);
+    \path [line] (fmw) -- (stg);
     \path [line] (req) -- (prc);
     \path [line] (prc) -- (out); 
 
