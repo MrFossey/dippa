@@ -659,7 +659,7 @@ Funnel.
    % \draw[semithick] (0,0) ellipse (4 and 0.5); % funnel top
    
     \draw[semithick] (-4,0) arc (180:0:4 and 0.5);                  % top ellipse top arc
-    \draw[semithick] (-4,0) arc (-180:0:4 and 0.5);                 % top ellipse bottom arc
+   
    
     \draw[semithick] (4,0) -- (1,-7);                               % funnel right side
     \draw[semithick] (-4,0) -- (-1,-7);                             % funnel left side
@@ -671,7 +671,7 @@ Funnel.
     \node [rect] (prc) {Process};
     \node [rect] (out) {Outcomes};
     \node [rect, right=of stg, fill= white] (fmw) {Framework};
-    
+    \draw[semithick] (-4,0) arc (-180:0:4 and 0.5);                 % top ellipse bottom arc
     \path [line] (stg) -- (fmw); 
     \path [line] (req) -- (prc);
     \path [line] (prc) -- (out); 
