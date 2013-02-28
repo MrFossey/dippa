@@ -656,11 +656,15 @@ Funnel.
   line/.style={draw, thick, -latex'}
 }
 
-    \draw[semithick] (0,0) ellipse (4 and 0.5);
-    \draw[semithick] (4,0) -- (1,-7);
-    \draw[semithick] (-4,0) -- (-1,-7);
-    \draw[dashed,color=gray] (-1,-7) arc (180:0:1 and 0.25);
-    \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25);
+   % \draw[semithick] (0,0) ellipse (4 and 0.5); % funnel top
+   
+    \draw[semithick] (0,0) arc (180:0:4 and 0.5); % bottom ellipse top arc
+    \draw[semithick] (0,0) arc (-180:0:4 and 0.5); % bottom ellipse bottom arc
+   
+   \draw[semithick] (4,0) -- (1,-7); % funnel right side
+    \draw[semithick] (-4,0) -- (-1,-7); % funnel left side
+    \draw[dashed,color=gray] (-1,-7) arc (180:0:1 and 0.25); % bottom ellipse top arc
+    \draw[semithick] (-1,-7) arc (-180:0:1 and 0.25); % bottom ellipse bottom arc
     
     \node [rect] (stg) {Strategy};
     \node [rect] (req) {Requirements};
