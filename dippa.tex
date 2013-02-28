@@ -645,7 +645,7 @@ Funnel.
 \centering
 \begin{tikzpicture} [
    start chain=going below,    % General flow is top-to-bottom
-    node distance=10mm and 50mm, % Global setup of box spacing
+    node distance=10mm and 40mm, % Global setup of box spacing
     ]
 % ------------------------------------------------- 
 \tikzset{
@@ -654,7 +654,7 @@ Funnel.
   line/.style={draw, thick, -latex'}
 }
 
-    \node [rect, xshift=-1.5cm, yshift=1.5cm] (stg) {Strategy};
+    \node [rect, xshift=-2.0cm, yshift=1.5cm] (stg) {Strategy};
     \node [rect, xshift=1.5cm, yshift=0.25cm] (req) {Requirements};
     \node [rect, yshift=-0.75cm] (prc) {Process};
     \node [rect, yshift=-1.4cm] (out) {Outcomes};
