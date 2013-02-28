@@ -85,6 +85,10 @@
 % of rendered bitmaps). You can do this by zooming very close to any letter
 % - if the letter is shown pixelated, you should change this setting
 % (try commenting out the entire line, for example).
+
+\renewcommand*\sfdefault{uop}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
 \usepackage[OT1]{fontenc}
 % The babel package provides hyphenating instructions for LaTeX. Give
 % the languages you wish to use in your thesis as options to the babel
@@ -122,7 +126,7 @@
 % \usepackage{palatino}
 % \usepackage{tgpagella}
 % \usepackage[bitstream-charter]{mathdesign}
-\renewcommand*\sfdefault{uop}
+
 
 % Optional packages
 % ------------------------------------------------------------------
