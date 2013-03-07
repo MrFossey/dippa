@@ -625,13 +625,13 @@ Wärtsilä's business relies on over 50 different systems, which are intersected
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   rect/.style={base, rectangle, minimum height=2em, text width=6em},
-  bus/.style={base, rectangle, minimum width=25em, text width=8em},
+  bus/.style={base, rectangle, minimum width=40em, text width=8em},
   line/.style={draw, thick, -latex'},
 }
 
     \node [rect, xshift=1.25cm] (s1) {Service 1};
     \node [bus] (esb) {ESB};
-    \node [rect, xshift=-1.25cm] (s2) {Service 2};
+    \node [rect, xshift=-3.25cm] (s2) {Service 2};
     \node [rect, right=of s2] (s3) {Service 3};
     \node [rect, right=of s3] (s4) {Service 4};
       
