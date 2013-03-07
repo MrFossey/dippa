@@ -633,24 +633,24 @@ Wärtsilä's business relies on over 50 different systems, which are intersected
     \node [bus] (esb) {ESB};
   
     \node [rect, xshift=-4.00cm] (s21) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s2.2) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s2.3) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 2}] (s2.4) {Service};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s22) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s23) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 2}] (s24) {Service};
     
-    \node [rect, right=of s21] (s3.1) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s3.2) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s3.3) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 3}] (s3.4) {Service};
+    \node [rect, right=of s21] (s31) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s32) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s33) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 3}] (s34) {Service};
     
-    \node [rect, right=of s3.1] (s4.1) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s4.2) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s4.3) {};
-    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 4}] (s4.4) {Service};
+    \node [rect, right=of s31] (s41) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s42) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white] (s43) {};
+    \node [rect, xshift=0.25cm, yshift=1.25cm, fill=white, label=below:{System 4}] (s44) {Service};
   
     \path [line] (s1) -- (esb);
-    \path [line] (s2.1) -- (esb);
-    \path [line] (s3.1) -- (esb);
-    \path [line] (s4.1) -- (esb);
+    \path [line] (s21) -- (esb);
+    \path [line] (s31) -- (esb);
+    \path [line] (s41) -- (esb);
     
 \end{tikzpicture}
 \caption{SOA architecture} \label{fig:soa}
