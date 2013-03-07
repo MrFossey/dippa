@@ -728,6 +728,15 @@ Funnel.
     \path [line] (tcs) -- (exe);
     \path [line] (exe) -- (out);
     
+    \path [line] (exe) -- (prc);
+    \path [line] (prc) -- (exe);
+    
+    \path [line] (req) -- (tcs);
+    \path [line] (tcs) -- (req);
+    
+    \path [line] (rlt) -- (out);
+    \path [line] (out) -- (rlt);
+    
     
 
 \end{tikzpicture}
