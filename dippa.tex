@@ -657,7 +657,9 @@ Huang et al's model, a precursor to the authors unified testing framework presen
 \end{figure}
 
 In Laukkanen's model testing is divided into modules for test design, test execution, and test monitoring.
-Where the two first models essentially depict a testing loop and treat continuous testing as implicit, Laukkanen's model instead offers a monitoring step which overlays verification processes. A view to system status and health is more clearly seprated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. Laukkanen's model supports the notion that a full framwork should contain tools for test case generation, test execution, and verification/monitoring.
+Where the two first models essentially depict a testing loop and treat continuous testing as implicit, Laukkanen's model instead offers a monitoring step which overlays verification processes. A view to system status and health is more clearly seprated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. Laukkanen's model supports the notion that a full framework should contain tools for test case generation, test execution, and verification/monitoring.
+
+
 
 
 
@@ -680,7 +682,7 @@ Funnel.
 \centering
 \begin{tikzpicture} [
    start chain=going below,         % General flow is top-to-bottom
-    node distance=10mm and 40mm,    % Global setup of box spacing
+    node distance=10mm and 70mm,    % Global setup of box spacing
     ]
 % ------------------------------------------------- 
 \tikzset{
@@ -690,25 +692,36 @@ Funnel.
 }
 
     \node [rect, xshift=-2.0cm, yshift=1.5cm] (stg) {Strategy};
-    \node [rect, xshift=2.0cm, yshift=0.25cm] (req) {Requirements \& input};
-    \node [rect, yshift=-0.75cm] (prc) {Testing execution};
-    \node [rect, yshift=-1.4cm] (out) {Testing outcomes};
+    \node [rect, xshift=-2.0cm, yshift=0.25cm] (req) {Requirements \& input};
+    \node [rect, yshift=-0.75cm] (prc) {Process};
+    \node [rect, yshift=-1.4cm] (rlt) {Results};
+    
     \node [rect, right=of stg] (fmw) {Framework};
+    \node [rect, right=of req] (tcs) {Test cases};
+    \node [rect, right=of prc] (exe) {Testing execution};
+    \node [rect, right=of rlt] (out) {Testing outcomes};
+    
     \node [rect, right=of out] (pit) {Pitfalls};
     
-    \draw[semithick] (-3,0) arc (180:0:3 and 0.5);                  % top ellipse top arc
-
-    \draw[dashed,color=gray] (-1,-5) arc (180:0:1 and 0.25);        % bottom ellipse top arc
-    \draw[semithick] (-1,-5) arc (-180:0:1 and 0.25);               % bottom ellipse bottom arc
-    \draw[semithick] (-3,0) arc (-180:0:3 and 0.5);                 % top ellipse bottom arc
-    \draw[semithick] (3,0) -- (1,-5);                               % funnel right side
-    \draw[semithick] (-3,0) -- (-1,-5);                             % funnel left side
+    \draw[semithick] (-3,0) arc (180:0:3 and 0.5);                  % cone 1: top ellipse top arc
+    \draw[dashed,color=gray] (-1,-5) arc (180:0:1 and 0.25);        % cone 1: bottom ellipse top arc
+    \draw[semithick] (-1,-5) arc (-180:0:1 and 0.25);               % cone 1: bottom ellipse bottom arc
+    \draw[semithick] (-3,0) arc (-180:0:3 and 0.5);                 % cone 1: top ellipse bottom arc
+    \draw[semithick] (3,0) -- (1,-5);                               % cone 1: right side
+    \draw[semithick] (-3,0) -- (-1,-5);                             % cone 1: left side
    
     \path [line] (stg) -- (fmw);
     \path [line] (fmw) -- (stg);
-    \path [line] (fmw) -- (req);
+    ,
+    \path [line] (stg) -- (req);
     \path [line] (req) -- (prc);
-    \path [line] (prc) -- (out); 
+    \path [line] (prc) -- (rlt);
+    
+    \path [line] (fmw) -- (tcs);
+    \path [line] (tcs) -- (exe);
+    \path [line] (exe) -- (out);
+    
+    
 
 \end{tikzpicture}
 \caption{Framework founding funnel} \label{fig:funnel}
