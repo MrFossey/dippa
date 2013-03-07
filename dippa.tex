@@ -692,7 +692,7 @@ Funnel.
 }
 
     \node [rect, xshift=-2.0cm, yshift=1.5cm] (stg) {Strategy};
-    \node [rect, xshift=-2.0cm, yshift=0.25cm] (req) {Requirements \& input};
+    \node [rect, yshift=0.25cm] (req) {Requirements \& input};
     \node [rect, yshift=-0.75cm] (prc) {Process};
     \node [rect, yshift=-1.4cm] (rlt) {Results};
     
@@ -703,12 +703,12 @@ Funnel.
     
     \node [rect, right=of out] (pit) {Pitfalls};
     
-    \draw[semithick] (-3,0) arc (180:0:3 and 0.5);                  % cone 1: top ellipse top arc
+    \draw[semithick] (-5,0) arc (180:0:5 and 0.5);                  % cone 1: top ellipse top arc
     \draw[dashed,color=gray] (-1,-5) arc (180:0:1 and 0.25);        % cone 1: bottom ellipse top arc
     \draw[semithick] (-1,-5) arc (-180:0:1 and 0.25);               % cone 1: bottom ellipse bottom arc
-    \draw[semithick] (-3,0) arc (-180:0:3 and 0.5);                 % cone 1: top ellipse bottom arc
-    \draw[semithick] (3,0) -- (1,-5);                               % cone 1: right side
-    \draw[semithick] (-3,0) -- (-1,-5);                             % cone 1: left side
+    \draw[semithick] (-5,0) arc (-180:0:5 and 0.5);                 % cone 1: top ellipse bottom arc
+    \draw[semithick] (5,0) -- (1,-5);                               % cone 1: right side
+    \draw[semithick] (-5,0) -- (-1,-5);                             % cone 1: left side
    
     \path [line] (stg) -- (fmw);
     \path [line] (fmw) -- (stg);
