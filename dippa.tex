@@ -689,7 +689,7 @@ Funnel.
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   rect/.style={base, rectangle, minimum height=2em, text width=6em},
   line/.style={draw, thick, -latex'}
-  line2/.style={draw, dotted, -latex'}
+  test/.style={draw, dotted, -latex'}
 }
 
     \node [rect, xshift=-2.0cm, yshift=1.5cm] (stg) {Strategy};
@@ -729,14 +729,14 @@ Funnel.
     \path [line] (tcs) -- (exe);
     \path [line] (exe) -- (out);
     
-    \path [line2] (exe) -- (prc);
-    \path [line2] (prc) -- (exe);
+    \path [test] (exe) -- (prc);
+    \path [test] (prc) -- (exe);
     
-    \path [line2] (req) -- (tcs);
-    \path [line2] (tcs) -- (req);
+    \path [test] (req) -- (tcs);
+    \path [test] (tcs) -- (req);
     
-    \path [line2] (rlt) -- (out);
-    \path [line2] (out) -- (rlt);
+    \path [test] (rlt) -- (out);
+    \path [test] (out) -- (rlt);
     
 
 \end{tikzpicture}
