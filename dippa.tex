@@ -612,13 +612,12 @@ The empirical part of the study evaluates a limited set of testing frameworks an
 The general reasons for testing automation.
 Why is integration testing important
 
-
 Wärtsilä's business relies on over 50 different systems, which are intersected by information exchange processes. The process chains depend on many different systems, for example ERP, PDM, CRM, warehouse control, and financial systems. The architeture is built on the service-orientation principle (SOA) where individual systems lend themselves to be called by other services through a shared channel, the enterprise service bus (ESB).
 
 \begin{figure}
 \centering
 \begin{tikzpicture} [
-   start chain=going below,         % General flow is top-to-bottom
+   start chain=going below,        % General flow is top-to-bottom
     node distance=4mm and 40mm,    % Global setup of box spacing
     ]
 % ------------------------------------------------- 
@@ -660,16 +659,9 @@ The ESB
 
 <Wärtsilä's SOA arhitecture>
 
-
-
 In a recent ERP update effort it became clear to Wärtsilä that testing is a time-consuming effort and that a framework guiding the testing process and automating a part of it could significantly reduce costs and risks. 
 
-
-
-
 Move general stuff about testing here?
-
-
 
 \chapter{Looking for a testing framework}
 \label{chapter:integration testing} % TODO
