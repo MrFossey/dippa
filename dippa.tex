@@ -621,15 +621,14 @@ The empirical part of the study evaluates a limited set of testing frameworks an
 \chapter{Research background}
 \label{chapter:background}
 
+%The general reasons for testing automation.
 The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The general reasons for testing automation are improving software quality and cost-efficiency: harnessing the power of computers helps expedite the testing process as well as reduce the amount of manual work. \citep{laukkanen2006data}
 
-Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing resonsibilities to the supplier, while solution integration remains Wärtsilä's concern and responsiblity. A flexible and well-defined process framework can serve many development projects to come.
-
-Wärtsilä's business rests on over 50 different systems, which are intersected by information exchange processes. These process chains depend on many different systems, for example ERP, PDM, CRM, warehouse control, and financial systems. The system architeture is built on the service-orientation principle (SOA) where individual systems lend their services to be called by other systems' services through a shared channel, the enterprise service bus (ESB). Adapters and application programming interfaces (APIs) provide a means to access and use systems irrespective of their internal composition. This permits adding new services and replacing or removing old ones incrementally, but does not remove the challenges related to testing. Any change in even one of the systems can potential disrupt one or more process paths. 
-components and interoperability
-%Fews
-T%he general reasons for testing automation.
 %Why is integration testing important
+Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing resonsibilities to the supplier, while solution integration remains Wärtsilä's concern and responsiblity. A flexible and well-defined process framework can serve many development projects to come. To date, there have been cases with unnecessary duplicate work. In a recent ERP update effort it became clear to Wärtsilä that testing is a time-consuming effort and that a framework guiding the testing process and automating a part of it could significantly reduce costs and risks.
+
+Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, CRM, warehouse control, and financial systems, which are intersected by information exchange processes. The system architeture is built on the service-orientation principle (SOA) where individual systems or software components lend their services to be called by other systems' services through a shared channel, the enterprise service bus (ESB). Adapters and application programming interfaces (APIs) provide a means to access and use systems irrespective of their internal composition. This permits adding new services and replacing or removing old ones incrementally, but does not remove the challenges related to testing. Any change in even one of the systems can potential disrupt one or more process chains. 
+components and interoperability.
 
 \begin{figure}
 \centering
@@ -644,7 +643,6 @@ T%he general reasons for testing automation.
   bus/.style={base, rectangle, minimum width=30em, text width=8em},
   line/.style={draw, thick, -latex'},
 }
-
     \node [rect, xshift=1.25cm] (s1) {Service 1};
     \node [bus] (esb) {ESB};
   
@@ -672,18 +670,19 @@ T%he general reasons for testing automation.
 \caption{Service-oriented architecture} \label{fig:soa}
 \end{figure}
 
-The ESB 
-
-<Wärtsilä's SOA arhitecture>
-
-In a recent ERP update effort it became clear to Wärtsilä that testing is a time-consuming effort and that a framework guiding the testing process and automating a part of it could significantly reduce costs and risks. 
-
 Move general stuff about testing here?
 
 \chapter{Looking for a testing framework}
 \label{chapter:integration testing} % TODO
 
-From an IT or software perspective, a framework is sometimes understood as a technology or library intended for a purpose \citep{johnson1988designing}. In the scope of this thesis, the framework concept is extended to the overall process workflow related to (integration) testing. While a technology may be a part of the framework, the framework itself is technology-agnostic and only sets requirements for functionality. \citet{liu2009unified), \citet{huang2008surrogate}, and \citet{laukkanen2006data} present frameworks that span the integration testing process start to end. These are presented in figures \ref{fig:liu}, \ref{fig:huang}, and \ref{fig:laukkanen}. The models show that in actuality, frameworks combine different tools for different steps along the workflow chain.
+This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in respect to frameworks. The thesis asserts that testing strategy and framework selection are inseparable in that strategy determines the general testing approach, but the technical limitations of frameworks impose restrictions on strategy employed, too. To reasonable degree, a framework should be flexible enough to adapt to individual project needs. After a framework \emph{is} selected the requirements for the framework are defined. Next, the framework's testing process is implemented. Finally, outcomes of testing are collected. The final subchapter looks at common integration testing pitfalls and how they can be avoided.
+% no single test auomation solution M. Fewster and D. Graham. Software Test Automation. Addison-Wesley, 1999.
+
+\section{What is a testing framework?}
+
+From an IT or software perspective, a framework is understood as an abstract technology or library intended for a purpose \citep{johnson1988designing}. In the scope of this thesis, the framework concept is extended to the overall process workflow related to (integration) testing. While a technology may be a part of the framework, the framework itself is technology-agnostic and only sets requirements for functionality. 
+
+\citet{liu2009unified), \citet{huang2008surrogate}, and \citet{laukkanen2006data} present frameworks that span the integration testing process start to end. These are presented in figures \ref{fig:liu}, \ref{fig:huang}, and \ref{fig:laukkanen}. The models show that in actuality, frameworks combine different tools for different steps along the workflow chain.
 
 \begin{figure}[ht]
   \begin{center}
@@ -714,17 +713,11 @@ Huang et al's model, a precursor to the authors unified testing framework presen
 \end{figure}
 
 In Laukkanen's model testing is divided into modules for test design, test execution, and test monitoring.
-Where the two first models essentially depict a testing loop and treat continuous testing as implicit, Laukkanen's model instead offers a monitoring step which overlays verification processes. A view to system status and health is more clearly seprated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. Laukkanen's model supports the notion that a full framework should contain tools for test case generation, test execution, and verification/monitoring.
+Where the two first models essentially depict a loop and treat continuous testing as implicit, Laukkanen's model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly seprated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. Laukkanen's model supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
 
+Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction. Testing objectives and the general approach are defined in a testing plan or strategy. Typically, a plan includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}}}. Strategy is turned to a framework
 
-
-
-
-This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in respect to frameworks. The thesis asserts that testing strategy and framework selection are inseparable in that strategy determines the general framework composition, but the technical limitations of frameworks impose restrictions on strategy employed, too. After a framework \emph{is} selected the requirements for the framework are defined. Next, the framework's testing process is implemented. Finally, outcomes of testing are collected. The final subchapter looks at common integration testing pitfalls and how they can be avoided.
-
-no single test auomation solution M. Fewster and D. Graham. Software Test Automation. Addison-Wesley, 1999.
-
-\ref{fig:funnel} presents a testing framework wireframe divided to four parts. Testing objectives and the general approach are defined in a testing plan or strategy. Typically, a plan includes ... (reference). The reason the framework definition and strategy are part of the figure is because they not only affect structure, but the way the framework is used.
+ The reason the framework definition and strategy are part of the figure is because they not only affect structure, but the way the framework is used.
 
 Requirements are generally set by specifications of functionality or agreements on e.g. security policy or service level. The teting process also requires an executable set of test cases, which should be constructed with regard to the stratey scope. These can be derived (even autmatically) from formally structured models or specifications. Inputs comprise any other assets needed to start the testing process.
 
