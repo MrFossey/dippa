@@ -717,11 +717,11 @@ Where the two first models essentially depict a loop and treat continuous testin
 
 Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction (horizontal dimension) and on a process dimension (vertical). Starting from the right, general testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosynchracies. 
 
-The case specific use of the framework is determined by a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically everytime a change is committed to system source code. This approach is called continuous integration (CI). 
+The case specific use of the framework is determined by specifications or agreements, e.g. on security policy or service level, and a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically everytime a change is committed to system source code. This approach is called continuous integration (CI). 
 
-On the final level are physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form. On the vertical process dimension, each framework abstracton takes some input which it refines into an outcome or deliverable.
+On the final level are physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form. These should be constructed with regard to the chosen stratey and framework scope. 
 
-Requirements are generally set by specifications of functionality or agreements on e.g. security policy or service level. The teting process also requires an executable set of test cases, which should be constructed with regard to the stratey scope. These can be derived (even autmatically) from formally structured models or specifications. Inputs comprise any other assets needed to start the testing process.
+The vertical dimension, presented as a tapering funnels, depict the process dimension. Eech framework abstracton takes some input which it refines into an outcome or deliverable.
 
 %Pace of integration, rate of automation 
 
