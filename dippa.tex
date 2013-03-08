@@ -715,21 +715,15 @@ Huang et al's model, a precursor to the authors unified testing framework presen
 In Laukkanen's model testing is divided into modules for test design, test execution, and test monitoring.
 Where the two first models essentially depict a loop and treat continuous testing as implicit, Laukkanen's model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly seprated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. Laukkanen's model supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
 
-Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction. General testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosynchracies. The case specific use of the framework is determined by a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically everytime a change is committed to system source code. This approach is called continuous integration (CI). On the final level are physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form.
+Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction (horizontal dimension) and on a process dimension (vertical). Starting from the right, general testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosynchracies. 
 
-On the vertical process dimension, each framework abstracton takes some input which it refines into an outcome or deliverable.
+The case specific use of the framework is determined by a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically everytime a change is committed to system source code. This approach is called continuous integration (CI). 
 
-
-
-The reason the framework definition and strategy are part of the figure is because they not only affect structure, but the way the framework is used.
+On the final level are physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form. On the vertical process dimension, each framework abstracton takes some input which it refines into an outcome or deliverable.
 
 Requirements are generally set by specifications of functionality or agreements on e.g. security policy or service level. The teting process also requires an executable set of test cases, which should be constructed with regard to the stratey scope. These can be derived (even autmatically) from formally structured models or specifications. Inputs comprise any other assets needed to start the testing process.
 
-
-
-Testing outcomes may 
-
-Pace of integration, rate of automation, 
+%Pace of integration, rate of automation 
 
 \begin{figure}
 \centering
