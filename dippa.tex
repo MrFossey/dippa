@@ -739,7 +739,7 @@ Pace of integration, rate of automation,
 \centering
 \begin{tikzpicture} [
    start chain=going below,         % General flow is top-to-bottom
-    node distance=10mm and 70mm,    % Global setup of box spacing
+    node distance=10mm and 40mm,    % Global setup of box spacing
     ]
 % ------------------------------------------------- 
 \tikzset{
@@ -749,7 +749,7 @@ Pace of integration, rate of automation,
   test/.style={draw, dotted, -latex'}
 }
 
-    \node [rect, xshift=-2.0cm, yshift=1.5cm] (stg) {Strategy};
+    \node [rect, xshift=-3.0cm, yshift=1.5cm] (stg) {Strategy};
     \node [rect, yshift=0.25cm] (req) {Requirements \& input};
     \node [rect, yshift=-0.75cm] (prc) {Process};
     \node [rect, yshift=-1.4cm] (rlt) {Results};
