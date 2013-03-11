@@ -626,9 +626,7 @@ The empirical part of the study evaluates a limited set of testing frameworks an
 %The general reasons for testing automation.
 The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks rises are reflected on software testing. This creates a demand for testing automation.
 
-The oft-cited reasons for testing automation are improving software quality and cost-efficiency: harnessing the power of computers helps expedite the testing process as well as reduce the amount of manual work. \citep{laukkanen2006data} give a more complete list of automation benefits: 
-
-TODO
+The oft-cited reasons for testing automation are improving software quality and cost-efficiency: harnessing the power of computers helps expedite the testing process as well as reduce the amount of manual work. \citep{laukkanen2006data} give a more complete list of automation benefits: %TODO
 
 %Why is integration testing important
 Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing responsibilities to the supplier, while solution integration remains Wärtsilä's concern and responsibility. A flexible and well-defined process framework can serve many development projects to come. To date, there have been cases with unnecessary duplicate work. In a recent ERP update effort the scale of and need for testing became evident to Wärtsilä. A framework guiding the testing process and automating a part of it could significantly reduce costs and risks.
@@ -681,7 +679,7 @@ Since the systems undergo continuous changes, like improvements, upgrades, fixes
 
 Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools (which include for instance a system for executing service requests to other systems and a bug tracker tool) are used on a mix-and-match basis. Testing strategy and policy as well as testing processes are described and defined, but the practical testing approach is set by project managers or project test managers. 
 
-Test cases are constructed manually as is the collection of requirements, and the testing process itself. Testing is done when needed, usually after some change or update has been implemented in one or more of Wärtsilä's or Wärsilä's partners' systems. Test cases and results are collected in documents, but no material is explicitly made reusable. Results are used for decision-makin\ldots 
+Test cases are constructed manually as is the collection of requirements, and the testing process itself. Testing is done when needed, usually after some change or update has been implemented in one or more of Wärtsilä's or Wärsilä's partners' systems. Test cases and results are collected in documents, but no material is explicitly made reusable. Results are used for decision-making\ldots 
 
 The yearly need for testing increases at a steady level as\ldots
 
@@ -693,6 +691,28 @@ The yearly need for testing increases at a steady level as\ldots
 
 This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in respect to frameworks. The thesis asserts that testing strategy and framework selection are inseparable in that strategy determines the general testing approach, but the technical limitations of frameworks impose restrictions on strategy employed, too. To reasonable degree, a framework should be flexible enough to adapt to individual project needs. After a framework \emph{is} selected the requirements for the framework are defined. Next, the framework's testing process is implemented. Finally, outcomes of testing are collected. The final subchapter looks at common integration testing pitfalls and how they can be avoided.
 % no single test auomation solution M. Fewster and D. Graham. Software Test Automation. Addison-Wesley, 1999.
+
+% testing strategy
+\section{Testing strategy}
+Traditionally, testing is grouped to unit, integration, and system levels \citep{jenkins2008software}. Unit testing is assuring that individual software components and functions perform to specifications. When components are paired or grouped, the resulting connections must also be tested. Finally, system testing refers to testing the finished software suite with a suitable array of use cases.
+
+The way integration testing is conducted is linked to the integration strategy. Service-
+Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. \citet{myers1976software} introduces six integration strategies: bottom-up, top-down, modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, integrations are put together and tested one by one, starting from either low-level systems or the most important system, whereas in big bang testing is delayed until the system is wholly integrated, where sandwich testing lies in between big-bang and top-down/bottom-up testing.
+
+Other incremental testing methods include delivery, criticality, or functionality based 
+strategies \citep{van2008identifying} where the system connections and hierarchy are built selectively an integration at a time. Further, \citet{carey1977control} discuss build testing. \citet{beizer1984software} introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
+
+% introduction of stubs and drivers
+Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
+
+
+Testing is an essential part of software engineering. Without a degree of confidence of sound operation and functional integrity, systems accumulate great risk and may ultimately produce more harm than benefit. Controlled testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risks involved in IT applications and services.
+
+% TODO add references above chapters
+Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
+
+% What to test
+Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
 \section{What is a testing framework?}
 
@@ -834,27 +854,7 @@ On the final level are physical objects which realize the testing process: the t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Testing framework synthesis
 
-% testing strategy
-\section{Testing strategy}
-Traditionally, testing is grouped to unit, integration, and system levels \citep{jenkins2008software}. Unit testing is assuring that individual software components and functions perform to specifications. When components are paired or grouped, the resulting connections must also be tested. Finally, system testing refers to testing the finished software suite with a suitable array of use cases.
 
-The way integration testing is conducted is linked to the integration strategy. Service-
-Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. \citet{myers1976software} introduces six integration strategies: bottom-up, top-down, modified top-down, sandwich, modified sandwich and big-bang testing. In the first two, integrations are put together and tested one by one, starting from either low-level systems or the most important system, whereas in big bang testing is delayed until the system is wholly integrated, where sandwich testing lies in between big-bang and top-down/bottom-up testing.
-
-Other incremental testing methods include delivery, criticality, or functionality based 
-strategies \citep{van2008identifying} where the system connections and hierarchy are built selectively an integration at a time. Further, \citet{carey1977control} discuss build testing. \citet{beizer1984software} introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
-
-% introduction of stubs and drivers
-Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult. A better option might to test little by little and employ some other schemes. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests.
-
-
-Testing is an essential part of software engineering. Without a degree of confidence of sound operation and functional integrity, systems accumulate great risk and may ultimately produce more harm than benefit. Controlled testing reduces the number of incidents that would otherwise be discovered in the live environment and fixing which would be very expensive. In a similar fashion, testing can point to ways the systems can be improved. For example, a system that is fluid and easy to use does not incur as many service and maintenance or information requests. At the very least testing helps decision makers understand the risks involved in IT applications and services.
-
-% TODO add references above chapters
-Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
-
-% What to test
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
 % Out of scope?
 \section{Integration testing pitfalls}
