@@ -858,49 +858,15 @@ On the final level are physical objects which realize the testing process: the t
 
 
 
-% Out of scope?
-\section{Integration testing pitfalls}
-
-Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008identifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to \citet{van2008identifying}, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
-
-\citet{leung1990study} present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups. The error types are presented in Figure X.
-
-\begin{center}
-    \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} |}
-    \hline
-    TODO & Interpretation error & Miscoded call error & Interface error \\ \hline
-    Wrong & Unspecified function & Call at wrong location & Stardards or agreements are violated \\ \hline
-    Missing & Not all necessary functionality implemented & Call instruction missing & Stardards or agreements are       violated \\ 
-    \hline
-    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Stardards or agreements are violated \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\begin{comment}
-Interpretation
-    wrong function - something else than specified
-    extra function - more than what is expected/needed
-    missing function - not all that is specified
-Miscoded call (error which causes the developer to place the call instruction at the wrong point in the program)
-    Extra instruction fault: the call instruction is on a path which should not have the call.
-    Wrong placement fault: the call is at the wrong location on the path which should have the call instruction.
-    Missing instruction fault: the call instruction is missing on the path which should have the call.
-Interface error
-    When stardards or agreements are violated
-\end{comment}
-
-% ERRORS: wrong function, extra function, missing function 
-% Miscoded call error
-% Interface error (Lueng \& white)
-
-\section{Automation in testing}
+\section{Automation in testing} % execution in framework
 
 Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
 
 Test case creation is perhaps the most time-consuming task in automated testing. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} presents an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. For regression testing, where the system suite is already in place, cases and related test data can be produced by recording actual use cases from production.
 
-\section{Evaluating testing}
+It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
+
+\section{Evaluating testing} % creating test cases
 
 Before test cases are produced a strategy for their selection should be selected. Ideally the case set provides minimum required coverage based on the strategy criteria. \citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
 \begin{itemize}
@@ -1006,6 +972,44 @@ As cases are run the execution traces or results are collected by . The traces a
 \end{tikzpicture}
 \caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
 \end{figure}
+
+Text under figure.
+
+% Out of scope?
+\section{Integration testing pitfalls}
+
+Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008identifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, rendering it the project's 'crushable zone'. Not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation -- or sharing knowledge -- are also typical pitfalls, according to \citet{van2008identifying}, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
+
+\citet{leung1990study} present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups. The error types are presented in Figure X.
+
+\begin{center}
+    \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} |}
+    \hline
+    TODO & Interpretation error & Miscoded call error & Interface error \\ \hline
+    Wrong & Unspecified function & Call at wrong location & Stardards or agreements are violated \\ \hline
+    Missing & Not all necessary functionality implemented & Call instruction missing & Stardards or agreements are       violated \\ 
+    \hline
+    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Stardards or agreements are violated \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\begin{comment}
+Interpretation
+    wrong function - something else than specified
+    extra function - more than what is expected/needed
+    missing function - not all that is specified
+Miscoded call (error which causes the developer to place the call instruction at the wrong point in the program)
+    Extra instruction fault: the call instruction is on a path which should not have the call.
+    Wrong placement fault: the call is at the wrong location on the path which should have the call instruction.
+    Missing instruction fault: the call instruction is missing on the path which should have the call.
+Interface error
+    When stardards or agreements are violated
+\end{comment}
+
+% ERRORS: wrong function, extra function, missing function 
+% Miscoded call error
+% Interface error (Lueng \& white)
 % =================================================
 
 % Thin threads, groupin into a tree (tsai et al)
