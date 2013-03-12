@@ -628,6 +628,8 @@ Testing is an essential part of software engineering. Without a degree of confid
 % TODO add references above chapters
 Along with the functionality of the system, tests should also be applied on non-functional aspects such as performance and usability, because these also determine the validity of the system under test. Verifying that specified functions are implemented is not enough, but the system must satisfy underlying needs.
 
+Traditionally, testing is grouped to unit, integration, and system levels \citep{jenkins2008software}. Unit testing is assuring that individual software components and functions perform to specifications. When components are paired or grouped, the resulting connections must also be tested. Finally, system testing refers to testing the finished software suite with a suitable array of use cases.
+
 % What to test
 Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
 
@@ -689,7 +691,9 @@ Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, 
 % add reference
 Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continously, would also provide an up-to-date view on the status of of systems. This improves quality and transparency of information and can thereby argued to aid decision-making.
 
-Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools (which include for instance a system for executing service requests to other systems and a bug tracker tool) are used on a mix-and-match basis. Testing strategy and policy as well as testing processes are described and defined, but the practical testing approach is set by project managers or project test managers. 
+Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and wep application automation, have been adopted and are used on a mix-and-match basis. Testing strategy and policy as well as testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
+
+Testing is done in projects in the traditional
 
 Test cases are constructed manually as is the collection of requirements, and the testing process itself. Testing is done when needed, usually after some change or update has been implemented in one or more of Wärtsilä's or Wärsilä's partners' systems. Test cases and results are collected in documents, but no material is explicitly made reusable. Results are used for decision-making\ldots 
 
@@ -706,8 +710,6 @@ This chapter explores the theoretical base for a framework. First it examines in
 
 % testing strategy
 \section{Testing strategy}
-Traditionally, testing is grouped to unit, integration, and system levels \citep{jenkins2008software}. Unit testing is assuring that individual software components and functions perform to specifications. When components are paired or grouped, the resulting connections must also be tested. Finally, system testing refers to testing the finished software suite with a suitable array of use cases.
-
 The way integration testing is conducted is linked to the integration strategy. Service-Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. \citet{myers1976software} introduces six integration strategies: bottom-up, top-down, modified top-down, sandwich, modified sandwich, and big-bang testing each influencing the form in which test cases are written, the types of tools needed, the order in which separate components are coded, and the thoroughness and economics of the testing effort. 
 
 In bottom-up and top-down testing integrations are put together and tested one by one, starting from either low-level systems or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system. In big-bang testing, the integration testing effort is delayed until the system is wholly ready to be put together. Each compoenent is unit tested before the eponymous big-bang. Sandwich testing testing is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly.
@@ -870,8 +872,6 @@ On the final level are physical objects which realize the testing process: the t
 % Testing pitfalls
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Testing framework synthesis
-
-
 
 \section{Automation in testing} % execution in framework
 
