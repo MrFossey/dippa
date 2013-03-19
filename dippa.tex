@@ -633,16 +633,49 @@ Traditionally, testing is grouped to unit, integration, and system levels \citep
 % Integration testing word replaced by component testing, functional units, integration testing the whole thing
 
 % What to test
-Naturally, software has to be tested to after development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}. Testing is a continous, and time-consuming, process.
+Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}.
 
 \section{Integration testing at Wärtsilä}
 
 %The general reasons for testing automation.
-The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks rises are reflected on software testing. This creates a demand for testing automation.
+The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks rises are reflected on software testing. This creates a demand for testing automation. Already in 1976 \citet{myers1976software} stated that maintenance and testing accouynt for 75\% of software costs.
 
 The oft-cited reasons for testing automation are improving software quality and cost-efficiency: harnessing the power of computers helps expedite the testing process as well as reduce the amount of manual work. \citep{laukkanen2006data} give a more complete list of automation benefits: %TODO
 
-% myers already in 1976: mauintenance and testing account for 75 % of software costs
+Rerunning tests on a new version of the system
+Reusing tests in a new project
+Running tests more often
+Perform tests which would be difficult or impossible to do manually (e.g. performance tests}
+Freeing test engineers to do more rewarding work
+Increased confidence due to increased and systematic testing
+
+
+Consistency and repeatability of tests
+Tests are always run the same way so test results can be consistently compared to previous results from previous testing rounds. Tests can also be easily repeated on different environments.
+
+Earlier time to market 
+Reusing tests and shortening test execution time fastens feedback cycle to developers. In the end that shortens the time to market.
+
+Unrealistic expectations 
+Managers may believe test automation will solve all their testing problems and magically make the software quality better. Automation experts should help managers setting their expectations right.
+
+Poor testing practice 
+If testing practices and processes are inadequate it is better to start improving them than bringing in test automation. Automating chaos just gives faster chaos.
+
+Expectation that automated tests will find a lot of new defects 
+After automated test has been run successfully once it is not very likely to find new bugs unless the tested functionality changes. Automators normally find more defects while they are developing tests than when tests are re-executed.
+
+False sense of security 
+Just seeing a test report with no failures does not mean that the SUT did not have any. Tests may be incomplete, either not testing all features or not able to see failures when they occur. Tests may also have defects and show wrong results.
+
+Maintenance 
+When the SUT changes also its tests change. Human test engineers are able to handle even major changes without problems but automated tests can fail after a slightest change. If maintaining test automation system takes more time than testing manually it will surely be abandoned. The same will happen also if adding new features to the automation system is too cumbersome.
+
+Technical problems 
+Building and taking test automation system to use is a technical challenge which is unlikely to proceed without problems. Tools may be incompatible with the tested system and they also often have defects themselves.
+
+Organizational issues 
+Successful test automation project requires both high technical skills and support from management. Test automation has also big impact on the organization and requires changes in many processes.
 
 %Why is integration testing important
 Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing responsibilities to the supplier, while solution integration remains Wärtsilä's concern and responsibility. A flexible and well-defined process framework can serve many development projects to come. To date, there have been cases with unnecessary duplicate work. In a recent ERP update effort the scale of and need for testing became evident to Wärtsilä. A framework guiding the testing process and automating a part of it could significantly reduce costs and risks.
