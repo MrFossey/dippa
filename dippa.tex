@@ -701,20 +701,17 @@ Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, 
 \end{figure}
 
 % add reference
-Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continously, would also provide an up-to-date view on the status of of systems. This improves quality and transparency of information and can thereby argued to aid decision-making.
+Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continously, would also provide an up-to-date view on the status of of systems. This improves quality and transparency of information and can thereby be argued to aid decision-making.
 
-Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and wep application automation, have been adopted and are used on a mix-and-match basis. Testing strategy and policy as well as testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
+Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and a UI scripting tool, have been adopted and are used on a mix-and-match basis. Organization test strategy, policy, and testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
 
-Requirements and specifications are collected among solution key users and managers. Unit tests are performed by the vendor, which is followed by integration tests in Wärtsilä's test environment executed by Wärtsilä's technical experts possibly aided by the vendor. Next, system tests are done by the information management solution manager, who then passes the solution forward to business key useres for verification testing. 
+Requirements and specifications are collected among solution key users and managers. Unit tests are performed by the vendor, which is followed by integration tests in Wärtsilä's test environment executed by Wärtsilä's technical experts possibly aided by the vendor. Next, system tests are done by the solution manager, who then passes the solution forward to business key useres for verification testing. % has verification testing been introduced  
 
-Test cases are constructed manually and are not maintained. After a development project is closed and moves to live maintanence mode, new cases are created as needed when new features or enhancements are released. In some cases, a battery of regression tests is maintained. Testing results and found incidents are logged to a bug tracking system, or maintained by shared files or email conversations. 
+Test cases are constructed manually and are not maintained. After a development project is closed and moves to \eph{live maintanence mode}, new cases are created wwhen needed as new features or enhancements are released. In some few cases, a battery of regression tests is maintained. Testing results and found incidents are logged to a bug tracking system, or collected in shared files or email conversations. 
 
-Remarkably, the reusability of testing artefacts is minimal. Steps have been taken to standardize the testing process, to identify the most importnat points of improvement, and raise the maturity level of testing and esatblish the preconditions for an automated and controlled organization-wide process.
+The reuse and reusability of testing objects is minimal. Steps have been taken to standardize the testing process, to identify the most important points of improvement, and raise the maturity level of testing to gradually establish the preconditions for an automated and controlled organization-wide process.
 
 %maintanence work, involving people and gettim them to comply.
-
-% resources, frequency, results, guidelines, test cases, yearly increase, 
-%Move general stuff about testing here?
 
 \chapter{Looking for a testing framework}
 \label{chapter:integration testing} % TODO
