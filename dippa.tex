@@ -887,11 +887,17 @@ On the final level are physical objects which realize the testing process: the t
 
 \section{Framework objects}
 
+This section examines the components of the framework from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
+
 \subsection{Test case design and creation}
 
-Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. \citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
+% coverage traditionally, selecting cases
+Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. \citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures.
+
+
+\citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
 \begin{itemize}
-\item Manual selection
+\item Manual selection - The tester selects 
 \item Task coverage (each task performed once)
 \item Simple Temporal Relationship Coverage (specified temporal relationships tested)
 \item Complete Temporal Relationship Coverage (all temporal relationships tested)
@@ -901,14 +907,16 @@ Before test cases are produced a strategy for their selection should be selected
 \item Concurrency coverage
 \item Pre- and post-condition based path coverages
 \end{itemize}
+ % edges and vertices
 
-\citet{linnenkugel1990test} present a similar coverage hierarchy of node, relation, call, sequence, and loop coverage measures. % edges and vertices
-
+% selecting which part of the system to test
 \citet{bhuyan2012survey} present strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. \citep{bhuyan2012survey}
 
-The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Attention must be spent on both selecting the method of execution and test criteria. 
+% case quality
+The test set quality itself can be evaluated quantitatively and 'tested'. In \citet{delmaro2011interface} mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code.
 
-The test set quality itself can be evaluated quantitatively and 'tested'. In \citet{delmaro2011interface} mutation testing the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, erroneous code.
+% test effectiveness and testability
+The results of test effectiveness can be measured by how many cases were executed out of the set of necessary cases and testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Attention must be spent on both selecting the method of execution and test criteria. 
 
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
 
