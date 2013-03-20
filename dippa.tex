@@ -896,24 +896,12 @@ Before test cases are produced a strategy for their selection should be selected
 
 \citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations(call statements). Complex path sequences can be interpreted as system tests. 
 \begin{itemize}
-
 \item \emph{all-modules} requires that every module is executed at least once 
-
 \item \emph{all-relations} requires that the calling relation between modules is executed at least once
-
-\item \emph{all-multiple-relations} requires that every call between modules is executed at least once, i.e. that every edge of the p-graph is covered (all-edges).
-
-all-simple-call-sequences requires that every sequence of (descending) calls without repetition of calls is executed at least once, i.e. that every simple path of the p-graph is covered (all-simple-paths).
-
-all-loop-iteratzon-free-call-sequencerse quires that every
-sequence of (descending) calls without repetition of loops
-is executed at least once, i.e. that every loop-iterationfree
-path of the p-graph is covered (all-loop-iterationfree-
-paths).
-712
-all-call-sequences requires that every sequence of (descending)
-calls is executed at least once, i.e. that every
-path of the p-graph is covered (all-paths).
+\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
+\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
+all-loop-iteratzon-free-call-sequencerse quires that every sequence of (descending) calls without repetition of loops is executed at least once, i.e. that every loop-iteration free path of the p-graph is covered (all-loop-iterationfree-paths).
+all-call-sequences requires that every sequence of (descending) calls is executed at least once
 
 
 \citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
