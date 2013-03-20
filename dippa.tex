@@ -887,9 +887,9 @@ On the final level are physical objects which realize the testing process: the t
 
 \section{Framework objects}
 
-This section examines the components of the framework from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
+This section examines the framework-object relationships from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
 
-\subsection{Test case design and model-based testing}
+\subsection{Test case design and generation}
 
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
@@ -916,22 +916,17 @@ Once the test cases have been created and chosen, the test set quality itself ca
 
 Overall test effectiveness can be measured by how many cases were executed out of the set of necessary cases and feature testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Therefore attention must be spent on both selecting the method of execution and test criteria. 
 
-It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
-
-\subsection{Test case generation}
-
-\subsection{Automated testing}
-
-weigh benefits against cost, ease of implementation, mechanical tasks automated, creative ones not
-pezze: test cases straight from specs, if modeled as finite state machine -> mdoel-based testing pezze p. 152-154
-
-% pitfalls?
-Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
-
 % move to earlier chapter
 Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} presents an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dadal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
 
 Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
+
+It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
+
+\subsection{Automated testing}
+
+% pitfalls?
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
 
 \subsection{Test oracle}
 
