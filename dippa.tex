@@ -885,25 +885,9 @@ On the final level are physical objects which realize the testing process: the t
 
 %\section{input}
 
-\section{Framework requirements}
+\section{Framework objects}
 
-\section{Framework process}
-
-\section{Framework results}
-
-\section{Automation in testing} % execution in framework
-
-weigh benefits against cost, ease of implementation, mechanical tasks automated, creative ones not
-pezze: test cases straight from specs, if modeled as finite state machine -> mdoel-based testing pezze p. 152-154
-
-% pitfalls?
-Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
-
-Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} presents an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dadal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
-
-Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay.
-
-\section{Evaluating testing} % creating test cases
+\subsection{Test case design and creation}
 
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. \citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
 \begin{itemize}
@@ -928,6 +912,22 @@ The test set quality itself can be evaluated quantitatively and 'tested'. In \ci
 
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
 
+\subsection{Automated testing}
+
+weigh benefits against cost, ease of implementation, mechanical tasks automated, creative ones not
+pezze: test cases straight from specs, if modeled as finite state machine -> mdoel-based testing pezze p. 152-154
+
+% pitfalls?
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
+
+Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} presents an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dadal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
+
+Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay.
+
+\subsection{Test oracle}
+
+Test oracle
+
 \section{Towards a model-based approach}
 % add CIT definition earlier
 
@@ -938,7 +938,7 @@ In particular researchers advocate the creation of a call graph \citep{leung1990
 The graph can serve as a foundation for setting test coverage criteria and strategy or test case creation 
 \citep{benz2007combining, hura2011method, linnenkugel1990test}. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
-Test oracle
+
 
 \chapter{Piecing together a testing framework}
 \label{chapter:framework}
