@@ -889,32 +889,20 @@ On the final level are physical objects which realize the testing process: the t
 
 This section examines the components of the framework from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
 
-\subsection{Test case design and creation}
+\subsection{Test case creation and model-based testing}
 
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
 
-\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations(call statements). Complex path sequences can be interpreted as system tests. 
+\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations(call statements). Coverage criteria include:
 \begin{itemize}
 \item \emph{all-modules} requires that every module is executed at least once 
 \item \emph{all-relations} requires that the calling relation between modules is executed at least once
 \item \emph{all-multiple-relations} requires that every call between modules is executed at least once
 \item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
 \item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
-
-\citet{benz2007combining} lists different schemes for testing strategy and case coverage based on e.g. traversal in the system network:
-\begin{itemize}
-\item Manual selection - The tester selects 
-\item Task coverage (each task performed once)
-\item Simple Temporal Relationship Coverage (specified temporal relationships tested)
-\item Complete Temporal Relationship Coverage (all temporal relationships tested)
-\item n-Task combination coverage (each possible sequence of n-Tasks performed)
-\item Interruption coverage (each possible interruption of task by other task tested)
-\item Random selection of task sequences
-\item Concurrency coverage
-\item Pre- and post-condition based path coverages
 \end{itemize}
- % edges and vertices
+Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \all{multiple-relations} fall under integration testing.
 
 % selecting which part of the system to test
 \citet{bhuyan2012survey} present strategies for regression testing. Testing can be selective where only a part of the whole system is examined in order save time and costs. It is essential to model and understand the system hierarchy and which part of it should be tested. Code-based tests look for modified and related code that is tested, typically in unit tests. Testing can also be risk-based, recalling selective integration strategies. Risk areas are ones most affected by changes and which require the best coverage. In state-based regression testing coverage criteria are determined and test cases devised using control and data flow descriptions in UML state diagrams. Lastly, models, such as UML diagrams, can be used implemented regression testing for instance when access to code is not available. \citep{bhuyan2012survey}
