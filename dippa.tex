@@ -894,29 +894,17 @@ This section examines the components of the framework from an automation perspec
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
 
-\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. Individual compoenents are nodes and integrations are relations. Complex sequences can be interpreted as system tests. 
+\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations(call statements). Complex path sequences can be interpreted as system tests. 
+\begin{itemize}
 
-all-paths (or path t,esting), requiring each path to be
-executed at least once.
-all-edges (or branch testing), requiring that each edge
-in the flowgraph be visited at least once.
-all-nodes (or statement testing), requiring that each
-node of the flowgraph be visited at least once.
+\item \emph{all-modules} requires that every module is executed at least once 
 
-all-modules requires that every module is executed at
-least once, i.e. that every node of the p-graph is covered
-(all-nodes).
-all-relations requires that the calling relation between
-modules is executed at least once, i.e. that at least one
-of the edges between two modules is covered (all-oneof-
-multiple-edges)
-all-multiple-relations requires that every call between
-modules is executed at least once, i.e. that every edge
-of the p-graph is covered (all-edges).
-all-simple-call-sequences requires that every sequence of
-(descending) calls without repetition of calls is executed
-at least once, i.e. that every simple path of the p-graph
-is covered (all-simple-paths).
+\item \emph{all-relations} requires that the calling relation between modules is executed at least once
+
+\item \emph{all-multiple-relations} requires that every call between modules is executed at least once, i.e. that every edge of the p-graph is covered (all-edges).
+
+all-simple-call-sequences requires that every sequence of (descending) calls without repetition of calls is executed at least once, i.e. that every simple path of the p-graph is covered (all-simple-paths).
+
 all-loop-iteratzon-free-call-sequencerse quires that every
 sequence of (descending) calls without repetition of loops
 is executed at least once, i.e. that every loop-iterationfree
