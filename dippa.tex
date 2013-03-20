@@ -558,7 +558,7 @@ Test Automation Framework & A framework used for test automation. Provides some 
 % Keywords: system-to-system integration (testing), automated testing, testing framework, integration testing
 
 % benefits of automation, build-up to integration, orienting to automoated IT business processes
-% TODO start with key concept, not automation, real-time processes perspective, inter-company, information flow as a % reaso, add picture and figure, why was the work conducted? business critical and dependencies. why?
+% TODO start with key concept, not automation, real-time processes perspective, inter-company, information flow as a % reason, add picture and figure, why was the work conducted? business critical and dependencies. why?
 Automation is one of the great boons brought on by technological development on one hand freeing up resources like labour for more value-adding purposes --- and permitting the execution of uniform, repeatable processes and process control on the other. The pinnacle of advancement and prosperity on which society stands today is based on a continuous flow of various automated tasks and electronic services, many of which are complex and involve a slew of actors or agents. Work is divided and its completion therefore requires cooperation between service systems, which poses another challenge.
 
 % integration reasons and logic
@@ -568,7 +568,7 @@ Integrating disparate actors and information systems is a prerequisite of automa
 Integration efforts may, however, result in unclear responsibilities and difficulties in determining if the systems cooperate and behave correctly, and if any use cases are unaccounted for. In a distributed system there are more components and connections that can fail, and relinquishing control over units always carries risk. A high number of integrations makes the task even more difficult since a single change in the system components can disrupt a whole chain of operation.
 
 % business motivation and technical considerations 
-The benefits outweighing all shortcomings, modern coprorations' business processes rely on automation and operate on distributed systems and networked devices. But the problems are still there; ensuring quality of service is essential. Systematic, rigorous, and automated testing, both functional and non-functional, is required. This thesis examines the requirements of system-to-system integration testing in a real world business setting. The hypothesis is that a setup will help uncover defects and issues earlier and resolve them with fewer resources.
+The benefits outweighing all shortcomings, modern corporations' business processes rely on automation and operate on distributed systems and networked devices. But the problems are still there; ensuring quality of service is essential. Systematic, rigorous, and automated testing, both functional and non-functional, is required. This thesis examines the requirements of system-to-system integration testing in a real world business setting. The hypothesis is that a setup will help uncover defects and issues earlier and resolve them with fewer resources.
 
 \section{Research question}
 
@@ -586,7 +586,7 @@ The first part addresses the pertinent question: what is a framework? Based on a
 % 2. Compare alternatives, choose best one.
 \textbf{2. Which is the best integration testing framework in of the requirements among a limited set of alternatives?} \\
 \\
-Promising framework alternatives are listed after which, based on the requirements, a shortlist is composed. The purpose is not to go arduously through every available tool and painstakingly analyze and quantify their potential, but by quick assessment determine a set of alternatives that are easy to use and fit the framework, then offer a succinct comparison. Included in the second research question is requirements analysis, i.e. criteria for suitable framework technologies. A group of selected technologies satisfying the defined framework requirements will constitute a proof of concept experiement. \\
+Promising framework alternatives are listed after which, based on the requirements, a shortlist is composed. The purpose is not to go arduously through every available tool and painstakingly analyze and quantify their potential, but by quick assessment determine a set of alternatives that are easy to use and fit the framework, then offer a succinct comparison. Included in the second research question is requirements analysis, i.e. criteria for suitable framework technologies. A group of selected technologies satisfying the defined framework requirements will constitute a proof of concept experiment. \\
 \\
 % 3. Test viability. Proof of concept.
 \textbf{3. How can the selected framework be implemented?} \\
@@ -637,7 +637,7 @@ Traditionally, testing is grouped to unit, integration, and system levels \citep
 Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}.
 
 %The general reasons for testing automation.
-The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks rises are reflected on software testing. This creates a demand for testing automation. Already in 1976 \citet{myers1976software} stated that maintenance and testing accouynt for 75\% of software costs.
+The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks rises are reflected on software testing. This creates a demand for testing automation. Already in 1976 \citet{myers1976software} stated that maintenance and testing account for 75\% of software costs.
 
 The oft-cited reasons for testing automation are improving software quality and cost-efficiency: harnessing the power of computers helps expedite the testing process as well as reduce the amount of manual work. \citet{fewster1999software} give a more complete list of automation benefits: %TODO
 
@@ -659,7 +659,7 @@ TODO
 Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing responsibilities to the supplier, while solution integration strictly remains Wärtsilä's concern and responsibility. A flexible and well-defined process framework can serve many development projects to come. To date, there have been cases with unnecessary duplicate work. In a recent ERP update effort the scale of and need for testing became evident to Wärtsilä. A framework guiding the testing process and automating a part of it could significantly reduce costs and risks as well as project execution time.
 
 % references to these? what can be included?
-Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, CRM, warehouse control, and financial systems, which are intersected by information exchange processes. The system architeture is built on the service-orientation principle (SOA) where individual systems or software components lend their services to be called by other systems' services through a shared channel, the enterprise service bus (ESB). Adapters and application programming interfaces (APIs) provide a means to access and use systems irrespective of their internal composition (e.g. programming language). This permits adding new services and replacing or removing old ones incrementally, but does not remove the challenges related to testing. A change in even one of the systems can potentially break one or more process chains. 
+Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, CRM, warehouse control, and financial systems, which are intersected by information exchange processes. The system architecture is built on the service-orientation principle (SOA) where individual systems or software components lend their services to be called by other systems' services through a shared channel, the enterprise service bus (ESB). Adapters and application programming interfaces (APIs) provide a means to access and use systems irrespective of their internal composition (e.g. programming language). This permits adding new services and replacing or removing old ones incrementally, but does not remove the challenges related to testing. A change in even one of the systems can potentially break one or more process chains. 
 
 \begin{figure}
 \centering
@@ -702,13 +702,13 @@ Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, 
 \end{figure}
 
 % add reference
-Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continously, would also provide an up-to-date view on the status of of systems. This improves quality and transparency of information and can thereby be argued to aid decision-making.
+Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continuously, would also provide an up-to-date view on the status of systems. This improves quality and transparency of information and can thereby be argued to aid decision-making.
 
 Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and a UI scripting tool, have been adopted and are used on a mix-and-match basis. Organization test strategy, policy, and testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
 
-Requirements and specifications are collected among solution key users and managers. Unit tests are performed by the vendor, which is followed by integration tests in Wärtsilä's test environment executed by Wärtsilä's technical experts possibly aided by the vendor. Next, system tests are done by the solution manager, who then passes the solution forward to business key useres for verification testing. % has verification testing been introduced  
+Requirements and specifications are collected among solution key users and managers. Unit tests are performed by the vendor, which is followed by integration tests in Wärtsilä's test environment executed by Wärtsilä's technical experts possibly aided by the vendor. Next, system tests are done by the solution manager, who then passes the solution forward to business key users for verification testing. % has verification testing been introduced  
 
-Test cases are constructed manually and are not maintained. After a development project is closed and moves to \eph{live maintanence mode}, new cases are created wwhen needed as new features or enhancements are released. In some few cases, a battery of regression tests is maintained. Testing results and found incidents are logged to a bug tracking system, or collected in shared files or email conversations. 
+Test cases are constructed manually and are not maintained. After a development project is closed and moves to \eph{live maintenence mode}, new cases are created when needed as new features or enhancements are released. In some few cases, a battery of regression tests is maintained. Testing results and found incidents are logged to a bug tracking system, or collected in shared files or email conversations. 
 
 The reuse and reusability of testing objects is minimal. Steps have been taken to standardize the testing process, to identify the most important points of improvement, and raise the maturity level of testing to gradually establish the preconditions for an automated and controlled organization-wide process. Introducing the new integration testing framework is a grand undertaking requiring the participation of many stakeholders. A complex, inflexible or overly prescribing model will probably not find much use.
 
@@ -722,7 +722,7 @@ This chapter explores the theoretical base for a framework. First it examines in
 \section{Testing strategy}
 The way integration testing is conducted is linked to the integration strategy. Service-Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. \citet{myers1976software} introduces six integration strategies: bottom-up, top-down, modified top-down, sandwich, modified sandwich, and big-bang testing each influencing the form in which test cases are written, the types of tools needed, the order in which separate components are coded, and the thoroughness and economics of the testing effort. 
 
-In bottom-up and top-down testing integrations are put together and tested one by one, starting from either low-level systems or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system. In big-bang testing, the integration testing effort is delayed until the system is wholly ready to be put together. Each compoenent is unit tested before the eponymous big-bang. Sandwich testing testing is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly. \citep{burnstein2003practical, myers1976software}
+In bottom-up and top-down testing integrations are put together and tested one by one, starting from either low-level systems or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system. In big-bang testing, the integration testing effort is delayed until the system is wholly ready to be put together. Each component is unit tested before the eponymous big-bang. Sandwich testing is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly. \citep{burnstein2003practical, myers1976software}
 
 \begin{comment} % find better references or remove entirely
 Other incremental testing methods include delivery, criticality, or functionality based 
@@ -734,7 +734,7 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % remember to criticize this 
 
 Avoiding the big-bang 
-While continous testing has been advocated since a long time \citep{myers1976software}, it has also found home in more recent software development trends, like eXtreme Programming and Agile (reference).
+While continuous testing has been advocated since a long time \citep{myers1976software}, it has also found home in more recent software development trends, like eXtreme Programming and Agile (reference).
 
 Extreme Programming Explained: Embrace Change (Addison-Wesley, 1999)
 
@@ -894,7 +894,7 @@ This section examines the components of the framework from an automation perspec
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
 
-\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations(call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
+\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
 \begin{itemize}
 \item \emph{all-modules} requires that every module is executed at least once 
 \item \emph{all-relations} requires that the calling relation between modules is executed at least once
@@ -912,7 +912,7 @@ From the criteria one can observe that because testing must only provide reasona
 In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
 % case quality
-Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeed against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
+Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
 
 Overall test effectiveness can be measured by how many cases were executed out of the set of necessary cases and feature testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Therefore attention must be spent on both selecting the method of execution and test criteria. 
 
