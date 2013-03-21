@@ -740,6 +740,7 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % Extreme Programming Explained: Embrace Change (Addison-Wesley, 1999)
 
 % Continuous testing, continuous integration, test-driven development
+% duvall: realiability at the lowest level
 
 % What are the methods of execution? (not technical, move to framework section in the automation part)
 % How are results used?
@@ -926,9 +927,9 @@ It is not possible to go through every code branch or to test every possible inp
 
 \subsection{Automated testing process}
 
-% pitfalls?
-The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code.  Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. 
+The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code \citep{pezze2008software}. Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. A big-bang is out of the question. All tests must pass for the build to be accepted. \citep{duvall200continuous} While extreme, the 
 
+% pitfalls?
 Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
 
 \subsection{Test oracle}
