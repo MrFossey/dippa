@@ -870,6 +870,8 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 Delaying testing to the big-bang is not ideal for a large and complex integration undertaking because examining the integration as a whole and pinpointing defects is difficult \citep{myers1976software}. A better option would be to test early and little by little. However, integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual systems needed for tests. 
 % remember to criticize this 
 
+% strategy: some authors like pezze prefer to talk about component testing instead of integration testing
+
 %Avoiding the big-bang 
 %While continuous testing has been advocated since a long time \citep{myers1976software}, it has also found home in %more recent software development trends, like eXtreme Programming and Agile (reference).
 
@@ -918,7 +920,7 @@ From the criteria one can observe that because testing must only provide reasona
 
 In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
-% meyer: case extraction out of failures
+% meyer: case extraction out of failures, alternative test generation strategies
 Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
 
 Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
