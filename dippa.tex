@@ -934,11 +934,11 @@ It is not possible to go through every code branch or to test every possible inp
 
 \subsection{Framework process -- Automated testing execution}
 
-The testing process is performed by an engine that runs the test cases. Test can be scheduled to run at regular intervals or they can be triggered by developer actions, such as a code commit \citep{pezze2008software}. Continuous integration (CI) is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. All tests must pass for the build to be accepted. \citep{duvall2007continuous} A big-bang is out of the question. 
+The testing process is performed by an engine program that runs the test cases. Test can be scheduled to run at regular intervals or they can be triggered by developer actions, such as a code commit \citep{pezze2008software}. Continuous integration (CI) is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. All tests must pass for the build to be accepted. \citep{duvall2007continuous} A big-bang is out of the question. 
 
 While extreme, CI's continuous testing can make integration more manageable with its gradual approach. In the case of integration testing, the important execution decisions are related to integration strategy, i.e. which tests run first \citep{duvall2007continuous}. If test cases have been prepared, regularly rerunning tests and regression testing is easy, though implementing automated test processes still takes an initial investment of time and effort. Additional automation issues are examined in section \ref{section:pitfalls}.
 
-Since virtually any scripting language is capable of executing scheduled commands, the technical automation challenge is not as interesting as test case generation or oracle construction. 
+Since virtually any scripting language is capable of executing scheduled commands, the technical automation challenge is not as interesting as test case generation or oracle construction. Therefore, more attention is paid to these.
 
 \subsection{Framework end products -- Testing results and oracle}
 
