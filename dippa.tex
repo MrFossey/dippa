@@ -745,7 +745,67 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 % What are the methods of execution? (not technical, move to framework section in the automation part)
 % How are results used?
 
-\section{What is a testing framework?}
+% Framework
+% Integration and testing strategy
+% Requirements for a framework - model-based testing, 
+% Testing process - verification, the framework verifying non-functionalities
+% Testing outcome
+% Testing pitfalls
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Testing framework synthesis
+
+%\section{input}
+
+\section{Framework objects}
+
+This section examines the framework-object relationships from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
+
+\subsection{Test case design and generation}
+
+% coverage traditionally, selecting cases, check first sentence
+Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
+
+\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
+\begin{itemize}
+\item \emph{all-modules} requires that every module is executed at least once 
+\item \emph{all-relations} requires that the calling relation between modules is executed at least once
+\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
+\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
+\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
+\end{itemize}
+Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing.
+
+% selecting which part of the system to test
+From the criteria one can observe that because testing must only provide reasonable confidence in system performance, it can be selective. Not everything should or indeed can be tested. Focusing on a part of the whole system saves time and costs. It is however essential to model and understand the system flow and which part of it should be tested. If only a part of system is known to have changed, testing can be limited to the new functionality \citep{bhyan2012survey}.
+
+\citet{hewett2009automated} persuade testers to lay out and quantify components and their connections in a graph and use this information to design the most efficient order for testing, with a minimal need for creating test stubs. Likewise, \citet{leung1990study} and \citet{abdullah1995correcting} endorse the concept of a firewall, which draws a line between components and systems that are to be tested, and those that need not, based on where changes in code or specifications have occurred. This both strengthens understanding of the inner workings of the tested system and reduces testing costs. 
+
+In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
+
+% move to earlier chapter
+Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
+
+Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
+
+% case quality
+Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
+
+Overall test effectiveness can be measured by how many cases were executed out of the set of necessary cases and feature testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Therefore attention must be spent on both selecting the method of execution and test criteria. 
+
+It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
+
+\subsection{Automated testing process}
+
+The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code \citep{pezze2008software}. Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. A big-bang is out of the question. All tests must pass for the build to be accepted. \citep{duvall200continuous} While extreme, the 
+
+% pitfalls?
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
+
+\subsection{Test oracle}
+
+Test oracle.
+
+\section{Piecing together a framework}
 
 From an IT or software perspective, a framework is understood as an abstract technology or library intended for a purpose \citep{johnson1988designing}. In the scope of this thesis, the framework concept is extended to the overall process workflow related to (integration) testing. While a technology may be a part of the framework, the framework itself is technology-agnostic and only sets requirements for functionality. 
 
@@ -876,67 +936,8 @@ On the final level are physical objects which realize the testing process: the t
 \caption{Levels of integration testing} \label{fig:funnel}
 \end{figure}
 
-% Framework
-% Integration and testing strategy
-% Requirements for a framework - model-based testing, 
-% Testing process - verification, the framework verifying non-functionalities
-% Testing outcome
-% Testing pitfalls
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Testing framework synthesis
 
-%\section{input}
-
-\section{Framework objects}
-
-This section examines the framework-object relationships from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
-
-\subsection{Test case design and generation}
-
-% coverage traditionally, selecting cases, check first sentence
-Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
-
-\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
-\begin{itemize}
-\item \emph{all-modules} requires that every module is executed at least once 
-\item \emph{all-relations} requires that the calling relation between modules is executed at least once
-\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
-\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
-\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
-\end{itemize}
-Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing.
-
-% selecting which part of the system to test
-From the criteria one can observe that because testing must only provide reasonable confidence in system performance, it can be selective. Not everything should or indeed can be tested. Focusing on a part of the whole system saves time and costs. It is however essential to model and understand the system flow and which part of it should be tested. If only a part of system is known to have changed, testing can be limited to the new functionality \citep{bhyan2012survey}.
-
-\citet{hewett2009automated} persuade testers to lay out and quantify components and their connections in a graph and use this information to design the most efficient order for testing, with a minimal need for creating test stubs. Likewise, \citet{leung1990study} and \citet{abdullah1995correcting} endorse the concept of a firewall, which draws a line between components and systems that are to be tested, and those that need not, based on where changes in code or specifications have occurred. This both strengthens understanding of the inner workings of the tested system and reduces testing costs. 
-
-In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
-
-% move to earlier chapter
-Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
-
-Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
-
-% case quality
-Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
-
-Overall test effectiveness can be measured by how many cases were executed out of the set of necessary cases and feature testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Therefore attention must be spent on both selecting the method of execution and test criteria. 
-
-It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
-
-\subsection{Automated testing process}
-
-The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code \citep{pezze2008software}. Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. A big-bang is out of the question. All tests must pass for the build to be accepted. \citep{duvall200continuous} While extreme, the 
-
-% pitfalls?
-Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
-
-\subsection{Test oracle}
-
-Test oracle.
-
-\chapter{Piecing together a testing framework}
+\chapter{New integration testing framework}
 \label{chapter:framework}
 
 \citet{huang2008surrogate} and \citet{liu2009unified} offer a unified testing framework for testing integration. The frameworks contain a generator for test cases, an execution engine, a surrogate engine simulating unavailable systems, and execution monitoring. Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
