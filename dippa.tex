@@ -594,6 +594,8 @@ Answering the third research question involves proofing the selected frameworks.
 
 Additionally, observed results and conclusions are used to produce a set of guidelines and recommendations listed in a separate document (see attachment x). % TODO attachment num
 
+% b meyer: ironic that more computing power does not yield better tests, process contains bottlenecks of manual tasks
+
 % TODO: consult professor, instructor about research method. Alternatives: exploratory research, empirical research
 \section{Research methods}
 Research is conducted according to the constructive research method paradigm --- a six step model, where a concrete, real world problem is investigated through practical experience and academic understanding. The resulting conclusions and concepts are then tested in a working simulation. The emphasis is not to produce hard fact to the academic canon, but to produce hypotheses and theories, and test them in practice.
@@ -930,15 +932,18 @@ It is not possible to go through every code branch or to test every possible inp
 
 \subsection{Framework process -- Automated testing execution}
 
-The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code \citep{pezze2008software}. Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. A big-bang is out of the question. All tests must pass for the build to be accepted. \citep{duvall200continuous} While extreme, the 
+The testing process is performed by an engine that runs the test cases. Test can be scheduled to run at regular intervals or they can be triggered by developer actions, such as a code commit \citep{pezze2008software}. Continuous integration (CI) is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. All tests must pass for the build to be accepted. \citep{duvall2007continuous} A big-bang is out of the question. 
+
+While extreme, CI's continuous testing can make integration more manageable by locating bugs early and little by little. If test cases are prepared, regularly rerunning tests and regression testing is easy. In the case of integration testing the important execution decisions are related to integration strategy, i.e. which tests run first \citep{duvall2007continuous}.
 
 % pitfalls?
-Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
+Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes an initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
+
+Since virtually any scripting language is capable of executing scheduled commands, the technical automation challenge is not as interesting as test case generation or oracle construction. 
 
 \subsection{Framework end products -- Testing results and oracle}
 
 Test oracle.
-
 
 \chapter{Piecing together a new integration testing framework}
 \label{chapter:newframework}
