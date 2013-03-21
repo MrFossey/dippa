@@ -758,9 +758,9 @@ Delaying testing to the big-bang is not ideal for a large and complex integratio
 
 \section{Framework objects}
 
-This section examines the framework-object relationships from an automation perspective. First, test case design and generation, then test execution, and finally verification tools are presented.
+This section examines the framework-object relationships. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquianted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process. Because of the automation requirement, 
 
-\subsection{Test case design and generation}
+\subsection{Framwork input -- Test case design and generation}
 
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
@@ -794,14 +794,14 @@ Overall test effectiveness can be measured by how many cases were executed out o
 
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
 
-\subsection{Automated testing process}
+\subsection{Framework process -- Automated testing execution}
 
 The testing process is performed by an engine that runs the test cases. Test runs can be scheduled to run at regular intervals or triggered by developer actions, such as a change in code \citep{pezze2008software}. Continuous integration is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. A big-bang is out of the question. All tests must pass for the build to be accepted. \citep{duvall200continuous} While extreme, the 
 
 % pitfalls?
 Automating testing has obvious benefits of scale, but is not without fault. Implementing automated tests takes a significant initial investment of time and effort, algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense. As changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation also does not counter inherently flawed software development processes. \citep{jenkins2008software, zhang2011approach).
 
-\subsection{Test oracle}
+\subsection{Framework verification -- An  oracle}
 
 Test oracle.
 
@@ -935,7 +935,6 @@ On the final level are physical objects which realize the testing process: the t
 \end{tikzpicture}
 \caption{Levels of integration testing} \label{fig:funnel}
 \end{figure}
-
 
 \chapter{New integration testing framework}
 \label{chapter:framework}
