@@ -858,11 +858,33 @@ This chapter examines indiviudal components and subprocesses of integration test
 
 % testing strategy
 \section{Testing strategy}
+
+\subsection{Test requirements}
+Before test cases are produced a strategy for their selection should be selected and test coverage planned. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
+
+\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
+\begin{itemize}
+\item \emph{all-modules} requires that every module is executed at least once 
+\item \emph{all-relations} requires that the calling relation between modules is executed at least once
+\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
+\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
+\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
+\end{itemize}
+Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing.
+
+% selecting which part of the system to test
+From the criteria one can observe that because testing must only provide reasonable confidence in system performance, it can be selective. Not everything should or indeed can be tested. Focusing on a part of the whole system saves time and costs. It is however essential to model and understand the system flow and which part of it should be tested. If only a part of system is known to have changed, testing can be limited to the new functionality \citep{bhyan2012survey}.
+
+\citet{hewett2009automated} persuade testers to lay out and quantify components and their connections in a graph and use this information to design the most efficient order for testing, with a minimal need for creating test stubs. Likewise, \citet{leung1990study} and \citet{abdullah1995correcting} endorse the concept of a firewall, which draws a line between components and systems that are to be tested, and those that need not, based on where changes in code or specifications have occurred. This modeling both strengthens understanding of the inner workings of the tested system and reduces testing costs. 
+
+In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
+
+\subsection{Test process}
 The way integration testing is conducted is linked to the integration strategy. Service-Oriented Architecture especially blurs the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. \citet{myers1976software} introduces six integration strategies: bottom-up, top-down, modified top-down, sandwich, modified sandwich, and big-bang testing each influencing the form in which test cases are written, the types of tools needed, the order in which separate components are coded, and the thoroughness and economics of the testing effort. 
 
 In bottom-up and top-down testing integrations are put together and tested one by one, starting from either low-level systems or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system. In big-bang testing, the integration testing effort is delayed until the system is wholly ready to be put together. Each component is unit tested before the eponymous big-bang. Sandwich testing is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly. \citep{burnstein2003practical, myers1976software}
 
-The strategy typology is designed for integration in development, rather than integration regression testing. This limits its applicability in the Wärtsilä case if an automatically executable test case set exists or if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations, possibly all of them.  
+The strategy typology is designed for integration in development, rather than integration regression testing. This limits its applicability in the Wärtsilä case if an automatically executable test case set that is capable of going through every integration in a matter of seconds or minutes exists or if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations, possibly all of them.  
 
 \begin{comment} % find better references or remove entirely
 Other incremental testing methods include delivery, criticality, or functionality based 
@@ -871,7 +893,7 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 
 % introduction of stubs and drivers
 \citet{pezze2008software} point out that big-bang essentially merges integration testing with system testing. While it reduces costs of 'test scaffolding', the structure (e.g. stubs and drivers) needed to carry out picemeal testing
-, a delay in testing is not ideal for a large and complex integration undertaking. Examining the integration as a whole and pinpointing defects is difficult in the tumult of the big-bang \citep{myers1976software, \citet{pezze2008software}. A better option would be to test early and little by little. For new systems in development, this integration-by-integration testing requires drivers and stubs as stand-ins to make up for the absence of actual components or modules needed for tests. 
+, a delay in testing is not ideal for a large and complex integration undertaking. Examining the integration as a whole and pinpointing defects is difficult in the tumult of the big-bang \citep{myers1976software, \citet{pezze2008software}. A better option would be to test early and little by little. 
 % remember to criticize this 
 
 % strategy: some authors like pezze prefer to talk about component testing instead of integration testing
@@ -902,28 +924,10 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 
 This section examines the framework-object relationships. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquianted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process. Because of the automation requirement, 
 
-\subsection{Framwork input -- Test case design and generation}
+\subsection{Framwork input -- Test case generation}
 % move coverage part to strategy?
-This section explores test case design and generation concerns, which dominate the testing framework challenge.
+This section explores test case generation concerns, which dominate the testing framework challenge.
 % coverage traditionally, selecting cases, check first sentence
-Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
-
-\citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
-\begin{itemize}
-\item \emph{all-modules} requires that every module is executed at least once 
-\item \emph{all-relations} requires that the calling relation between modules is executed at least once
-\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
-\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
-\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
-\end{itemize}
-Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing.
-
-% selecting which part of the system to test
-From the criteria one can observe that because testing must only provide reasonable confidence in system performance, it can be selective. Not everything should or indeed can be tested. Focusing on a part of the whole system saves time and costs. It is however essential to model and understand the system flow and which part of it should be tested. If only a part of system is known to have changed, testing can be limited to the new functionality \citep{bhyan2012survey}.
-
-\citet{hewett2009automated} persuade testers to lay out and quantify components and their connections in a graph and use this information to design the most efficient order for testing, with a minimal need for creating test stubs. Likewise, \citet{leung1990study} and \citet{abdullah1995correcting} endorse the concept of a firewall, which draws a line between components and systems that are to be tested, and those that need not, based on where changes in code or specifications have occurred. This modeling both strengthens understanding of the inner workings of the tested system and reduces testing costs. 
-
-In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
 % meyer: case extraction out of failures, alternative test generation strategies
 Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
