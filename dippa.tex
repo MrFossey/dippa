@@ -862,6 +862,8 @@ The way integration testing is conducted is linked to the integration strategy. 
 
 In bottom-up and top-down testing integrations are put together and tested one by one, starting from either low-level systems or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system. In big-bang testing, the integration testing effort is delayed until the system is wholly ready to be put together. Each component is unit tested before the eponymous big-bang. Sandwich testing is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly. \citep{burnstein2003practical, myers1976software}
 
+The strategy typology is designed for integration and integration testin in development, rather than integration regression testing, which limits its applicability in the Wärtsilä case if an automatically executable test case set exists. 
+
 \begin{comment} % find better references or remove entirely
 Other incremental testing methods include delivery, criticality, or functionality based 
 strategies \citep{van2008identifying} where the system connections and hierarchy are built selectively an integration at a time. Further, \citet{carey1977control} discuss build testing. \citet{beizer1984software} introduces a "mixed bag" strategy which combines bottom-up, top-down, big-bang and build testing. 
