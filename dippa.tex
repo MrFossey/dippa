@@ -900,7 +900,6 @@ This section examines the framework-object relationships. First, test case desig
 
 \subsection{Framwork input -- Test case design and generation}
 
-\subsubsection{Case design}
 % coverage traditionally, selecting cases, check first sentence
 Before test cases are produced a strategy for their selection should be selected. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
 
@@ -921,13 +920,11 @@ From the criteria one can observe that because testing must only provide reasona
 
 In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
 
-\subsubsection{Case generation}
 % meyer: case extraction out of failures, alternative test generation strategies
 Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
 
 Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
 
-\subsubsection{Test quality}
 % case quality
 Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
 
