@@ -724,7 +724,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 
 \citet{liu2009unified}, \citet{huang2008surrogate}, and \citet{laukkanen2006data} present frameworks that span the integration testing process start to end. These are presented in figures \ref{fig:liu}, \ref{fig:huang}, and \ref{fig:laukkanen}. The models show that in actuality, frameworks combine different tools for different steps along the workflow chain.
 
-\subsection{A unified testing framework}
+\section{A unified testing framework}
 
 The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case generation, case execution, and execution trace collection. The model was used in relatively small-scale experiments, but successfully uncovered bugs early in development. The framework also helped find different kind of bugs and didn't appear to have a bias towards uncovering a certain kind of defect \citep{liu2009unified}.
 
@@ -736,7 +736,7 @@ The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case gener
   \end{center}
 \end{figure}
 
-\subsection{Simulation apparatus system}
+\section{Simulation apparatus system}
 
 \citeauthor{huang2008surrogate}'s \citeyearpar{huang2008surrogate} model, a precursor to the authors unified testing framework presented in figure \ref{fig:liu}, is more concerned with the testing environment arrangements related to surrogates, but figure \ref{fig:huang} already shows a clear framework structure streching from test case generation to verification of functionality. The area around simulating components is the target of focus. Both of the authors' models attempt to elaborate the test case creation phase. \citep{huang2008surrogate}
 
@@ -748,7 +748,7 @@ The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case gener
   \end{center}
 \end{figure}
 
-\subsection{Data-driven testing framework}
+\section{Data-driven testing framework}
 
 In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2005data} keyword-driven testing model (figure \ref{fig:laukkanen}) testing is divided into modules for \emph{test design}, \emph{test execution}, and \emph{test monitoring}. Where the two first models essentially depict a loop and treat continuous testing as implicit, the key-word driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2005data} model supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
 
@@ -760,7 +760,7 @@ In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2005data} keyword-driv
   \end{center}
 \end{figure}
 
-\subsection{Model summary}
+\section{Model summary}
 
 Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction (horizontal dimension) and on a process dimension (vertical). Starting from the right, general testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosyncrasies and onto concrete objects, like test cases. The vertical dimension, presented as a tapering funnels, depict the process dimension. Each framework abstraction takes some input which it refines into an outcome or deliverable.
 %Pace of integration, rate of automation  , definition for I/O process
