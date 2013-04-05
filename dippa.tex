@@ -634,7 +634,7 @@ Traditionally, testing is grouped to unit, integration, and system levels \citep
 % Integration testing word replaced by component testing, functional units, integration testing the whole thing
 
 % What to test
-Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved an incident \citep{jenkins2008software}.
+Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved a software bug \citep{jenkins2008software}.
 
 %The general reasons for testing automation.
 The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks are reflected on software testing. This in turn creates a demand for testing automation. Already in 1976 \citet{myers1976software} stated that maintenance and testing account for 75\% of software costs.
@@ -925,7 +925,19 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 %\section{input}
 
 \subsection{Test results}
-TODO
+The purpose of testing is to reveal bugs in the software \citep{burnstein2003practical}. But what's next? The testing framework should deliver results so that they can help developers fix the found defects. As such, though, defect management is not in the scope of the testing framework. In Wärtsilä's case there already is a bug tracker tool in use and logging new defects is left to human discretion and manual work. The framework should, however, record test execution times, system version numbers, and other contextual metadata so that testers can manage system relaases and defects \citep{jenkins2008software].
+
+Testing results can be used to evaluate and analyze the testing process and framework. \citet{jenkins2008software} advocates measuring found defects \footnote{Only those that have been confirmed as defects and have not been rejected.} per tester work hours, or how well are new issues are discovered, to determine if testing efficiency. Ideally, this figure would be compared to testing manually. 
+
+Results can also guide further testing efforts. In fault-based testing, new test cases (and more strict specifications) are designed for each problem areas, which are then more heavily tested. \citep{pezze2008software}
+
+\begin{comment}
+Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested', too. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
+\end{comment}
+
+should be compared to manual testing
+
+only valid finds
 % Results can guide testing: fault-based testing. Reports coordinate testing activity, what has been executed and when. Get confidence, create quality, communicate,
 
 \section{Framework objects}
