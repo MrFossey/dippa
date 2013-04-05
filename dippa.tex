@@ -940,12 +940,12 @@ should be compared to manual testing
 only valid finds
 % Results can guide testing: fault-based testing. Reports coordinate testing activity, what has been executed and when. Get confidence, create quality, communicate,
 
-\section{Framework objects}
+\section{From strategy to execution}
 
 This section examines the framework-object relationships. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquianted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process.
 %Because of the automation requirement, 
 
-\subsection{Framwork input -- Test case generation}
+\subsection{Test case generation}
 % move coverage part to strategy?
 This section explores test case generation concerns, which dominate the testing framework challenge.
 % coverage traditionally, selecting cases, check first sentence
@@ -955,7 +955,7 @@ Test case creation is perhaps the most time-consuming task in automated testing 
 
 Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
 
-\subsection{Framework process -- Automated testing execution}
+\subsection{Running automated tests}
 
 The testing process is performed by an engine program that runs the test cases. Test can be scheduled to run at regular intervals or they can be triggered by developer actions, such as a code commit \citep{pezze2008software}. Continuous integration (CI) is a development philosophy where integration is reduced to a "nonevent" by integrating new code with old as soon as the former is ready. All tests must pass for the build to be accepted. \citep{duvall2007continuous} A big-bang is out of the question. 
 
@@ -965,7 +965,7 @@ Since virtually any scripting language is capable of executing scheduled command
 
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
 
-\subsection{Framework end products -- Testing results and oracle}
+\subsection{Verification through an oracle}
 
 A testing oracle analyses testing results and applies pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. In one common approach, oracles determine succuess and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks, sometimes referred to as testing harnesses. The framework inputs are the test case and the expected result. \citep{pezze2008software}. 
 
