@@ -862,10 +862,12 @@ TODO
 \chapter{Deconstructing the integration testing framework}
 \label{chapter:analysis} % TODO
 
-This chapter examines indiviudal components and subprocesses of integration testing based on the funnel model derived in the previous chapter. First testing strategy is broken down to aspects of coverage/efficicency requirements, process, and results after which the same is done to the more tangible framework/object level. 
+This chapter examines indiviudal components and subprocesses of integration testing based on the funnel model derived in the previous chapter. First  after which the same is done to the more tangible framework/object level. 
 
 % testing strategy
 \section{Testing strategy}
+
+Testing strategy is broken down to aspects of coverage/efficicency requirements, process, and results.
 
 \subsection{Requirements for converage and efficiency}
 Before test cases are produced a strategy for their selection should be selected and test coverage planned. Ideally, the set of cases provides minimum required coverage based on the strategy criteria. The most common way to evaluate coverage is based on the flow of control. Visualizing the program process flows can help design cases, too. \citep{burnstein2003practical} 
@@ -896,6 +898,7 @@ In bottom-up and top-down testing integrations are put together and tested one b
 
 The strategy typology is designed for integration in development, rather than integration regression testing. This limits its applicability in the Wärtsilä case if an automatically executable test case set that is capable of going through every integration in a matter of seconds or minutes exists or if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations, possibly all of them.  
 
+%FIXME
 Models made in the design phase can be used to drive testing. Typically, a system is formalized as a finite-state machine and pictured as a network. Then tests are run so that the whole network is traversed. Every transition from state to state is tested and model-based testing is usually used to test systems with very high availability requirements, like banking or medical systems.
 
 \begin{comment} % find better references or remove entirely
