@@ -908,7 +908,7 @@ In \emph{bottom-up} and \emph{top-down testing} integrations are put together an
 The strategy typology is also designed for integration in the development phase, rather than integration regression testing. This limits its applicability. An automatically executable test set may be capable of going through every integration in a matter of seconds or minutes, especially if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations (possibly all of them), for example when reassembling the system is required after a change with global effects.  
 
 %FIXME
-Models made in the design phase can be used to manage testing. Typically, a system is formalized as a finite-state machine and pictured as a network. Then tests are run so that the whole network is traversed. Every transition from state to state is tested and model-based testing is usually used to test systems with very high availability requirements, like banking or medical systems.
+Models made in the design phase can be used to manage testing. Typically, a system is formalized as a finite-state machine and pictured as a network. Then tests are run so that the whole network is traversed: every transition from state to state is tested. Model-based testing is usually used to test systems with very high availability requirements, like banking or medical systems.
 
 \begin{comment} % find better references or remove entirely
 Other incremental testing methods include delivery, criticality, or functionality based 
