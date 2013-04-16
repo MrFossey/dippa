@@ -706,7 +706,7 @@ Wärtsilä's business rests on over 50 different systems, for example ERP, PDM, 
 % add reference
 Since the systems undergo continuous changes, like improvements, upgrades, fixes, pilots, etc., the need for regression tests is common. Ideally, a prepared test set could be executed by issuing a simple command. In addition to the benefits listed above, testing, if executed continuously, would also provide an up-to-date view on the status of systems. This improves quality and transparency of information and can thereby be argued to aid decision-making.
 
-Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and a UI scripting tool, have been adopted and are used on a mix-and-match basis. There is also a monitoring tool in which failed communication is flagged and which can roughly indicate the existance of bugs. Organization test strategy, policy, and testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
+Current testing at Wärtsilä is ad-hoc. There is no universal testing framework. A set of tools, which include for instance a bug tracker tool and a UI scripting tool, have been adopted and are used on a mix-and-match basis. There is also a monitoring tool in which failed communication is flagged and which can roughly indicate the existence of bugs. Organization test strategy, policy, and testing processes are described and defined, but the practical testing approach is set by project managers or project test managers.
 
 Requirements and specifications are collected among solution key users and managers. Unit tests are performed by the vendor, which is followed by integration tests in Wärtsilä's test environment executed by Wärtsilä's technical experts and possibly aided by the vendor. Next, system tests are done by the solution manager, who then passes the solution forward to business key users for verification testing. % has verification testing been introduced  
 
@@ -738,7 +738,7 @@ The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case gener
 
 \section{Simulation apparatus system}
 
-\citeauthor{huang2008surrogate}'s \citeyearpar{huang2008surrogate} model, a precursor to the authors unified testing framework presented in figure \ref{fig:liu}, is more concerned with the testing environment arrangements related to surrogates, but figure \ref{fig:huang} already shows a clear framework structure streching from test case generation to verification of functionality. The area around simulating components is the area of focus. Both of the authors' models attempt to elaborate the test case creation phase. \citep{huang2008surrogate}
+\citeauthor{huang2008surrogate}'s \citeyearpar{huang2008surrogate} model, a precursor to the authors unified testing framework presented in figure \ref{fig:liu}, is more concerned with the testing environment arrangements related to surrogates, but figure \ref{fig:huang} already shows a clear framework structure stretching from test case generation to verification of functionality. The area around simulating components is the area of focus. Both of the authors' models attempt to elaborate the test case creation phase. \citep{huang2008surrogate}
 
 \begin{figure}[H]
   \begin{center}
@@ -750,7 +750,7 @@ The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case gener
 
 \section{Data-driven testing framework}
 
-In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driven testing model (figure \ref{fig:laukkanen}) testing is divided into modules for \emph{test design}, \emph{test execution}, and \emph{test monitoring}. Where the two first models essentially depict a loop and treat continuous testing as implicit, the key-word driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
+In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driven testing model (figure \ref{fig:laukkanen}) testing is divided into modules for \emph{test design}, \emph{test execution}, and \emph{test monitoring}. Where the two first models essentially depict a loop and treat continuous testing as implicit, the keyword-driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
 
 \begin{figure}[H]
   \begin{center}
@@ -765,7 +765,7 @@ In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driv
 Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction (horizontal dimension) and on a process dimension (vertical). Starting from the right, general testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosyncrasies and onto concrete objects, like test cases. The vertical dimension, presented as a tapering funnels, depict the process dimension. Each framework abstraction takes some input which it refines into an outcome or deliverable.
 %Pace of integration, rate of automation  , definition for I/O process
 
-The case specific use of the framework is determined by specifications or agreements, e.g. on security policy or service level, and a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically everytime a change is committed to system source code. This approach is called continuous integration (CI). 
+The case specific use of the framework is determined by specifications or agreements, e.g. on security policy or service level, and a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically every time a change is committed to system source code. This approach is called continuous integration (CI). 
 
 The final funnel column consists of physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form. These should be constructed with regard to the chosen strategy and framework scope. 
 
@@ -862,12 +862,12 @@ TODO
 \chapter{Deconstructing the integration testing framework}
 \label{chapter:analysis} % TODO
 
-This chapter examines indiviudal components and subprocesses of integration testing, based on the funnel model derived in the previous chapter. The first section enumerates important testing strategy decisions, while the latter concentrates on practical questions and what options and tools there are to implement the strategy.
+This chapter examines individual components and subprocesses of integration testing, based on the funnel model derived in the previous chapter. The first section enumerates important testing strategy decisions, while the latter concentrates on practical questions and what options and tools there are to implement the strategy.
 
 % testing strategy
 \section{Testing strategy}
 
-Testing strategy is broken down to aspects of coverage-efficiency requirements, process design, and how test results are used to drive quality and further improve testing practices. Precisly, the first strategy choice is test case selection and design, the second the test control and management model, and the last test and framework improvement through feedback.
+Testing strategy is broken down to aspects of coverage-efficiency requirements, process design, and how test results are used to drive quality and further improve testing practices. Precisely, the first strategy choice is test case selection and design, the second the test control and management model, and the last test and framework improvement through feedback.
 
 \subsection{Requirements for coverage and efficiency}
 
@@ -897,12 +897,12 @@ In particular researchers advocate the creation of a call graph \citep{leung1990
 
 Deriving test cases from models or using models to represent the testing strategy is known as model-based testing.
 The more formal the model, the better test cases, still support (pezze). 
-can be represented by finites state machine, modeling all transitions involves work, out of scope. for rigourous testing
+can be represented by finites state machine, modeling all transitions involves work, out of scope. for rigorous testing
 %"The effectiveness of model-based testing is primarily due to the potential for automation it offers. If a model is machine-readable and formal to the extent that it has a well-defined behavioral interpretation, test cases can in principle be derived mechanically."
-benefits in reduced specificaition errors and avoided misinterpretation 
-often simplications although theoretical number of states infinite
+benefits in reduced specification errors and avoided misinterpretation 
+often simplifications although theoretical number of states infinite
 state machine guides selection
-often specs lakcing, missing cases implicitly error cases
+often specs lacking, missing cases implicitly error cases
 good testing covers these too
 can do anything, does nothing
 Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
@@ -916,7 +916,7 @@ The way integration testing is conducted is linked to the integration strategy. 
 
 In \emph{bottom-up} and \emph{top-down testing} integrations are put together and tested one by one, starting from either low-level systems --- or the top-level systems that are not called by any other system. Both approaches require mock systems to simulate integrations, either just below or above the tested system component. In \emph{big-bang testing}, the integration testing effort is delayed until the system is wholly ready and put together. Each component is unit tested before the eponymous big-bang. \emph{Sandwich testing} is a combination of top-down and bottom-up testing where two concurrent testing threads progress towards the middle layers of the system. If it were better that some of the middle layers were tested first, the approach can be modified accordingly. \citep{burnstein2003practical, myers1976software}
 
-\citet{pezze2008software} point out that big-bang essentially merges integration testing with system testing. While it reduces costs of 'test scaffolding', the structure (e.g. stubs and drivers) needed to carry out picemeal testing
+\citet{pezze2008software} point out that big-bang essentially merges integration testing with system testing. While it reduces costs of 'test scaffolding', the structure (e.g. stubs and drivers) needed to carry out piecemeal testing
 , a delay in testing is not ideal for a large and complex integration undertaking. Examining the integration as a whole and pinpointing defects is difficult in the tumult of the big-bang \citep{myers1976software, pezze2008software}. A better option would be to test early and little by little. This is more of a development strategy decision than a testing.
 
 The strategy typology is also designed for integration in the development phase, rather than integration regression testing. This limits its applicability. An automatically executable test set may be capable of going through every integration in a matter of seconds or minutes, especially if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations (possibly all of them), for example when reassembling the system is required after a change with global effects.  
@@ -962,7 +962,7 @@ strategies \citep{van2008identifying} where the system connections and hierarchy
 %\section{input}
 
 \subsection{Test results}
-The purpose of testing is to reveal bugs in the software \citep{burnstein2003practical}. But what's next? The testing framework should deliver results so that they can help developers fix the found defects. As such, though, defect management is not in the scope of the testing framework. In Wärtsilä's case there already is a bug tracker tool in use and logging new defects is left to human discretion and manual work. The framework should, however, record test execution times, system version numbers, and other contextual metadata so that testers can manage system relaases and defects \citep{jenkins2008software].
+The purpose of testing is to reveal bugs in the software \citep{burnstein2003practical}. But what's next? The testing framework should deliver results so that they can help developers fix the found defects. As such, though, defect management is not in the scope of the testing framework. In Wärtsilä's case there already is a bug tracker tool in use and logging new defects is left to human discretion and manual work. The framework should, however, record test execution times, system version numbers, and other contextual metadata so that testers can manage system releases and defects \citep{jenkins2008software].
 
 Testing results can be used to evaluate and analyze the testing process and framework. \citet{jenkins2008software} advocates measuring found defects\footnote{Only those that have been confirmed as defects and have not been rejected.} per tester work hours, or how well are new issues are discovered, to determine if testing efficiency. Ideally, this figure would be compared to testing manually. 
 
@@ -979,7 +979,7 @@ only valid finds
 
 \section{From strategy to framework execution}
 
-This section examines the framework-object relationships. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquianted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process.
+This section examines the framework-object relationships. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquainted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process.
 %Because of the automation requirement, 
 
 \subsection{Test case generation}
