@@ -990,7 +990,7 @@ This section explores test case generation concerns, which dominate the testing 
 % meyer: case extraction out of failures, alternative test generation strategies
 Test case creation is perhaps the most time-consuming task in automated testing \citep{kit1999integrated}. Cases have to be produced based on the test plan and execution strategy, and updated when necessary. Researchers have presented solutions for automatic test case generation. \citet{tsai2002coyote} introduces an XML-based framework for automated test case generation from WSDL service descriptions. \citet{bai2005WSDL} and \citet{di2007web} similarly offer WSDL service description based generation strategies. \citet{dalal1999model} present a combinatorics-based data model that produces a minimum number of test cases for some input parameter related coverage criteria. In cases where the system suite is already in place, cases and related test data can be produced by recording or capturing user actions in the system environment and turning these into use cases that can be automatically replayed.
 
-Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetetive tasks should be automated, creative ones not \citep{pezze2008software}.
+Researchers like \citet{zallar2001you} and \citet{kit1999integrated} criticize in particular the capture/replay paradigm claiming that maintaining the test scripts is cumbersome and as such will often be left undone rendering the test cases unusable and potentially misleading. \citet{kit1999integrated} suggests to just leave out capture and simply use automation to replay. Repetitive tasks should be automated, creative ones not \citep{pezze2008software}.
 
 \subsection{Running automated tests}
 
@@ -1005,7 +1005,7 @@ Virtually any script can be scheduled commands and the technical automation chal
 
 \subsection{Verification}
 
-A testing oracle analyses testing results and applies pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. In one common approach, oracles determine succuess and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks, sometimes referred to as testing harnesses. The framework inputs are the test case and the expected result. \citep{pezze2008software}. 
+A testing oracle analyses testing results and applies pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. In one common approach, oracles determine success and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks, sometimes referred to as testing harnesses. The framework inputs are the test case and the expected result. \citep{pezze2008software}. 
 
 Defining expected results naturally creates more work in test case creation. There are options to mitigate this, for example by using 'correct' output from previous versions of the system or a trusted alternative to the one tested. In the most ambitious method, program execution is documented in a specification model in the full, so that the model can be used to both generate test cases and used as an oracle. \citep{pezze2008software}
 
@@ -1094,10 +1094,10 @@ There are also many potential stumbling blocks in automation. Algorithms cannot 
 \begin{center}
     \begin{tabular}{ l || >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | >{\raggedright\arraybackslash}p{3cm} }
       & Interpretation error & Miscoded call error & Interface error \\ \hline \hline
-    Wrong & Incorrect functionality & Call instruction at wrong location on path & Stardards or agreements are violated \\ \hline
-    Missing & Not all necessary functionality implemented & Call instruction missing on path & Stardards or agreements are violated \\ 
+    Wrong & Incorrect functionality & Call instruction at wrong location on path & Standards or agreements are violated \\ \hline
+    Missing & Not all necessary functionality implemented & Call instruction missing on path & Standards or agreements are violated \\ 
     \hline
-    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Stardards or agreements are violated \\
+    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Standards or agreements are violated \\
     \end{tabular}
 \end{center}
 \caption{Integration testing errors \citep{leung1990study}} \label{fig:errors}
