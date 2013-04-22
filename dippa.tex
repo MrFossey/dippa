@@ -1118,7 +1118,11 @@ Scheduling test runs is done with
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
+The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
+
 TIKZ figure here
+
+Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
 
 \section{Evaluation of the framework}
 The framework is evaluated mainly on qualitative measures. is done by comparisons to idealized models, interviews with Wärtsilä's experts, and observations of the framework in simulated action.
@@ -1129,6 +1133,14 @@ Key characteristics of the automated regime test regime, system of government of
 \item test take care of all their housekeeping such as environmental set-up and clear-down
 \item it is easier to add a new test to the automated pack than to run that test manually
 \end{itemize}
+
+The framework satiesfies the first criteria esaily. Tests can be grouped and executing packages of tests in Jenkins is done with a simple click. 
+
+The second criteria is also arguable satisfied since integration testing. Is satisfied by inputting information requried by the test first and lastly deleting the information. Alternatively, unchanged information may be used, though this is a more risky approach. 
+
+The final criteria is easy to satisfy, because even manual testing requires composition of a message to be transmitted and expected results.
+
+
 
 \begin{comment}
 % pezze integration faults
