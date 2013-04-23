@@ -1168,19 +1168,23 @@ The testing processes described in Chapter \ref{chapter:frameworkproposal} are m
 \caption{Testing framework structure} \label{fig:structure}
 \end{figure}
 
-The framework includes a visualization layer and GUI, an execution engine which also collects execution traces. The engine, capable of running tests, is an IDE or integrated development environment which is also used in constructing the test scripts, both manually and through capture and playback. 
+In the framework architecture, SoapUI contains script logic and acts as model while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
+
+The execution engine runing the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in Jenkins. Accordinly, what can only be called an initial oversight, visualizing the test results is added as a process to the overall framework process.
+
+SoapUI is an IDE, or integrated development environment, and is also used in constructing test scripts, both manually and through capture and playback. Capture can also be used to to create scripts to simulate the behaviour of external systems
 
 The IDE environment is also capable of producing surrogates, which simulate the behaviour of actual systems. These mock service surrogates allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome. Building and running mock services can also be done with capture and replay, which contributed to the tool choice.
 
 Execuction engine duties are split between the actual running of the tests and scheduling test cycles. 
 
-The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
+
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
 Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
 
-An initial oversight, visualizing the test results is added as a process to the overall framework process.
+
 
 \section{Evaluation of the framework}
 The framework is evaluated mainly on qualitative measures. is done by comparisons to idealized models, interviews with Wärtsilä's experts, and observations of the framework in simulated action.
