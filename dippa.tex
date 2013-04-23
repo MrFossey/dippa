@@ -1136,7 +1136,7 @@ The teting processes are mapped to tools figure .
 \draw [dashed] (2,2) -- (2,-8);
 \draw [dashed] (-2,1) -- (8,1);
 \node[label] (l0) {\textbf{SoapUI}};
-\node[label, right=of l0] (l1) {\textbf{Jenkins}};
+
 
 \node [proc] (p0) {Generating test cases};
 \node [proc] (p1) {Mocking services};
@@ -1144,6 +1144,7 @@ The teting processes are mapped to tools figure .
 \node [proc] (p3) {Collecting traces};
 \node [proc] (p4) {Verifying};
 
+\node[label, right=of l0] (l1) {\textbf{Jenkins}};
 \node [proc, right=of p2] (p5) {Scheduling (Jenkins+ANT)};
 \node [proc, right=of p3] (p6) {Trace transforming};
 
