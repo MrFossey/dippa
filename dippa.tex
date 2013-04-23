@@ -1144,15 +1144,15 @@ The teting processes are mapped to tools figure .
 \node [proc, right=of p0] (p7) {Visualization of results};
 
 \begin{pgfonlayer}{background}
-  \node[box] [fit = (p2) (p5)] (b0) {Execution engine};
+  \node[box] [fit = (p2) (p5)] (b0) {};
 \end{pgfonlayer}
 
 \begin{pgfonlayer}{background}
   \node[box] [fit = (p1)] {};
 \end{pgfonlayer}
 
-\node[label, right=3cm of p5] {\emph{Execution engine}};
-\node[label, right=3cm of p1] {\emph{Surrogate engine}};
+\node[label, right=3,5cm of p5] {\emph{Execution engine}};
+\node[label, right=3,5cm of p1] {\emph{Surrogate engine}};
 
 \path [line] (p0) -- (p1);
 
