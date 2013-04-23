@@ -553,7 +553,7 @@ Test Automation Framework & A framework used for test automation. Provides some 
 
 % \input{1introduction.tex}
 \chapter{Introduction}
-\label{chapter:intro}
+\label{chapter:introduction}
 % Keywords: system-to-system integration (testing), automated testing, testing framework, integration testing
 
 % benefits of automation, build-up to integration, orienting to automoated IT business processes
@@ -716,7 +716,7 @@ Test cases are constructed manually and are not maintained. After a development 
 The reuse and reusability of testing objects is minimal. Steps have been taken to standardize the testing process, to identify the most important points of improvement, and raise the maturity level of testing to gradually establish the preconditions for an automated and controlled organization-wide process. Introducing the new integration testing framework is a grand undertaking requiring the participation of many stakeholders. A complex, inflexible or overly prescribing model will probably not find much use.
 
 \chapter{Looking for a testing framework}
-\label{chapter:integrationtesting} % TODO
+\label{chapter:frameworktheory}
 
 This chapter explores the theoretical base for a framework. First it examines integration and testing strategies in respect to frameworks and presents integration testing frameworks developed earlier. The thesis asserts that testing strategy and framework selection are inseparable in that strategy determines the general testing approach, but the technical limitations of frameworks impose restrictions on strategy employed, too.  A strategic fit must exists between IT strategy and information system infrastructure and processes \citep{henderson1993strategic}. To reasonable degree, a framework should be flexible enough to adapt to individual project needs.
 % no single test auomation solution M. Fewster and D. Graham. Software Test Automation. Addison-Wesley, 1999.
@@ -861,7 +861,7 @@ The final funnel column consists of physical objects which realize the testing p
 TODO
 
 \chapter{Deconstructing the integration testing framework}
-\label{chapter:analysis} % TODO
+\label{chapter:frameworkanalysis} % TODO
 
 This chapter examines individual components and subprocesses of integration testing, based on the funnel model derived in the previous chapter. The first section enumerates important testing strategy decisions, while the latter concentrates on practical questions and what options and tools there are to implement the strategy.
 
@@ -1013,7 +1013,7 @@ Defining expected results naturally creates more work in test case creation. The
 Typically, test cases contain assertions of the correct result which is compared to the actual result. Comparison between actual and expected results can be done algorithmically if the information is in some structured form, like XML.
 
 \chapter{Piecing together a new integration testing framework}
-\label{chapter:newframework}
+\label{chapter:frameworkproposal}
 
 \citet{huang2008surrogate} and \citet{liu2009unified} offer a unified testing framework for testing integration. The frameworks contain a generator for test cases, an execution engine, a surrogate engine simulating unavailable systems, and execution monitoring. Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
 
@@ -1107,6 +1107,8 @@ There are also many potential stumbling blocks in automation. Algorithms cannot 
 Analyzing defects is a possible quality assurance strategy: determining which kinds of errors are most common and testing for them in particular \citep{pezze2008software}. % TODO citation
 
 \chapter{Proof of concept}
+\label{chapter:poc}
+
 This chapter presents a construct built to address Wärtsilä's testing needs presented in chapter 2 (ref) and based on theoretical observations made earlier in chapter (ref) and guided by previous works and examples, chapter (ref). The purpose of the construct is to act as proof of concept and, in true testing form, give early indicators of how valid the theoretical foundations are as well as highlight practical concerns that arise during the experiment.
 
 \section{Testing framework concept structure}
@@ -1136,7 +1138,6 @@ The testing processes are mapped to tools figure .
 \draw [dashed] (2,0) -- (2,-10);
 \draw [dashed] (-2,-0.75) -- (8,-0.75);
 \node[label] (l0) {\textbf{SoapUI}};
-
 
 \node [proc] (p0) {Generating test cases};
 \node [proc] (p1) {Mocking services};
