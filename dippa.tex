@@ -1168,15 +1168,15 @@ The testing processes described in Chapter \ref{chapter:frameworkproposal} are m
 \caption{Testing framework structure} \label{fig:structure}
 \end{figure}
 
-In the framework architecture, SoapUI contains script logic and acts as model while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
+In the framework architecture, SoapUI contains script logic and acts as model while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fullfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
 
-Execuction engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine runing the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in Jenkins. (Accordinly, what can only be called an initial oversight, visualizing the test results is added as a process to the overall framework process.)
+Execution engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine runing the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in Jenkins. (Accordingly, what can only be called an initial oversight, visualizing the test results is added as a process to the overall framework process.)
 
 SoapUI is an IDE, or integrated development environment, and is also used in constructing test scripts, both manually and through capture and playback. Capture can also be used to to create scripts to simulate the behaviour of systems thereby satisfying the requirement of a surrogate engine. These mock service surrogates allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome.
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
-Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
+Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reusasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
 
 \section{Evaluation of the framework}
 The framework is evaluated mainly on qualitative measures. is done by comparisons to idealized models, interviews with Wärtsilä's experts, and observations of the framework in simulated action.
@@ -1188,9 +1188,9 @@ Key characteristics of the automated regime test regime, system of government of
 \item it is easier to add a new test to the automated pack than to run that test manually
 \end{itemize}
 
-The framework satiesfies the first criteria esaily. Tests can be grouped and executing packages of tests in Jenkins is done with a simple click. 
+The framework satisfies the first criteria easily. Tests can be grouped and executing packages of tests in Jenkins is done with a simple click. 
 
-The second criteria is also arguable satisfied since integration testing. Is satisfied by inputting information requried by the test first and lastly deleting the information. Alternatively, unchanged information may be used, though this is a more risky approach. 
+The second criteria is also arguable satisfied since integration testing. Is satisfied by inputting information required by the test first and lastly deleting the information. Alternatively, unchanged information may be used, though this is a more risky approach. 
 
 The final criteria is easy to satisfy, because even manual testing requires composition of a message to be transmitted and expected results.
 
