@@ -1123,13 +1123,13 @@ The IDE environment is also capable of producing surrogates, which simulate the 
 
 Execuction engine duties are split between the actual running of the tests and scheduling test cycles. 
 
-
-
 The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
 Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
+
+An initial oversight, visualizing the test results is added as a process to the overall framework process.
 
 \section{Evaluation of the framework}
 The framework is evaluated mainly on qualitative measures. is done by comparisons to idealized models, interviews with Wärtsilä's experts, and observations of the framework in simulated action.
