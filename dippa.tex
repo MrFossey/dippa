@@ -1113,9 +1113,9 @@ This chapter presents a construct built to address Wärtsilä's testing needs pr
 
 Early on in tool selection it became clear that one tool could not handle all processes but conversly not all processes required their own tool. Testing software could possible cater to different, even disparate aspects of the framework. The evaluation of testing tools is omitted from this study. The reader is instead referred to excellent resources such as Opensourcetesting.org and Thoughtworks CI tool comparison matrix (http://confluence.public.thoughtworks.org/display/CC/CI+Feature+Matrix).
 
+The teting processes are mapped to tools figure .
 
-
-
+TIKZ figure here
 
 The framework includes a visualization layer and GUI, an execution engine which also collects execution traces. The engine is an IDE or integrated development environment which is also used in test case construction. The suite is capable of test script capture and playback.
 
@@ -1125,7 +1125,7 @@ it is used in conjunction with ANT, which while not necessary, is an industry be
 
 The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing one feature requires cooperation between tools where one assumes part of the duties while others fulfil other parts. In true irony, implementing the integration testing framework already created a number of integrations to be tested.
 
-TIKZ figure here
+
 
 Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
 
