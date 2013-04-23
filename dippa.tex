@@ -1111,11 +1111,45 @@ This chapter presents a construct built to address Wärtsilä's testing needs pr
 
 \section{Testing framework concept structure}
 
-Early on in tool selection it became clear that one tool could not handle all processes but conversly not all processes required their own tool. Testing software could possible cater to different, even disparate aspects of the framework. The evaluation of testing tools is omitted from this study. The reader is instead referred to excellent resources such as Opensourcetesting.org and Thoughtworks CI tool comparison matrix (http://confluence.public.thoughtworks.org/display/CC/CI+Feature+Matrix).
+Early on in tool selection it became clear that one tool could not handle all processes but conversly not all processes required their own tool.data Testing software could possible cater to different, even disparate aspects of the framework. The evaluation of testing tools is omitted from this study. The reader is instead referred to excellent resources such as Opensourcetesting.org and Thoughtworks CI tool comparison matrix (http://confluence.public.thoughtworks.org/display/CC/CI+Feature+Matrix).
 
 The teting processes are mapped to tools figure .
 
 TIKZ figure here
+\begin{figure}[H]
+\centering
+% Start the picture
+\begin{tikzpicture}[
+    start chain=going below,    % General flow is top-to-bottom
+    node distance=6mm and 50mm, % Global setup of box spacing
+    ]
+% ------------------------------------------------- 
+\tikzset{
+  base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
+  label/.style={draw, on chain, on grid, align=center, minimum height=4ex},
+  proc/.style={base, rectangle, minimum height=4em, text width=7em},
+  box/.style={base, circle, text width=5em, fill = blackish, text = white},
+  line/.style={draw, thick, -latex'}
+}
+% -------------------------------------------------
+% Placing the nodes
+\node [proc] () {Test case generation};
+\node [proc] () {Surrogate engine};
+\node [proc] () {Running tests};
+\node [proc] () {Scheduling};
+\node [proc] () {Verification};
+\node [proc] () {Trace collecting};
+\node [proc] () {Trace transform};
+\node [proc] () {Viasualization of results};
+
+
+
+
+\path [line] (f2) -- (p1);
+
+\end{tikzpicture}
+\caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
+\end{figure}
 
 The framework includes a visualization layer and GUI, an execution engine which also collects execution traces. The engine, capable of running tests, is an IDE or integrated development environment which is also used in constructing the test scripts, both manually and through capture and playback. 
 
