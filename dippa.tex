@@ -1132,18 +1132,18 @@ The teting processes are mapped to tools figure .
 }
 % -------------------------------------------------
 % Placing the nodes
-\node [proc] () {Test case generation};
-\node [proc] () {Surrogate engine};
-\node [proc] () {Running tests};
-\node [proc] () {Trace collecting};
-\node [proc] () {Verification};
+\node [proc] (p0) {Test case generation};
+\node [proc] (p1) {Surrogate engine};
+\node [proc] (p2) {Running tests};
+\node [proc] (p3) {Trace collecting};
+\node [proc] (p4) {Verification};
 
-\node [proc] () {Scheduling};
-\node [proc] () {Trace transform};
+\node [proc, right=of p2] (p5) {Scheduling};
+\node [proc, right=of p3] (p6) {Trace transform};
 
-\node [proc] () {Viasualization of results};
+\node [proc] (p7) {Viasualization of results};
 
-\path [line] (f2) -- (p1);
+\path [line] (p0) -- (p1);
 
 \end{tikzpicture}
 \caption{Testing framework structure} \label{fig:structure}
