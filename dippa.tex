@@ -1145,8 +1145,13 @@ The teting processes are mapped to tools figure .
 \node [proc, right=of p0] (p7) {Visualization of results};
 
 \begin{pgfonlayer}{background}
-  \node[box] [fit = (p2) (p5)] {Test};
+  \node[box] [fit = (p2) (p5)] {Execution engine};
 \end{pgfonlayer}
+
+\begin{pgfonlayer}{background}
+  \node[box] [fit = (p1)] {Surrogate engine};
+\end{pgfonlayer}
+
 
 \path [line] (p0) -- (p1);
 
