@@ -1172,13 +1172,11 @@ In the framework architecture, SoapUI contains script logic and acts as model wh
 
 Execuction engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine runing the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in Jenkins. (Accordinly, what can only be called an initial oversight, visualizing the test results is added as a process to the overall framework process.)
 
-SoapUI is an IDE, or integrated development environment, and is also used in constructing test scripts, both manually and through capture and playback. Capture can also be used to to create scripts to simulate the behaviour of systems thereby satisfying the requirement of a surrogate engine. These mock service surrogates allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome. 
+SoapUI is an IDE, or integrated development environment, and is also used in constructing test scripts, both manually and through capture and playback. Capture can also be used to to create scripts to simulate the behaviour of systems thereby satisfying the requirement of a surrogate engine. These mock service surrogates allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome.
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
 Specification of sufficient accuracy for deriving test cases were not available, and therefore test scripts are based on capture. Test cases are written in the soapui format but since their structural composition is largely that of an XML file, their reuasability and low risk of vendor lock-in is justified. Execution traces are simply full text accounts of test results. 
-
-
 
 \section{Evaluation of the framework}
 The framework is evaluated mainly on qualitative measures. is done by comparisons to idealized models, interviews with Wärtsilä's experts, and observations of the framework in simulated action.
