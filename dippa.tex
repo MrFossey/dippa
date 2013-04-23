@@ -1132,14 +1132,14 @@ The teting processes are mapped to tools figure .
 }
 % -------------------------------------------------
 % Placing the nodes
-\node [proc] (p0) {Test case generation};
-\node [proc] (p1) {Surrogate engine};
+\node [proc] (p0) {Generating test cases};
+\node [proc] (p1) {Mocking services};
 \node [proc] (p2) {Running tests};
-\node [proc] (p3) {Trace collecting};
-\node [proc] (p4) {Verification};
+\node [proc] (p3) {Collecting traces};
+\node [proc] (p4) {Verifying};
 
 \node [proc, right=of p2] (p5) {Scheduling};
-\node [proc, right=of p3] (p6) {Trace transform};
+\node [proc, right=of p3] (p6) {Trace transforming};
 
 \node [proc, right=of p0] (p7) {Visualization of results};
 
