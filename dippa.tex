@@ -1117,9 +1117,11 @@ The teting processes are mapped to tools figure .
 
 TIKZ figure here
 
-The framework includes a visualization layer and GUI, an execution engine which also collects execution traces. The engine is an IDE or integrated development environment which is also used in test case construction. The suite is capable of test script capture and playback.
+The framework includes a visualization layer and GUI, an execution engine which also collects execution traces. The engine, capable of running tests, is an IDE or integrated development environment which is also used in constructing the test scripts, both manually and through capture and playback. 
 
-Scheduling test runs is done with 
+The IDE environment is also capable of producing surrogates, which simulate the behaviour of actual systems. These mock service surrogates allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome. Building and running mock services can also be done with capture and replay, which contributed to the tool choice.
+
+Execuction engine duties are split between the actual running of the tests and scheduling test cycles. 
 
 it is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration.
 
