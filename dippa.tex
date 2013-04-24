@@ -1154,17 +1154,24 @@ The testing processes described in Chapter \ref{chapter:frameworkproposal} are m
 \node [proc, right=of p0] (p7) {Visualization of results};
 
 \begin{pgfonlayer}{background}
-  \node[box] [fit = (p2) (p5)] (b0) {};
+  \node[box] [fit = (p2) (p5)] (b0) {}; % Execution engine
 \end{pgfonlayer}
 
 \begin{pgfonlayer}{background}
-  \node[box] [fit = (p1)] {};
+  \node[box] [fit = (p1)] (b1) {};      % Surrogate engine
 \end{pgfonlayer}
 
 \node[label, right=3.5cm of p5] {\emph{Execution engine}};
 \node[label, right=4cm of p1] {\emph{Surrogate engine}};
 
-\path [line] (p0) -- (p1);
+\path [line] (p0) -- (b0);
+\path [line] (b0) -- (p1);
+\path [line] (p1) -- (b0);
+\path [line] (b0) -- (p3);
+\path [line] (p3) -- (p4);
+\path [line] (p4) -- (p6);
+\path [line] (p6) -- (p7);
+
 
 \end{tikzpicture}
 \caption{Testing framework structure} \label{fig:structure}
