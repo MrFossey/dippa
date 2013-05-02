@@ -649,6 +649,10 @@ Traditionally, testing is grouped to unit, integration, and system levels \citep
 % What to test
 The fluid progression from atomic unit tests to holistic system tests is strongly reflects the software development process. Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated TODO references. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved a software bug \citep{jenkins2008software}.
 
+\section{Information systems and motivation}
+
+Write about what processes are already defined and argue that there is no overlap. What to do. technique how to do. Does not assume overall test steering responsibilities, the two are separated and not dependent so they can be updated individually.
+
 %The general reasons for testing automation.
 The bigger and the more numerous information systems are, the more problems are likely to arise. Software failures may result in squandered time and money, and even loss of life. The growing pressures for delivering quality and controlling IT risks are reflected on software testing. This in turn creates a demand for testing automation. Already in 1976 \citet{myers1976software} stated that maintenance and testing account for 75\% of software costs.
 
@@ -726,12 +730,6 @@ Requirements and specifications are collected among solution key users and manag
 Test cases are constructed manually and are not maintained. After a development project is closed and moves to \eph{live maintenence mode}, new cases are created when needed as new features or enhancements are released. In some few cases, a battery of regression tests is maintained. Testing results and found incidents are logged to a bug tracking system, or collected in shared files or email conversations. 
 
 The reuse and reusability of testing objects is minimal. Steps have been taken to standardize the testing process, to identify the most important points of improvement, and raise the maturity level of testing to gradually establish the preconditions for an automated and controlled organization-wide process. Introducing the new integration testing framework is a grand undertaking requiring the participation of many stakeholders. A complex, inflexible or overly prescribing model will probably not find much use.
-
-\section{Information systems and motivation}
-
-
-
-Write about what processes are already defined and argue that there is no overlap. What to do. technique how to do. Does not assume overall test steering responsibilities, the two are separated and not dependent so they can be updated individually.
 
 \chapter{Looking for a testing framework}
 \label{chapter:frameworktheory}
