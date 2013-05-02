@@ -646,7 +646,7 @@ Along with the functionality of the system, tests should also be applied to non-
 
 Traditionally, testing is grouped to unit, integration, and system levels \citep{jenkins2008software, burnstein2003practical}. Unit testing is assuring that individual software components and functions perform to specifications. When components are paired or grouped, the resulting connections must also be tested. Finally, system testing refers to testing the finished software suite with a suitable array of use cases.
 
-The distinction between unit, integration, and system tests is not clear. Some authors consider end-to-end integration testing akin to system tests, ohters introduce component testing as intermediary between unit and integration/system tests \citep{duvall2008continuous, .
+The distinction between unit, integration, and system tests is not clear. Some authors consider end-to-end integration testing akin to system tests. Researchers like Duvall write about component testing which is synonymous with integration testing, while others like Pezze consider this an intermediary between unit and integration/system tests.
 
 % What to test
 Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated. A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved a software bug \citep{jenkins2008software}.
