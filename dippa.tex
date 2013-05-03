@@ -741,7 +741,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 
 \section{A unified testing framework}
 
-The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case generation, case execution, and execution trace collection. The model was used in relatively small-scale experiments, but successfully uncovered bugs early in development. The framework also helped find different kind of bugs and didn't appear to have a bias towards uncovering a certain kind of defect \citep{liu2009unified}.
+The \citet{liu2009unified} model (figure \ref{fig:liu}) includes processes, objects, and agents. Based on a UML obeject, the test generator creates test cases later submitted to the exeuction engine. Surrogates facilitate software testing. After execution IBM's properietary ITCAM technology aggregates execution traces which it passes to the trace correlator for , execution engine, surrogate engineion, case execution, and execution trace collection. The surrogate generator was left out of the model.
 
 \begin{figure}[H]
   \begin{center}
@@ -750,6 +750,8 @@ The \citet{liu2009unified} model (figure \ref{fig:liu}) includes test case gener
     \label{fig:liu}
   \end{center}
 \end{figure}
+
+The model was used in relatively small-scale experiments, but successfully uncovered bugs early in development. The framework also helped find different kind of bugs and didn't appear to have a bias towards uncovering a certain kind of defect \citep{liu2009unified}.
 
 \section{Simulation apparatus system}
 
