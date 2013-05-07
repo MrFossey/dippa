@@ -1234,7 +1234,7 @@ Execution traces are simply full text accounts of test results. These include in
 
 \textbf{Jenkins}\footnote{http://jenkins-ci.org/} is a continuous testing and integration tool which manages test execution for software projects. Running on a server, Jenkins can be triggered to run on a regular basis (e.g. daily, weekly, every hour) or immediately as new code is committed into a repository linked to a Jenkins project. Since test cases, suites, collections of suites can be linked to independent projects, it is easy to organize tests, tailor and schedule runs, and generally run tests only when it is needed.
 
-For clarification, it should be noted that Jenkins is made with software development rather than regression testing in mind. At the bare minimum, Jenkins is given a test case execution script courtesy of SoapUI which it runs in the native operating system's environment and collects traces provided by the cases and script.
+It should be noted that Jenkins is made with software development rather than regression testing in mind but on balance the regression test set-up is equally effective. At the bare minimum, Jenkins is given a test case execution script courtesy of SoapUI which it runs in the native operating system's environment and collects traces provided by the cases and script.
 
 Jenkins is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration. ANT is essentially an XML-format configuration file which specifies which steps are to be taken when a new build is created.
 
