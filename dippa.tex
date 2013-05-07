@@ -1216,7 +1216,7 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \caption{Testing framework structure} \label{fig:structure}
 \end{figure}
 
-In the framework architecture, SoapUI contains script logic and acts as model while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing a feature like test execution requires cooperation between tools where one assumes part of the duties while the other fullfils the rest. In true irony, implementing the integration testing framework already creates a number of "integrations".
+In the framework architecture, SoapUI contains script logic and in MVC terms acts as model, while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing a feature like test execution requires cooperation between tools where one assumes part of the duties while the other fulfils the rest. In true irony, implementing the integration testing framework already creates a number of dependencies.
 
 Execution engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine runing the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in Jenkins. Accordingly, what can only be called an initial oversight, visualizing the test results is added as a process to the overall framework process.
 
