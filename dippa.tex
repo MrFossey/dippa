@@ -794,8 +794,6 @@ A test design system is used to create and edit tests cases. In practice, the sy
 
 At the heart of the framework lies the test execution system which houses test libraries, driver scripts, and the test data parsers, as well as the logger and report generator utilities. The monitoring system fires driver scripts which use functions in the test libraries and modules to perform test actions. The parser manages test data and converts to the right format. The logger collects relevant execution information which is also used as input in test reports. Both logs and reports can be viewed in the monitorinh system.
 
-Where the two first models essentially depict a loop and treat continuous testing as implicit, the keyword-driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model also supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
-
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{laukkanen_framework.png}
@@ -803,6 +801,8 @@ Where the two first models essentially depict a loop and treat continuous testin
     \label{fig:laukkanen} 
   \end{center}
 \end{figure}
+
+Where the two first models essentially depict a loop and treat continuous testing as implicit, the keyword-driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model also supports the notion that a full framework should contain tools for the key processes test case generation, test execution, and verification or monitoring.
 
 
 \section{Model summary}
