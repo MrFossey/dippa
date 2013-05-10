@@ -788,11 +788,11 @@ The unified testing framework was tried out in relatively small-scale experiment
 
 \section{Data-driven testing framework}
 
-In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driven testing model (figure \ref{fig:laukkanen}) testing is divided into modules for \emph{test design}, \emph{test execution}, and \emph{test monitoring}. A test design system is used to create and edit tests cases. In practice, the system could simply be a spreadsheet or HTML editor. \citep{laukkanen2006data}
+In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driven testing model (figure \ref{fig:laukkanen}) testing is divided into modules for \emph{test design}, \emph{test execution}, and \emph{test monitoring}. 
 
-According to \citet{laukkanen2006data} the test monitoring system is used for controlling test execution and checking test results. The visualized results are text logs or HTML.
+A test design system is used to create and edit tests cases. In practice, the system could simply be a spreadsheet or HTML editor. According to \citet{laukkanen2006data} the test monitoring system is used for controlling test execution and checking test results. The visualized results are in the form of low-level text logs or more visually-pleasing HTML.
 
-At the heart of the framework lies the test execution system which houses test libraries, driver scripts and the test data parsers, as well as the logger and report generator utilities. The monitoring system fires driver scripts which use functions in the test libraries and modules to perform test actions. Parser manages test data converts to right format. Logger collects relevant execution information. viewed in monitorin system
+At the heart of the framework lies the test execution system which houses test libraries, driver scripts, and the test data parsers, as well as the logger and report generator utilities. The monitoring system fires driver scripts which use functions in the test libraries and modules to perform test actions. The parser manages test data and converts to the right format. The logger collects relevant execution information which is also used as input in test reports. Both logs and reports can be viewed in the monitorinh system.
 
 Where the two first models essentially depict a loop and treat continuous testing as implicit, the keyword-driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model also supports the notion that a full framework should contain tools for test case generation, test execution, and verification or monitoring.
 
