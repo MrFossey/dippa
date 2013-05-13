@@ -558,8 +558,6 @@ Something to grab the reader's attention
 
 Integrating disparate actors and information systems is common practice in modern corporations, and often a prerequisite for operational IT. The principles and drivers of a distributed system are not unlike those behind division of labour. Complex tasks are easier to solve when divided, each part administered by a dedicated expert. Distributed systems also enable incremental growth, which, of course, is sometimes a less-consciously-pursued natural evolution and accretion of new information services. Other benefits of an interdependent and connected information technology system include a reduction in the number of systems related upkeep, maintenance, and development costs, which also reduces the degree of complexity in the set-up. Shared resources bring economies of scale as software components find reuse \citep{rehman2007testing}.
 
-developer and tester coordination. typically developer does unit testing, integration first test in actual use environment (possibly by real end user)
-
 \begin{comment}
 % benefits of automation, build-up to integration, orienting to automoated IT business processes
 % TODO start with key concept, not automation, real-time processes perspective, inter-company, information flow as a % reason, add picture and figure, why was the work conducted? business critical and dependencies. why?
@@ -567,7 +565,9 @@ Automation is one of the great boons brought on by technological development on 
 \end{comment}
 
 % The negatives in integrated systems.
-Integration efforts may, however, result in unclear responsibilities and difficulties in determining if the systems cooperate and behave correctly, and if any use cases are unaccounted for. In a distributed system there are more components and connections that can fail, and relinquishing control over units always carries risk. A high number of integrations makes the task even more difficult since a single change in the system components can disrupt a whole chain of operations.
+Integration efforts may, however, result in unclear responsibilities and difficulties in determining if the systems cooperate and behave correctly, and if any use cases are unaccounted for. In a distributed system there are more components and connections that can fail, and relinquishing control over units always carries risk. Typically integrations are tested after the developer passes the sofware on to the tester or user for teting in the actual environment A high number of integrations makes the task even more difficult since a single change in the system components can disrupt a whole chain of operations.
+
+developer and tester coordination. typically developer does unit testing, integration first test in actual use environment (possibly by real end user)
 
 % business motivation and technical considerations
 The benefits outweighing all shortcomings, modern corporations' business processes rely on IT automation and operate on distributed systems and networked devices. But the problems are still there; ensuring quality of service is essential. Systematic, rigorous, and preferably automated regression testing, both functional and non-functional, is required. This thesis examines the requirements of system-to-system integration testing in a real world business setting. The supposition is that a carefully crafted framework will help uncover defects and issues earlier and resolve them with fewer resources.
