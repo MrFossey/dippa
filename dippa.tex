@@ -794,7 +794,7 @@ In \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} keyword-driv
 
 A test design system is used to create and edit tests cases. In practice, the system could simply be a spreadsheet or HTML editor. According to \citet{laukkanen2006data} the test monitoring system is used for controlling test execution and checking test results. The visualized results are in the form of low-level text logs or more visually-pleasing HTML.
 
-At the heart of the framework lies the test execution system which houses test libraries, driver scripts, and the test data parsers, as well as the logger and report generator utilities. The monitoring system fires driver scripts which use functions in the test libraries and modules to perform test actions. The parser manages test data and converts to the right format. The logger collects relevant execution information which is also used as input in test reports. Both logs and reports can be viewed in the monitorinh system.
+At the heart of the framework lies the test execution system which houses test libraries, driver scripts, and the test data parsers, as well as the logger and report generator utilities. The monitoring system fires driver scripts which use functions in the test libraries and modules to perform test actions. The parser manages test data and converts to the right format. The logger collects relevant execution information which is also used as input in test reports. Both logs and reports can be viewed in the monitoring system.
 
 \begin{figure}[H]
   \begin{center}
@@ -806,14 +806,16 @@ At the heart of the framework lies the test execution system which houses test l
 
 Where the two first models essentially depict a loop and treat continuous testing as implicit, the keyword-driven model instead offers a monitoring step which overlays verification processes where a view to system status and health is more clearly separated from the testing execution. Naturally, a batch of test cases can be set to run to update the status. \citeauthor{laukkanen2006data}'s \citeyearpar{laukkanen2006data} model also supports the notion that a full framework should contain tools for the key processes test case generation, test execution, and verification (or monitoring).
 
-Piloted in windows application testing
+\citet{laukkanen2006data} piloted the keyword-driven framework in Windows application testing.
 
 \section{Model summary}
 
 Figure \ref{fig:funnel} presents a testing framework on three levels of abstraction (horizontal dimension) and on a process dimension (vertical). Starting from the right, general testing strategy and requirements are translated into a framework, largely uniform, but flexible enough to conform to minor project idiosyncrasies and onto concrete objects, like test cases. The vertical dimension, presented as a tapering funnels, depict the process dimension. Each framework abstraction takes some input which it refines into an outcome or deliverable.
 %Pace of integration, rate of automation, definition for I/O process
 
-The case specific use of the framework is determined by specifications or agreements, e.g. on security policy or service level, and a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically every time a change is committed to system source code. This approach is called continuous integration (CI). 
+The case specific use of the framework is determined by specifications or agreements, e.g. on security policy or service level, and a test plan, which typically includes test objectives, responsibilities and schedules, a list of necessary tools, process descriptions, and success criteria \citep{myers1976software}. 
+% TODO remove?
+The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically every time a change is committed to system source code. This approach is called continuous integration (CI). 
 
 The final funnel column consists of physical objects which realize the testing process: the tested cases, a test executing instance, and testing results in human or machine readable form. These should be constructed with regard to the chosen strategy and framework scope. 
 
