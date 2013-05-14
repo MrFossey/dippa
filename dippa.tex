@@ -757,32 +757,24 @@ a jumble systems plugged into the common esb, critical system, managing risk,
 
 \section{Requirements}  
 
-Three technical experts at Wärtsilä shared their views on the framework early on in interviews conducted by the researcher. The experts at enterprise architecutre, integrations, and testing system-to-system connections. 
+Three technical experts at Wärtsilä shared their views on the framework early on in interviews conducted by the researcher. The interviews, approximately an hour in length, were loosely structured and had no presumptions about the nature of the framework-to-be. The mission was to elicit Wärtsilä's requirements for integration testing including technical, functional, and practical aspects. The two latter interviewees were, however, presented with findings from earlier interviews for their opinion and the addition of any further comments or clarifications.
 
-The interviews, approximately an hour in length, were loosely structured and had no presumptions about the nature of the framework-to-be. The mission was to elicit Wärtsilä's requirements for integration testing including technical, functional and practical aspects. The two latter interviewees were presented findings from earlier interviews for validation and the addition of any further comments or clarifications.
+The first interviewee, who also comssioned the work, acts as techincal integrations architecture expert. Confirmed in the intervew, the core test cases or integration message exchanges are of synchronous or asynchronous type. 
 
-The expert two integration exchange types, asynchronous and synchronous. also which protocols the framework technolgoy should support. Suggestion that test cases be geranted by capture and replay.
+In the former, a client application sends a request, which passes through the integration service and transformations along to the ESB from where it continues on to the receiving system. This immediately returns a reply which travels the same route in the opposite direction. Consequently, the framework needs a tool capable of sending and receiving these messages and presenting the final results to the tester for examination.
 
-The second inverview three types of testing: regression in own environment before deploying to production, end-to-end in project QA, health check in production as sanity or smoke check.
+The more tricky asynchronous messaging method, where no message is returned (at least not immediately), makes verification more difficult. Visibility to the end system is required. Since end system functionality is not in the test scope, intercepting the message after it has been subjected to integration transformations but before it reaches its final destination, and ascertaining it is correct by comparing it to an example, would suffice. Mocking services and systems or redirecting messages are practical ways to achieve this.
 
-In the final interview, reiterated the requirement for easy test case creation (though now specific method was endorsed) and that existing resources might be used.
+The integrations expert also pointed to the possibiltiy of recording messages in the current production environment so that they might be used as input data in test cases, and as reference when ascertaining the integration-transformed messages are of correct form. 
 
-The list of requirements summarizes
+Finally, a list of messaging protocols that should be supported by the framework was made.
 
--asynch, synch
--protocol
--capture/replay
+The second interviewee, responsible for enterprise architecutre and governance, concurred with the previous requirements and added three scenarios where integration testing is needed. Firstly, integration regression testing in a testing environment is needed when systems are updated and before changes are deployed into the production environemnt. Second, IT projects require end-to-end integration verification tests throughout the course of the project to be performed in the development or quality assurrance environment. Finally, an integration health check or smoke test in production should be enabled to quickly flag any errors and direct to problem areas. 
 
--health check, continuous testing
--easy test case creation, using existing resources
--end-to-end in projects, early and often
--regression 
+The third interviewee, an solutions architect, advocated using existing resources, such as manual test scripts, in implementing integration testing and the method of creating test cases should be well documented so as to help future testers adhere to and use the framework's testing process. Now specfic method for test creation was enrosed, however.
 
--easy test case creation
--using existing resources
--support documents for creation 
-
-
+All of the collected requirements are shown in table X.
+%Tommi
 
 \chapter{Looking for a testing framework}
 \label{chapter:frameworktheory}
