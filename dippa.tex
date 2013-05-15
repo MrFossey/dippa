@@ -776,14 +776,25 @@ The third interviewee, an solutions architect, advocated using existing resource
 All of the collected requirements are shown in table X.
 %Tommi
 
+-Scope: integraatioiden testaus webMethods-ympäristössä 
+-Tuki testikeissien tekemiselle 
+-Sanomien nauhoitus ja niiden toistaminen ja pukeminen testikeisseiksi 
+-Synkroniset palvelupyynnöt: vastaussanomien validointi 
+-Asynkroniset palvelupyynnöt: mock-up palveluiden tekeminen tai muu tapa testata tapauksia missä kohdejärjestelmä ei palauta tulosta 
+-Tuki suorituskykytestaukselle (ainakin load testing ja stress testing): suorituskyvyn mittaus, kuorman rakentaminen ja ajaminen 
+-Protokollatuki: Web services, HTTP/XML, JDBC, (S)FTP 
+
 
 \begin{figure}[H]
 \begin{center}
 \begin{tabular}{ l c }
   \hline                        
-  R1 & This is a requirement. The text is long. \\ \hline
-  R2 & This is a requirement. The text is long. \\ \hline
-  R3 & This is a requirement. The text is long. \\ \hline
+  R1 & It shall be possible to run test cases. \\ \hline
+  R1 & It shall be possible to scheudle automatical test runs. \\ \hline
+  R1 & It shall be possible to write and generate test cases \\ \hline
+  R2 & It shall be possible to capture and replay messages. \\ \hline
+  R2 & It shall be possible to generate mock services or stubs. \\ \hline
+  R3 & HTTP/XML, JDBC, (S)FTP messaging protocols shall be supported. \\ \hline
   \hline  
 \end{tabular}
 \end{center}
