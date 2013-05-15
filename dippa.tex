@@ -664,8 +664,6 @@ The distinction between unit, integration, and system tests is not clear, howeve
 % What to test
 The fluid progression from atomic unit tests to holistic system tests strongly reflects the software development process. Naturally, software has to be tested to during and after initial development, but there are other reasons, too. Any change in code or specifications, the environment, or testing policy, or plans can act as a trigger for testing. Systematically repeating a set of tests to ascertain changes (like fixes) have not introduced new errors to previously functional code is called regression testing. The execution of regression tests is typically automated (TODO references). A nearby concept, \textit{retesting} refers to examining if a fix has actually resolved a software bug \citep{jenkins2008software}.
 
-
-
 \section{Information systems and motivation}
 
 Write about what processes are already defined and argue that there is no overlap. What to do. technique how to do. Does not assume overall test steering responsibilities, the two are separated and not dependent so they can be updated individually.
@@ -689,6 +687,8 @@ The oft-cited reasons for testing automation are improving software quality and 
 Naturally, automation comes with its downsides and risks, some of which are not insignificant. These will be explored later in Chapter \ref{chapter:integrationtesting}. %TODO update reference
 
 \section{Integration testing at Wärtsilä}
+
+% add mention of interview
 
 %Why is integration testing important
 Integration testing is particularly important at Wärtsilä because the company typically outsources IT development. This pushes unit testing responsibilities to the supplier, while solution integration remains Wärtsilä's concern and responsibility. A flexible and well-defined integration testing process framework can serve many development projects to come. To date, there have been cases with unnecessary duplicate work. In a recent ERP update effort the scale of and need for testing became evident to Wärtsilä. A framework guiding the testing process and automating a part of it could significantly reduce costs and risks as well as project execution time.
