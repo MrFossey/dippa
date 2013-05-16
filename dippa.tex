@@ -863,7 +863,7 @@ The unified testing framework was tried out in relatively small-scale experiment
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{huang_et_al_framework.png}
-    \caption{Simulation apparatus system architecture \citep{huang2008surrogate}}
+    \caption{Surrogate system architecture \citep{huang2008surrogate}}
     \label{fig:huang}
   \end{center}
 \end{figure}
@@ -878,7 +878,7 @@ The unified testing framework was tried out in relatively small-scale experiment
 \end{figure}
 \end{comment}
 
-In the figure, the environment is made of the application container which may or may not contain parts or the whole of the system under test and in which surrogates are deployed. Again, the many intefaces in the framework are highlighted.
+In the figure, the environment is made of the application container which may or may not contain parts or the whole of the system under test and in which surrogates, or mock services or stubs, are deployed. Again, the many intefaces in the framework are highlighted.
 
 \citet{huang2008surrogate} instruct that before test execution the necessary surrogates should be defined by test case and deployed. Before test case execution, the surrogate component availability is checked. To achieve true automation, then, such environmental setup should also be automated.
 
@@ -904,7 +904,7 @@ Where the two first models essentially depict a loop and treat continuous testin
 
 \section{Model summary}
 
-The testing frameworks or models introduced in this chapter have striking similarities and subtle connotations. All models, save for \citeauthor{huang2008surrogate}'s surrogate architecture (really only a part of the whole continuous integration process), can be argued to roughly follow a three step process of generating necessary input (cases, surrogates, test data), running the test scripts, and finally verifying and comparing results. 
+The testing frameworks or models introduced in this chapter have striking similarities and subtle individual connotations. All models, save for \citeauthor{huang2008surrogate}'s surrogate architecture (really only a part of the whole continuous integration process), can be argued to roughly follow a three step process of generating necessary input (cases, surrogates, test data), running the test scripts, and finally verifying and comparing results. 
 % todo: indeed a steretypuical proces, defeinition
 
 Since all of the models are rather pragmatic and technical, 
