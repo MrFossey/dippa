@@ -617,6 +617,8 @@ The framework technology evaluation and choice is omitted from the scope of the 
 
 % b meyer: ironic that more computing power does not yield better tests, process contains bottlenecks of manual tasks
 
+% todo: add description of interview process and picture or research structure
+
 % TODO: consult professor, instructor about research method. Alternatives: exploratory research, empirical research
 \section{Research method}
 Research follows the constructive research method --- a six step model, where a concrete, real world problem is investigated through practical experience and academic understanding \citep{kasanen1993constructive, shaw2001research}. The resulting conclusions and concepts are then tested in a working simulation. The emphasis is not to produce hard fact to the academic canon, but to produce hypotheses and theories, and test them in practice. The constructive research method is depicted in Figure \ref{fig:constructiveResearch}.
@@ -1078,7 +1080,7 @@ In \emph{bottom-up} and \emph{top-down testing} integrations are put together an
 % TODO: literature development minded, regressions tests when systems are already put together, comes down to order of testing, but tests can be executed instantaneously. how realistic, how sophisticated, coverage of links
 The strategy typology is also designed for integration in the development phase, rather than integration regression testing. This limits its applicability. An automatically executable test set may be capable of going through every integration in a matter of seconds or minutes, especially if only a few integrations are tested at a time. The strategies, however, are worth considering when changes in systems call for testing many integrations (possibly all of them), for example when reassembling the system is required after a change with global effects. Integrations that are quick to run, or likely to fail should be run first \citep{duvall2008continuous} %(todo: ref). 
 
-Models made in the design phase can be used to manage testing. A system formalized as a finite-state machine and modeled as a network can be used to implement automated testing or test case creation, and elicit possible execution paths and plan coverage, and ensure that the system is adequately tested. T
+Models made in the design phase can be used to manage testing. A system formalized as a finite-state machine and modeled as a network can be used to implement automated testing or test case creation, and elicit possible execution paths and plan coverage, and ensure that the system is adequately tested. Some systems, like those in banking and medicine, have very high availability requirements and may 
 
 %FIXME
 Models made in the design phase can be used to manage testing. Typically, a system is formalized as a finite-state machine and pictured as a network. Then tests are run so that the whole network is traversed: every transition from state to state is tested. Model-based testing is usually used to test systems with very high availability requirements, like banking or medical systems.
@@ -1087,6 +1089,8 @@ Deriving test cases from models or using models to represent the testing strateg
 The more formal the model, the better test cases, still support (pezze). 
 can be represented by finites state machine, modeling all transitions involves work, out of scope. for rigorous testing
 %"The effectiveness of model-based testing is primarily due to the potential for automation it offers. If a model is machine-readable and formal to the extent that it has a well-defined behavioral interpretation, test cases can in principle be derived mechanically."
+pezze 245 models extracted from code or specs
+
 benefits in reduced specification errors and avoided misinterpretation 
 often simplifications although theoretical number of states infinite
 state machine guides selection
