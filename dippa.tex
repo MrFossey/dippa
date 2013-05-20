@@ -1048,22 +1048,6 @@ Here, complex path sequences can be interpreted as system tests, whereas \emph{a
 
 In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. 
 
-
-
-Deriving test cases from models or using models to represent the testing strategy is known as model-based testing.
-The more formal the model, the better test cases, still support (pezze). 
-can be represented by finites state machine, modeling all transitions involves work, out of scope. for rigorous testing
-%"The effectiveness of model-based testing is primarily due to the potential for automation it offers. If a model is machine-readable and formal to the extent that it has a well-defined behavioral interpretation, test cases can in principle be derived mechanically."
-benefits in reduced specification errors and avoided misinterpretation 
-often simplifications although theoretical number of states infinite
-state machine guides selection
-often specs lacking, missing cases implicitly error cases
-good testing covers these too
-can do anything, does nothing
-Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
-
-% add model-based testing
-
 \subsection{Test process}
 The way integration testing is conducted is linked to the integration strategy. Service-Oriented Architecture and Continuous Integration especially blur the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. 
 
@@ -1133,7 +1117,7 @@ Once the test cases have been created and chosen, the test set quality itself ca
 
 \section{From strategy to framework composition}
 
-This section examines the framework-object relationships ans structure. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings for establishing the basic structure of the testing framework, to get acquainted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process.
+This section examines the framework-object relationships ans structure. First, test case design and generation, then test execution, and finally verification or validation are covered. The purpose is to draw on academic writings and experiments for establishing the basic structure of the testing framework, to get acquainted with techniques that have been put to use previously, and identify any other practical concerns in designing a successful testing process.
 %Because of the automation requirement, 
 
 \subsection{Test case generation}
