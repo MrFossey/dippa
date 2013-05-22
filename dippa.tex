@@ -1173,6 +1173,8 @@ Typically, test cases contain assertions of the correct result which is compared
 % todo: remind that the models were covered in chapter 3
 \citet{huang2008surrogate} and \citet{liu2009unified} offer a unified testing framework for testing integration. The frameworks contain a generator for test cases, an execution engine, a surrogate engine simulating unavailable systems, and execution monitoring. Both frameworks are grounded on models or descriptions of the systems helping to automate stub or test case creation. Integration testing is done on a continuous basis (CIT, continuous integration testing) right from the start of development.
 
+In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate}, \citet{liu2009unified}, and \citet{laukkanen2006data} presented framework models for integration testing. The key components of impl
+
 The figure below synthesizes integration testing theories and techniques introduced in the chapter. The model is based on the \citet{liu2009unified} unified testing framework model and adapted to Wärtsilä's integration testing needs. The model is technology-agnostic, and only presents the steps, systems, and processes required on an abstract level.
 
 First off, production records are used for the generation of new test cases. This means that there must be some way to capture and record behaviour in the production environment, and save the information in a database. In the following generation step, the records are turned into an executable test case, which are then run by a testing engine against the system under test (SUT). Models, diagrams, and specifications can also be used for automatically producing test cases. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behavior. The different types of records or models must be turned into cases in a way that the engine can run them. 
@@ -1429,11 +1431,14 @@ relationship between automation and manual work, test automation manual maintena
 integration test strategy in the vein if rehmann, what options/technical strategies are there? tired old big-bang
 Strategies for test case creation (zeng & tan 2013)
 study merits of fault based testing for more efficient tests
+distinction between a technological configuration and process model is difficult.
 
 \chapter{Conclusions}
 \label{chapter:conclusions}
 
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
+
+
 
 \begin{comment}
 % pezze integration faults
