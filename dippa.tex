@@ -1170,7 +1170,7 @@ Typically, test cases contain assertions of the correct result which is compared
 \chapter{Piecing together a new integration testing framework}
 \label{chapter:frameworkproposal}
 
-In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate}, \citet{liu2009unified}, and \citet{laukkanen2006data} presented framework models for integration testing, the key processes of which include test case generation and design, an executing test cases, creating mock systems, simulating unavailable systems or servces, verificaiton of results, and execution monitoring. This chapter takes these building blocks and, according to instructions laid out already in Chapter \ref{chapter:background}, assembles a framework suitable for Wärtsilä.
+In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate}, \citet{liu2009unified}, and \citet{laukkanen2006data} presented framework models for integration testing, the key processes of which include test case generation and design, an executing test cases, creating mock systems, simulating unavailable systems or services, verification of results, and execution monitoring. This chapter takes these building blocks and, according to instructions laid out already in Chapter \ref{chapter:background}, assembles a framework suitable for Wärtsilä.
 
 \section{Wärtsilä's integration testing framework}
 
@@ -1380,7 +1380,7 @@ Compared to the models by \citet{liu2009unified} and \citet{huang2008surrogate} 
 \item it is easier to add a new test to the automated pack than to run that test manually
 \end{itemize}
 
-The framework satisfies the first criteria easily. Executing packages of tests packages in Jenkins is done with a simple click. Likewise choosing which tests to execute is not uncomplicated. Integration test cases can be organised inside Jenkins projects so that only the needed cases are run. This does call for some mainntenance work, however. It is essential to know which projects should be appended with the new case. Otherwise the unorganized collection test cases becomes clumsy to use. This issue can be subverted by guidelines already at the test creation process so that the test engineer adds the case in the correct test suite. The framework adminisitrator meanwhile sees to that each suite is correctly linked to projects.
+The framework satisfies the first criteria easily. Executing packages of tests packages in Jenkins is done with a simple click. Likewise choosing which tests to execute is not uncomplicated. Integration test cases can be organised inside Jenkins projects so that only the needed cases are run. This does call for some maintenance work, however. It is essential to know which projects should be appended with the new case. Otherwise the unorganized collection test cases becomes clumsy to use. This issue can be subverted by guidelines already at the test creation process so that the test engineer adds the case in the correct test suite. The framework administrator meanwhile sees to that each suite is correctly linked to projects.
 
 Automated testing already requires the second criteria be satisfied. Assuming the test server and SUT servers are available, and test cases contain necessary information to access information services, the test set-up is complete. Because some features require inputting information, like creating test orders, which can not be allowed in production, mock services are used. Here, test messages travel through the same \emph{"integration black box"} as actual messages would, and the only part that is not "real" is the end point system the testing of which is outside of integration test scope. Therefore the described test approach provides an accurate result of integration functionality and health. Not part of the automation, a test engineer should monitor execution and react appropriately in case a test case fails.
 
@@ -1424,7 +1424,7 @@ The workshop was recorded. In the session everyone was given a presentation and 
 \chapter{Discussion}
 \label{chapter:discussion}
 
-One of the fundamental difficulties in developing an integration testing framework is the intertwined relationship of technology and manual work involved in and around it. Clearly as a framework for \emph{automated} testing the framework is realized by algorithmical execution, but it cannot be used successfully without human intervention and maintenance. It is blurred relationship of man and machine, the conconction of technological configuration and human work process model tries the framework developer.
+One of the fundamental difficulties in developing an integration testing framework is the intertwined relationship of technology and manual work involved in and around it. Clearly as a framework for \emph{automated} testing the framework is realized by algorithmical execution, but it cannot be used successfully without human intervention and maintenance. It is blurred relationship of man and machine, the concoction of technological configuration and human work process model tries the framework developer.
 
 Future research:
 capture playback popular still despite warnings, what's up? when is it not applicable?
