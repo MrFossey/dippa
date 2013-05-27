@@ -1236,10 +1236,10 @@ As cases are run the execution traces or results are collected by . The traces a
 \path [line] (rec) -- (gen);
 \path [line] (gen) -- (cse);
 \path [line] (cse) -- (ver);
-\path [line] (ver) -- (gen);
+\path [line] (ver) -- (gen); % Todo: what is this?
 \path [line] (cse) -- (gen);
 \path [line] (gen) -- (sut);
-\path [line] (p1) -- (e0); % Todo: what is this?
+\path [line] (sut) -- (sgt); 
 \path [line] (s1) -- (p2);
 \path [line] (p2) -- (f2);
 \path [line] (f2) -- (p1);
