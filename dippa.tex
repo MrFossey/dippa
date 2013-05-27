@@ -1219,17 +1219,18 @@ As cases are run the execution traces or results are collected by . The traces a
 }
 % -------------------------------------------------
 % Placing the nodes
-\node [file] (s0) {Message record};
-\node [proc] (p0) {Integration test case generation};
-\node [file] (f1) {Test case};
-\node [syst] (e0) {Test case execution engine};
-\node [sut] (s1) {System under test};
-\node [syst] (e1) {Surrogate engine};
-\node [proc] (p4) {Capturing messages};
-\node [proc, right=of f1] (p1) {Verification};
-\node [file, right=of e0] (f2) {Exe-cution trace};
-\node [proc, right=of s1] (p2) {Trace collecting};
-\node [proc, right=of e1] (p3) {Surrogate generation};
+
+\node [proc] (cap) {Capturing messages};
+\node [file] (rec) {Message record};
+\node [proc] (gen) {Integration test case generation};
+\node [file] (cse) {Test case};
+\node [syst] (exe) {Test case execution engine};
+\node [sut] (sut) {System under test};
+\node [syst] (eng) {Surrogate engine};
+\node [proc, right=of f1] (ver) {Verification};
+\node [file, right=of e0] (ext) {Exe-cution trace};
+\node [proc, right=of s1] (col) {Trace collecting};
+\node [proc, right=of e1] (sgt) {Surrogate generation};
 
 \path [line] (s0) -- (p0);
 \path [line] (p0) -- (f1);
