@@ -1227,10 +1227,10 @@ As cases are run the execution traces or results are collected by . The traces a
 \node [syst] (exe) {Test case execution engine};
 \node [sut] (sut) {System under test};
 \node [syst] (eng) {Surrogate engine};
-\node [proc, right=of f1] (ver) {Verification};
-\node [file, right=of e0] (ext) {Exe-cution trace};
-\node [proc, right=of s1] (col) {Trace collecting};
-\node [proc, right=of e1] (sgt) {Surrogate generation};
+\node [proc, right=of cse] (ver) {Verification};
+\node [file, right=of exe] (ext) {Exe-cution trace};
+\node [proc, right=of sut] (col) {Trace collecting};
+\node [proc, right=of eng] (sgt) {Surrogate generation};
 
 \path [line] (cap) -- (rec);
 \path [line] (rec) -- (gen);
