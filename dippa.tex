@@ -1241,9 +1241,9 @@ As cases are run the execution traces or results are collected by . The traces a
 \path [line] (gen) -- (sut);
 \path [line] (sut) -- (eng); 
 \path [line] (sgt) -- (eng);
-\path [line] (p2) -- (f2);
-\path [line] (f2) -- (p1);
-\path [line] (p3) -- (e1);
+\path [line] (sut) -- (col);
+\path [line] (col) -- (trc);
+\path [line] (trc) -- (ver);
 
 \end{tikzpicture}
 \caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
