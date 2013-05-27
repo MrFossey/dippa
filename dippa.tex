@@ -1221,7 +1221,7 @@ As cases are run the execution traces or results are collected by . The traces a
 % Placing the nodes
 
 \node [proc] (cap) {Capturing messages};
-\node [file] (rec) {Message record};
+\node [file] (rec) {Mes-sage record};
 \node [proc] (gen) {Integration test case generation};
 \node [file] (cse) {Test case};
 \node [syst] (exe) {Test case execution engine};
@@ -1236,7 +1236,7 @@ As cases are run the execution traces or results are collected by . The traces a
 \path [line] (rec) -- (gen);
 \path [line] (gen) -- (cse);
 \path [line] (cse) -- (ver);
-\path [line] (ver) -- (gen); % Todo: what is this?
+\path [line] (ver) -- (exe); % Todo: what is this?
 \path [line] (cse) -- (gen);
 \path [line] (gen) -- (sut);
 \path [line] (sut) -- (eng); 
