@@ -1177,11 +1177,13 @@ In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate},
 
 \section{Wärtsilä's integration testing framework}
 
-Figure \ref{fig:UTF} below synthesizes and combines integration testing theories and techniques introduced in Chapter \ref{chapter:frameworkanalysis}. The model is perhaps most inspired by the \citet{liu2009unified} unified testing framework model, but adapted to Wärtsilä's integration testing needs. As such, the model is technology-agnostic, and only presents the steps, systems, system-document relationships, and processes required on an abstract level.
-
-First off, messages captured in the production environment are used for the generation of new test cases. This means that there must be some way to record behaviour in production, and save the information in a database or file system. In the following generation step, the records are turned into an executable test case, which are then run by a testing engine against the system under test. 
+First off, messages captured in the production environment are used for the generation of new test cases. This means that in the framework solution there must be some way to \emph{record} behaviour in production. In the following \emph{generation} step, the records are turned into an executable test case, which are then \emph{run} by a testing engine against the system under test. 
 
 Theoretically, models, diagrams, and specifications can also be used for automatically producing test cases, but in practice these are not documented in such detail that would afford such generation. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behavior. The different types of records or models must be turned into cases in a way that the engine can run them. 
+
+Figure \ref{fig:UTF} below synthesizes and combines integration testing theories and techniques introduced in Chapter \ref{chapter:frameworkanalysis}. The model is perhaps most inspired by the \citet{liu2009unified} unified testing framework model, but adapted to Wärtsilä's integration testing needs. As such, the model is technology-agnostic, and only presents the steps, systems, system-document relationships, and processes required on an abstract level.
+
+
 
 A surrogate engine refers to any scheme which is employed to act as a stand-in for unavailable, or testingwise unsuitable, systems. The surrogate engine's role is more important in the development phase, when not all components are fully ready.
 
