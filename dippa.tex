@@ -1217,11 +1217,12 @@ A surrogate engine refers to any scheme which is employed to act as a stand-in f
 \node [proc] (gen) {Integration test case/surrogate generation};
 \node [proc] (upd) {Updating test package/resources};
 % dotted line to test repo, what to do with surrogates/mocksystems
-\node [syst] (exe) {Test case execution};
+\node [syst] (db) {Test database};
+\node [proc] (exe) {Test case execution};
 \node [sut] (sut) {System under test};
 %\node [syst] (eng) {Surrogate execution};
 \node [file, right=of cap] (rec) {Mes-sage record};
-\node [file, rihgt=of ] (cse) {Test case};
+\node [file, rihgt=of gen] (cse) {Test case};
 \node [proc, right=of upd] (ver) {Verification};
 \node [file, right=of exe] (trc) {Exe-cution trace};
 \node [proc, right=of sut] (col) {Trace collecting};
