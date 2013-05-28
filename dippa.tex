@@ -888,7 +888,15 @@ From an IT or software perspective, a framework is understood as an abstract tec
   dots/.style={draw, dotted, -latex'}
 }
 
+
+\node [proc] (in) {Input data};
+\node [proc, yshift=0.5cm] (cap) {};
+
 \node [proc] (cap) {Capturing messages};
+\node [proclong] (cap) {Capturing messages};
+\node [proc] (cap) {Capturing messages};
+\node [ellipse] (cap) {Capturing messages};
+\node [ellipse] (cap) {Capturing messages};
 
 \path [line] (cap) -- (rec);
 
