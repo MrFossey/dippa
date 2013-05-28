@@ -656,11 +656,10 @@ As a scientific work, and to satisfy the first two steps, the thesis's research 
 \node [proc, right=of prb] (fun) {Practical functioning};
 \node [proc] (ctr) {Theoretical contribution};
 
-\path [line] (rel) -- (rec);
-\path [line] (rec) -- (gen);
-\path [line] (gen) -- (cse);
-\path [line] (cse) -- (ver);
-
+\path [line] (rel) -- (prb);
+\path [line] (prb) -- (fun);
+\path [line] (prb) -- (ctr);
+\path [line] (prb) -- (con);
 
 \end{tikzpicture}
 \caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
