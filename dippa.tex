@@ -886,13 +886,13 @@ From an IT or software perspective, a framework is understood as an abstract tec
 \node [proc] (datain) {Input data};
 \node [proclong] (ins) {Instructions};
 
-\node [elli, right=of datain] (prc) {Test process};
+\node [elli, right=of datain, yshift=1.00cm] (prc) {Test process};
 
 \node [proc, right=of prc] (dataout) {Output data};
 
 \node [proc] (exp) {Expected output data};
 
-\node [elli, right=of dataout] (com) {Comparison process};
+\node [elli, right=of dataout, yshift=1.00cm] (com) {Comparison process};
 \node [proc, right=of com] (rep) {Test report};
 
 \path [line] (datain) -- (prc);
