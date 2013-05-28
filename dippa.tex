@@ -889,9 +889,10 @@ From an IT or software perspective, a framework is understood as an abstract tec
 
 \node [elli, right=of datain, yshift=-1.00cm] (prc) {Test process};
 
+\node [proc] (dataout0) {};
 \node [proc, right=of prc, yshift=1.00cm] (dataout) {Output data};
 
-
+\node [proc] (exp0) {};
 \node [proc] (exp) {Expected output data};
 
 \node [elli, right=of dataout, yshift=-1.00cm] (com) {Comparison process};
