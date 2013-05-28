@@ -639,6 +639,7 @@ As a scientific work, and to satisfy the first two steps, the thesis's research 
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, minimum height=4em, text width=7em},
+  big/.style={base, rectangle, minimum height=8em, text width=10em},
   sut/.style={base, circle, text width=5em, fill = blackish, text = white},
   syst/.style={base, cylinder, shape border rotate=90,  aspect=.2, minimum height=5em, text width=5em},
   file/.style={base, rectangle, shape border rotate=90, minimum height=4em, text width=3em, fill = lightgrey},
@@ -649,33 +650,17 @@ As a scientific work, and to satisfy the first two steps, the thesis's research 
 % -------------------------------------------------
 % Placing the nodes
 
-\node [proc] (cap) {Capturing messages};
-\node [proc] (gen) {Integration test case/surrogate generation};
-\node [proc] (upd) {Updating test package/resources};
-\node [syst] (db) {Test data base};
-\node [proc] (exe) {Test case execution};
-\node [sut] (sut) {System under test};
+\node [proc] (rel) {Practical relevance};
+\node [proc] (con) {Theory connection};
+\node [big, right=of rel] (prb) {Construction, problem solving};
+\node [proc, right=of prb] (fun) {Practical functioning};
+\node [proc] (ctr) {Theoretical contribution};
 
-\node [file, right=of cap] (rec) {Mes-sage record};
-\node [file, rihgt=of gen] (cse) {Case/ surrogate};
-\node [proc, right=of upd] (ver) {Verification};
-\node [file, right=of db] (trc) {Exe-cution trace};
-\node [proc, right=of exe] (col) {Trace collecting};
-
-
-\path [line] (cap) -- (rec);
+\path [line] (rel) -- (rec);
 \path [line] (rec) -- (gen);
 \path [line] (gen) -- (cse);
 \path [line] (cse) -- (ver);
-\path [line] (ver) -- (upd); 
-\path [line] (cse) -- (exe);
-\path [dots] (upd) -- (db);
-\path [line] (exe) -- (sut);
-\path [line] (exe) -- (db);
-\path [line] (exe) -- (col);
-\path [line] (col) -- (sut);
-\path [line] (col) -- (trc);
-\path [line] (trc) -- (ver);
+
 
 \end{tikzpicture}
 \caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
