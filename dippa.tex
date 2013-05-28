@@ -879,7 +879,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, minimum height=4em, text width=7em},
   proclong/.style={base, rectangle, minimum height=4em, minimum width=6em, text width=7em},
-  ellipse/.style={base, ellipse, minimum height=4em, text width=7em},
+  elli/.style={base, ellipse, minimum height=4em, text width=7em},
   line/.style={draw, thick, -latex'}
 }
 
@@ -887,7 +887,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 \node [proc, yshift=0.5cm] (datain0) {};
 \node [proclong, right=of datain] (ins) {Instructions};
 
-\node [ellipse, rihgt=of datain] (prc) {Test process};
+\node [elli, rihgt=of datain] (prc) {Test process};
 
 \node [proc, right=of prc] (dataout) {Output data};
 \node [proc, yshift=0.5cm] (dataout0) {};
@@ -895,7 +895,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 \node [proc, right=of dataout] (exp) {Expected output data};
 \node [proc, yshift=0.5cm] (exp0) {};
 
-\node [ellipse, right=of dataout] (com) {Comparison process};
+\node [elli, right=of dataout] (com) {Comparison process};
 \node [proc, right=of com] (rep) {Test report};
 
 \path [line] (datain) -- (prc);
