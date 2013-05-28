@@ -883,16 +883,13 @@ From an IT or software perspective, a framework is understood as an abstract tec
   line/.style={draw, thick, -latex'}
 }
 
-\node [proc, yshift=-0.5cm] (datain0) {};
 \node [proc] (datain) {Input data};
 \node [proclong] (ins) {Instructions};
 
 \node [elli, rihgt=of datain] (prc) {Test process};
 
-\node [proc, yshift=-0.5cm] (dataout0) {};
 \node [proc, right=of prc] (dataout) {Output data};
 
-\node [proc, yshift=-0.5cm] (exp0) {};
 \node [proc, right=of dataout] (exp) {Expected output data};
 
 
