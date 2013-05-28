@@ -890,7 +890,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 
 \node [ellipse, rihgt=of datain] (prc) {Test process};
 
-\node [proc, right=of ] (dataout) {Output data};
+\node [proc, right=of prc] (dataout) {Output data};
 \node [proc, yshift=0.5cm] (dataout0) {};
 
 \node [proc, right=of dataout] (exp) {Expected output data};
