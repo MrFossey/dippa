@@ -938,29 +938,11 @@ The framework requires manual setup, for instance manual validation and storing 
 }
 
 \node [proc] (datain0) {};
-\node [proc, fill=white, yshift=1.80cm, xshift=0.20cm] (datain) {Input data};
-\node [proclong] (ins) {Instructions};
-
-\node [elli, right=of datain, yshift=-1.00cm] (prc) {Test process};
-
-\node [proc, right=of prc, xshift=-0.20cm, yshift=1.10cm] (dataout0) {};
-\node [proc, yshift=1.80cm, xshift=0.20cm, fill=white] (dataout) {Output data};
-
-\node [proc, xshift=-0.20cm] (exp0) {};
-\node [proc, fill=white, yshift=1.80cm, xshift=0.20cm,] (exp) {Expected output data};
-
-\node [elli, right=of dataout, yshift=-1.00cm] (com) {Comparison process};
-\node [proc, right=of com] (rep) {Test report};
 
 \path [line] (datain) -- (prc);
-\path [line] (ins) -- (prc);
-\path [line] (prc) -- (dataout);
-\path [line] (dataout) -- (com);
-\path [line] (exp) -- (com);
-\path [line] (com) -- (rep);
 
 \end{tikzpicture}
-\caption{Automated integration test process adapted from \citep{fewster1999software}} \label{fig:autotestprocess}
+\caption{Aurrogate system architecture \citep{huang2008surrogate}} \label{fig:surrogate}
 \end{figure}
 
 
