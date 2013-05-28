@@ -866,6 +866,44 @@ From an IT or software perspective, a framework is understood as an abstract tec
 \citet{fewster1999software} present an integration testing automation process, based on a test harness tool called Autotest, which author Mark Fewster worked on during his employment at Racal-Redac. The straightforward model in Figure \ref{fig:autotestprocess} shows a process extending from input and instructions to actual testing, then to output and expected output comparison and culminates in a test report.
 
 \begin{figure}[H]
+\centering
+% =================================================
+\pgfdeclarelayer{marx}
+\pgfsetlayers{main,marx}
+\xdefinecolor{lightgrey}{RGB}{220,220,220}
+\xdefinecolor{blackish}{RGB}{30,30,30}
+% -------------------------------------------------
+% Start the picture
+\begin{tikzpicture}[
+    start chain=going below,    % General flow is top-to-bottom
+    node distance=6mm and 50mm, % Global setup of box spacing
+    ]
+% ------------------------------------------------- 
+\tikzset{
+  base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
+  proc/.style={base, rectangle, minimum height=4em, text width=7em},
+  sut/.style={base, circle, text width=5em, fill = blackish, text = white},
+  syst/.style={base, cylinder, shape border rotate=90,  aspect=.2, minimum height=5em, text width=5em},
+  file/.style={base, rectangle, shape border rotate=90, minimum height=4em, text width=3em, fill = lightgrey},
+  data/.style={base, trapezium, trapezium left angle=70, trapezium right angle=-70, minimum height=1cm}, 
+  line/.style={draw, thick, -latex'},
+  dots/.style={draw, dotted, -latex'}
+}
+% -------------------------------------------------
+% Placing the nodes
+
+\node [proc] (cap) {Capturing messages};
+
+
+\path [line] (cap) -- (rec);
+
+
+\end{tikzpicture}
+\caption{Automated integration test process adapted from \citep{fewster1999software}} \label{fig:autotestprocess}
+\end{figure}
+
+
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{fewstermodel.png}
     \caption{Automated integration test process adapted from \citep{fewster1999software}}
