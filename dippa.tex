@@ -918,6 +918,53 @@ The framework requires manual setup, for instance manual validation and storing 
 \citeauthor{huang2008surrogate}'s \citeyearpar{huang2008surrogate} model, a precursor to the authors unified testing framework presented in figure \ref{fig:liu}, is concerned with the testing environment arrangements related to surrogates or mock services, but figure \ref{fig:huang} already shows a clear framework structure stretching from test case generation to verification of functionality. The area around simulating components is the area of focus. Both of the authors' models attempt to elaborate on the subprocesses and tasks that lie upstream on the testing process chain. \citep{huang2008surrogate}
 
 \begin{figure}[H]
+\centering
+% =================================================
+\pgfdeclarelayer{marx}
+\pgfsetlayers{main,marx}
+% -------------------------------------------------
+% Start the picture
+\begin{tikzpicture}[
+    start chain=going below,    % General flow is top-to-bottom
+    node distance=3mm and 30mm, % Global setup of box spacing
+    ]
+% ------------------------------------------------- 
+\tikzset{
+  base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
+  proc/.style={base, rectangle, minimum height=4em, text width=4em},
+  proclong/.style={base, rectangle, minimum height=4em, minimum width=6em, text width=6em},
+  elli/.style={base, ellipse, minimum height=4.5em, text width=4.5em},
+  line/.style={draw, thick, -latex'}
+}
+
+\node [proc] (datain0) {};
+\node [proc, fill=white, yshift=1.80cm, xshift=0.20cm] (datain) {Input data};
+\node [proclong] (ins) {Instructions};
+
+\node [elli, right=of datain, yshift=-1.00cm] (prc) {Test process};
+
+\node [proc, right=of prc, xshift=-0.20cm, yshift=1.10cm] (dataout0) {};
+\node [proc, yshift=1.80cm, xshift=0.20cm, fill=white] (dataout) {Output data};
+
+\node [proc, xshift=-0.20cm] (exp0) {};
+\node [proc, fill=white, yshift=1.80cm, xshift=0.20cm,] (exp) {Expected output data};
+
+\node [elli, right=of dataout, yshift=-1.00cm] (com) {Comparison process};
+\node [proc, right=of com] (rep) {Test report};
+
+\path [line] (datain) -- (prc);
+\path [line] (ins) -- (prc);
+\path [line] (prc) -- (dataout);
+\path [line] (dataout) -- (com);
+\path [line] (exp) -- (com);
+\path [line] (com) -- (rep);
+
+\end{tikzpicture}
+\caption{Automated integration test process adapted from \citep{fewster1999software}} \label{fig:autotestprocess}
+\end{figure}
+
+
+\begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{huang_et_al_framework.png}
     \caption{Surrogate system architecture \citep{huang2008surrogate}}
