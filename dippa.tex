@@ -883,7 +883,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
   line/.style={draw, thick, -latex'}
 }
 
-
+\begin{comment}
 \node [proc] (datain) {Input data};
 \node [proc, yshift=0.5cm] (datain0) {};
 \node [proclong, right=of datain] (ins) {Instructions};
@@ -905,7 +905,7 @@ From an IT or software perspective, a framework is understood as an abstract tec
 \path [line] (dataout) -- (com);
 \path [line] (exp) -- (com);
 \path [line] (com) -- (rep);
-
+\end{comment}
 \end{tikzpicture}
 \caption{Automated integration test process adapted from \citep{fewster1999software}} \label{fig:autotestprocess}
 \end{figure}
