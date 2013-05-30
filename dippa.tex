@@ -937,29 +937,20 @@ The framework requires manual setup, for instance manual validation and storing 
   elli/.style={base, ellipse, minimum height=4.5em, text width=4.5em},
   line/.style={draw, thick, -latex'}
 }
-
 \node [proc] (desc) {Service description};
 \node [proc] (tcs) {Configured test cases};
-
 \node [proc, right=of desc] (gen) {Generator};
 \node [proc] (ten) {Test engine};
-
 \node [cont, right=of gen] (app) {Application container};
 \node [proc] (sgt) {Surrogate};
 \node [proc] (sen) {Surrogate engine};
-
 \node [proc, right=of sgt] (rea) {Real component};
-
 \path [line] (desc) -- (gen);
 \path [line] (gen) -- (sgt);
-
 \path [line] (tcs) -- (ten);
 \path [line] (ten) -- (sen);
-
 \path [line] (sgt) -- (sen);
 \path [line] (sen) -- (sgt);
-
-
 \end{tikzpicture}
 \caption{Surrogate system architecture \citep{huang2008surrogate}} \label{fig:surrogate}
 \end{figure}
