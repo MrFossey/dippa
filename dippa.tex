@@ -1295,7 +1295,7 @@ Theoretically, models, diagrams, and specifications can also be used for automat
 
 Since there are cases where correct system behaviour cannot be verified by examining an output, service mocking is required. Consequently, a framework also needs a component for the creation of such mock-ups, preferably using a strategy similar to the one in test case creation. Actual records from production can be used as basis for mock service emulation.
 
-When cases or mock services are ready they are tested and verified before being saved as test resources in the appropriate files or packages. This concludes the pre-test setup work. The actual testing begins when scheduled test runs pick up cases or invoke mock services and 
+When cases or mock services are ready they are run and verified before being saved as test resources in the appropriate files or packages. Testing produces traces or logs which are used in the verification step. This concludes the pre-test setup work. The actual testing begins when scheduled test runs pick up cases or invoke mock services and they go through the testing sub-process again.
 
 Figure \ref{fig:UTF} below synthesizes and combines integration testing theories and techniques introduced in Chapter \ref{chapter:frameworkanalysis}. The model is perhaps most inspired by the \citet{liu2009unified} unified testing framework model, but adapted to Wärtsilä's integration testing needs. As such, the model is technology-agnostic, and only presents the steps, systems, system-document relationships, and processes required on an abstract level.
 
