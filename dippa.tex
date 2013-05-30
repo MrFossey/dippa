@@ -937,7 +937,15 @@ The framework requires manual setup, for instance manual validation and storing 
   line/.style={draw, thick, -latex'}
 }
 
-\node [proc] (datain0) {};
+\node [proc] (desc) {Service description};
+\node [proc] (gen) {Generator};
+\node [proc] (sgt) {Surrogate};
+
+\node [proc] (tcs) {Configured test case};
+\node [proc] (ten) {Test engine};
+\node [proc] (sen) {Surrogate engine};
+
+\node [proc] (sen) {Surrogate engine};
 
 \path [line] (datain) -- (prc);
 
