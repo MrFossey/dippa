@@ -945,8 +945,9 @@ The framework requires manual setup, for instance manual validation and storing 
 
 \node [cont, right=of gen] (app) {Application container};
 \node [proc] (sgt) {Surrogate};
-\node [proc] (rea) {Real component};
 \node [proc] (sen) {Surrogate engine};
+
+\node [proc, right=of sgt] (rea) {Real component};
 
 \path [line] (desc) -- (gen);
 \path [line] (gen) -- (sgt);
