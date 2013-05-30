@@ -938,7 +938,7 @@ The framework requires manual setup, for instance manual validation and storing 
 }
 
 \node [proc] (desc) {Service description};
-\node [proc] (tcs) {Configured test case};
+\node [proc] (tcs) {Configured test cases};
 
 \node [proc, right=of desc] (gen) {Generator};
 \node [proc] (ten) {Test engine};
@@ -946,10 +946,13 @@ The framework requires manual setup, for instance manual validation and storing 
 \node [proc, right=of gen] (app) {Application container};
 \node [proc] (sgt) {Surrogate};
 \node [proc] (rea) {Real component};
-
 \node [proc] (sen) {Surrogate engine};
 
-\path [line] (datain) -- (prc);
+\path [line] (desc) -- (gen);
+\path [line] (gen) -- (sgt);
+
+\path [line] (tcs) -- (ten);
+\path [line] (ten) -- (sen);
 
 \end{tikzpicture}
 \caption{Aurrogate system architecture \citep{huang2008surrogate}} \label{fig:surrogate}
