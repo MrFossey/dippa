@@ -1555,9 +1555,9 @@ The most sought-after results of the workshop were the observations of people wh
 
 \subsection{Testing validation}
 
-At the beginning of the meeting, participants were presented with a mission statement and a short introduction to the topic explaining the reasons that led to commissioning an automated testing framework study. The subject of current testing was brought under discussion. 
+At the beginning of the meeting, participants were presented with a mission statement and a short introduction to the topic explaining the reasons that led to commissioning an automated testing framework study. The subject of current testing was brought under discussion by the technical experts. 
 
-The first technical expert said that for her, testing often consists of code inspection, a white-box testing method not investigated or included in the framework. Code inspection is done by the developer to find issues in the code directly, without actually executing it. The expert also added the lacking \emph{negative testing}, or testing cases that are expected to fail to see if ill-formed input is able to disrupt systems, as a challenge. The remaining parties quietly agreed with the asserted reality that testing is largely ad hoc and driven by each project in its own way.
+The first technical expert said that for her, testing often consists of code inspection, a white-box testing method not investigated or included in the framework. Code inspection is done by the developer to find issues in the code directly, without actually executing it. The expert also added the lacking \emph{negative testing}, or testing cases that are expected to fail to see if ill-formed input is able to disrupt systems, as potentially harmful. The remaining parties quietly agreed with the asserted reality that testing is largely ad hoc and driven by each project in its own way.
 % not a requirement per se
 
 \subsection{Requirements validation}
@@ -1579,6 +1579,8 @@ Technical expert pointed out that the model explicitly prescribed a database whe
 The issue of framework maintanence was raised by the testing expert. Because the proposed framework required test generation using capture, test resources would have to be updated after any change in the systems' behavior that would render them moot or possibly even misleading. This was also a principal concern in criticism of capture and replay. TODO reference. After discussing the matter with the technical experts the workshop participants concluded that test reusability would be high because test cases would only have to change very infrequently. Hence, capture was accepted as a cost-effective way to create test resources.
 
 \subsection{Summary}
+
+Negative testing, while not a requirement of the framework per se, is a testing approach and does not require special attention from framework design. Being able to execute test cases is enough.
 
 % add table
 Issues: terminology, version contro, negative tests, code inspection, test library rather than db, deployment and pilot project, way of working, protocols, integration to bug tracker via email?, test coverage, who supports, who tests, concern over choice, skipped, reusability
