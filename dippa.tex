@@ -1633,8 +1633,16 @@ One of the fundamental difficulties in developing an integration testing framewo
 % manual challenges and adaptin the framework
 In the empirical part an essential challenge was introducing the framework into the company's way of working. Testing requires the coopereation of many individual stakeholders. In Wärtsilä's case this contribution was seen as extra work for application managers and soliciting their support was notoriopusly difficult. Here, a clearly defined framework which states what resources or contributions are needed can bring credibility and trust to the project and provide a channel for coopration. Testing is step that repeatedly crops up in software development projects and having a documented way to do so is advantageous.
 
+The devised framework is generalizable and can benefit any party doing testing based on capture and replay. Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however. Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a cleaning step taking logging test cases or creating test reports.
+
 % component testing replacing integration testing
 Software can still be abstracted and managed by splitting it to blocks. In fact, integration might be thought to be not between systems but between software components, which respects interfaces more broadly. One might ask if integration testing scope will become too bloated in this vein of thought. A computational trasaction with two points constituting an "integration". 
+
+% getting rid of the word integration literature
+It is possible that integration is a misleading term. Sometimes testing is divided to unit, component, and system tests. Supposedly, a component is a combination of simple units and system tests focus on testings when all necessary components have been integrated. Testing grows with development. But the target of testing is entirely removed from this division.
+
+where's the beef? testing often and testing early. component based. integrations should have responsible people
+
 
 %
 tired old big-bang as an alternative
@@ -1642,8 +1650,6 @@ tired old big-bang as an alternative
 %
 future: fault-based testing
 
-% getting rid of the word integration
-It is possible that integration is a misleading term. Sometimes testing is divided to unit, component, and system tests. Supposedly, a component is a combination of simple units and system tests focus on testings when all necessary components have been integrated. Testing grows with development. But the target of testing is entirely removed from this division.
 
 % capture playback and model generalizability, future resarch
 Capture and playback was the target of criticism but many commercial and non-commercial tools are based on it and while theoretically it may not be the best option, it arguably satisfies most companies' testing requirements and needs, at least temporarily. It remains to be seen if public opinon shifts after more is known about the lifecycle of such a testing tool. The alternative, model-driven testing, requires an initial investment that is greater, but might pay off.
@@ -1670,7 +1676,7 @@ It is not possible to go through every code branch or to test every possible inp
 One of the essential findings of this thesis is that Continuous Integration actually bridges the gaps in integration testing theory when examining the entire software lifecycle. Authors like Myers and XX and textbooks () still continue to perpetuate the image that integration testing is mere a software component assembly task and a simply a staging post in software development. This is unfair because integrations should be tested regularly when there is even the slightest change in systems composition or source code. CI connects integration testing with functional, non-functional, and regression testing while adhering the tester's adage "test early and often". 
 % also automation
 
-The devised framework is generalizable and can benefit any party doing testing based on capture and replay. Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however. Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a cleaning step taking logging test cases or creating test reports.
+
 
 Good testing is based on good plans and ensured by good governance. Plans include specifications of systems and models of their behavior. Technology has even taken steps to facilitate making these plans actionable, for instance separating structure and content. Where the structure can be seen as a generalizable asset repllicated in tests and content being test data. A good exmaple of this is web services where a single specification file can be used to automatically generate an executable case. However, test data and verification (adding assertions and the like) must be done by a test engineer, still. It remains a task for human discretion to decide what is to be tested and what the testing objectives are.
 
