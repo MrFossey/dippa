@@ -678,7 +678,8 @@ As a scientific work, and to satisfy the first two steps, the thesis's research 
 \path [line] (prb) -- (ctr);
 \path [line] (prb) -- (con);
 %\path [line] (ctr) -- (con);
-\draw[->] ([yshift=1.5 cm]ctr.south) node[left] -| ([xshift=0.25 cm]con.south);
+\foreach \i in {-2,...,2}{% 
+\draw[->] ([yshift=\i * 0.4 cm]a.east) to [out=-60,in=-120] ([yshift=\i * 0.8 cm]d.west) ;}
 
 \end{tikzpicture}
 \caption{Constructive research model adapted from \citet{kasanen1993constructive}} \label{fig:constructive}
