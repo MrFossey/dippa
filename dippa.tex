@@ -1666,9 +1666,6 @@ Confirmed in the empirical part the thesis, an essential challenge is introducin
 % framework bonuses
 The kicker to having a documented process and automted testing framework is the reusabilty of test resources like test cases, also a prerequisite of automation, which may act as an incentive to contribute to the framework. This remains to be seen. Admittedly, casess will have to be maintanted and updated, but the frequency was deemed to be low by Wärtsilä's experts.
 
-% generalizable
-The thesis asserts that the devised framework presented in \ref{chapter:frameworkproposal} is generalizable and can benefit any party doing testing based on capture and replay. (Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however.) Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a clean-up step  logging test results or creating test reports.
-
 % component testing replacing integration testing
 Software is abstracted and managed by splitting it to blocks. These blocks form a specific functional area that is a thematical whole and which can be assigned to responsible and which generally make the software easier to manage. In fact, integration might be thought to be not between systems but between software components, which respects interfaces more broadly. One may ask if integration testing scope will become too bloated in this vein of thought any trasaction with two points constituting an "integration". 
 
@@ -1708,6 +1705,9 @@ end-to-end tests are adequate if they can point to problem code accurately
 
 \chapter{Conclusions}
 \label{chapter:conclusions}
+
+% generalizable
+The thesis asserts that the devised framework presented in \ref{chapter:frameworkproposal} is generalizable and can benefit any party doing testing based on capture and replay. (Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however.) Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a clean-up step  logging test results or creating test reports.
 
 %mixing manual and technical aspects
 One of the fundamental difficulties in developing an integration testing framework is making sense the intertwined relationship of technology and manual work involved in and around it. Clearly as a framework for \emph{automated} testing the framework is realized by algorithmic and computational execution, but it cannot be used successfully without human intervention and maintenance. It is this blurred relationship of man and machine, the delicate mix of technological configuration and human work process model which tries the framework developer. \citep{pezze2008software} definition of an cirtcuit board with empty slots for components.
