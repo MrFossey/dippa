@@ -1463,11 +1463,12 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \draw [dashed] (-2,-0.75) -- (8,-0.75);
 \node[label] (l0) {\textbf{SoapUI}};
 
-\node [proc] (p0) {Generating test cases};
-\node [proc] (p1) {Mocking services};
-\node [proc] (p2) {Running tests};
+\node [proc] (p0) {Capturing};
+\node [proc] (p1) {Generating cases/ mock services};
+\node [proc] (p2) {Executing test cases};
 \node [proc] (p3) {Collecting traces};
 \node [proc] (p4) {Verifying};
+\node [proc] (p5) {Updating resources};
 
 \node[label, right=of l0] (l1) {\textbf{Jenkins}};
 \node [proc, right=of p2] (p5) {Scheduling (Jenkins+ANT)};
