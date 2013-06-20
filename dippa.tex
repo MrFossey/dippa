@@ -1718,20 +1718,13 @@ end-to-end tests are adequate if they can point to problem code accurately
 \chapter{Conclusions}
 \label{chapter:conclusions}
 
-% generalizable
-The thesis asserts that the devised framework presented in \ref{chapter:frameworkproposal} is generalizable and can benefit any party doing testing based on capture and replay. (Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however.) Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a clean-up step  logging test results or creating test reports.
-
-%mixing manual and technical aspects
-One of the fundamental difficulties in developing an integration testing framework is making sense the intertwined relationship of technology and manual work involved in and around it. Clearly as a framework for \emph{automated} testing the framework is realized by algorithmic and computational execution, but it cannot be used successfully without human intervention and maintenance. It is this blurred relationship of man and machine, the delicate mix of technological configuration and human work process model which tries the framework developer. \citep{pezze2008software} definition of an cirtcuit board with empty slots for components.
-
-% manual challenges and adaptin the framework
-In the empirical part an essential challenge was introducing the framework into the company's way of working. Testing requires the coopereation of many individual stakeholders. In Wärtsilä's case this contribution was seen as extra work for application managers and soliciting their support was notoriopusly difficult. Here, a clearly defined framework which states what resources or contributions are needed can bring credibility and trust to the project and provide a channel for coopration. Testing is step that repeatedly crops up in software development projects and having a documented way to do so is advantageous.
-
-% generalizable
-The devised framework is generalizable and can benefit any party doing testing based on capture and replay. Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however. Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a cleaning step taking logging test cases or creating test reports.
-
-
 It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software} 
+
+% generalizable
+The thesis asserts that the devised framework presented in \ref{chapter:frameworkproposal} is generalizable and can benefit any party doing testing based on capture and replay. (Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however.) Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a clean-up step logging test results or creating test reports.
+
+
+
 
 One of the essential findings of this thesis is that Continuous Integration actually bridges the gaps in integration testing theory when examining the entire software lifecycle. Authors like Myers and XX and textbooks () still continue to perpetuate the image that integration testing is mere a software component assembly task and a simply a staging post in software development. This is unfair because integrations should be tested regularly when there is even the slightest change in systems composition or source code. CI connects integration testing with functional, non-functional, and regression testing while adhering the tester's adage "test early and often". 
 % also automation
