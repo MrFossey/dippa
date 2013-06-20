@@ -1471,10 +1471,10 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \node [proc] (p5) {Updating resources};
 
 \node[label, right=of l0] (l1) {\textbf{Jenkins}};
-\node [proc, right=of p2] (p5) {Scheduling (Jenkins+ANT)};
-\node [proc, right=of p3] (p6) {Trace transforming};
+\node [proc, right=of p2] (p6) {Scheduling (Jenkins+ANT)};
 
-\node [proc, right=of p0] (p7) {Visualizing results};
+
+\node [proc, right=of p4] (p7) {Visualizing results};
 
 \begin{pgfonlayer}{background}
   \node[box] [fit = (p2) (p5)] (b0) {}; % Execution engine
@@ -1492,8 +1492,8 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \path [line] (p1) -- (p2);
 \path [line] (b0) -- (p3);
 \path [line] (p3) -- (p4);
-\path [line] (p4) -- (p6);
-\path [line] (p6) -- (p7);
+\path [line] (p4) -- (p5);
+%\path [line] (p6) -- (p7);
 
 \end{tikzpicture}
 \caption{Testing framework structure} \label{fig:structure}
