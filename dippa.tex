@@ -1594,15 +1594,15 @@ The testing expert was more concerned if the framework actually provided any act
 % bug tracker not in framework scope
 The second technical expert agreed with the previous comments citing both requirement 3 and requirement 6 as the most important. Meanwhile, the partner members underlined the importance of performance tests (requirements R8 and R9.
 
-Throughout the disuccsion the addition of new requirements was welcomed. Along with automated bug reports, one clear new requirement was version control. Systems and environments go through changes and test results always pertain to one particular version. This information must be easily available and understandable. Moreover, it is useful to document in which version of the system and environements the captured test cases or surrogates were generated. Version control was added as requirement eleven (R11).
+Throughout the disucussion the addition of new requirements was welcomed. Along with automated bug reports, one clear new requirement was version control. Systems and environments go through changes and test results always pertain to one particular version. This information must be easily available and understandable. Moreover, it is useful to document in which version of the system and environments the captured test cases or surrogates were generated. Version control was added as requirement eleven (R11).
 
 \subsection{Framework use and maintenance validation}
 
-The issue of framework maintanence was raised by the testing expert. Because the proposed framework required test generation using capture, test resources would have to be updated after any change in the systems' behavior that would render them moot or possibly even misleading. This was also a principal concern in the criticism of capture and replay discussed in Chapter \ref{chapter:frameworkanalysis}. After discussing the matter with the technical experts the workshop participants concluded that test reusability would be high because test cases would only have to change very infrequently. Hence, capture was accepted as a cost-effective way to create test resources.
+The issue of framework maintanance was raised by the testing expert. Because the proposed framework required test generation using capture, test resources would have to be updated after any change in the systems' behavior that would render them moot or possibly even misleading. This was also a principal concern in the criticism of capture and replay discussed in Chapter \ref{chapter:frameworkanalysis}. After discussing the matter with the technical experts the workshop participants concluded that test reusability would be high because test cases would only have to change very infrequently. Hence, capture was accepted as a cost-effective way to create test resources.
 
 The framework model (see Figure \ref{figure:framework} was broadly accepted. One partner expert pointed out that the model explicitly prescribed a database for test resources where any filing system would have sufficed. The participants agreed to remove this technical prescript. The connecting arrow between "updating" and the test resource library was also ambigious in that it did not distinguish between adding a new test case or mock service the library or updating test results and logs after a testing event.
 
-The demo was also met with appreciation. While agreeing in priciple, the participants were eager to pilot the prototype to see how it fit into the company's way of working. The framework terminilogy should also replaced with termininology used at Wärtsilä.
+The demo was also met with appreciation. While agreeing in principle, the participants were eager to pilot the prototype to see how it fit into the company's way of working. The framework terminology should also replaced with terminology used at Wärtsilä.
 
 An alternative suggestion for the implementation also surfaced in which the testing would be done through the existing message monitoring tool. The monitoring tool already made records of messages before and after integration transformation and had the functionality resending recorded messages. This promising alternative is explored more in Chapter \ref{chapter:discussion}.
 
@@ -1623,7 +1623,7 @@ The most important findings of the experiment were:
 \item Code inspection as a way of testing
 \item Test "library" rather than "database"
 \item Use resources already available: monitoring tool based test framework
-\item "Update resources" process has ambigious links
+\item "Update resources" process has ambigiuous links
 %\item Test coverage who supports who tests, 
 %\item Curiosity over test tool selection
 \end{enumerate}
@@ -1667,9 +1667,10 @@ who will create test cases. which tool is easiest to use and most feasible.
 \end{comment}
 
 %mixing manual and technical aspects
-One of the fundamental difficulties in developing an automated integration testing framework is making sense the technology and manual process relationship. The two are haplessly intertwined. Clearly as a framework for \emph{automated} testing the framework is realized by algorithmics and brute computing power, but such a tool cannot be wielded successfully without human intervention and maintenance. It is this blurred relationship of man and machine, the delicate mix of technological configuration and human work process model which tries the framework designer and motivates the researcher. 
+One of the fundamental difficulties in developing an automated integration testing framework is making sense the technology and manual process relationship. The two are haplessly intertwined. Clearly as a framework for \emph{automated} testing the framework is realized by algorithms and brute computing power, but such a tool cannot be wielded successfully without human intervention and maintenance. It is this blurred relationship of man and machine, the delicate mix of technological configuration and human work process model which tries the framework designer and motivates the researcher. 
 
-Harking back to \citep{pezze2008software} definition of an circuit board with empty slots for components is useful here. The framework consists of roles to be filled by applications or manual processes, the choice being left to each individual testing project. TODO: lähde prosessisuunnittelusta. The framework will fail if it is too narrow and imcompatbile or too broad and poorly supported.
+% TODO: lähde prosessisuunnittelusta.
+Harking back to \citep{pezze2008software} definition of an circuit board with empty slots for components is useful here. The framework consists of roles to be filled by applications or manual processes, the choice being left to each individual testing project. The framework will fail if it is too narrow and imcompatble or too broad and poorly supported.
 
 % manual challenges and adaptin the framework
 Confirmed in the empirical part the thesis, an essential challenge is introducing the framework into the company's way of working. Testing requires the coopereation of many individual stakeholders. In Wärtsilä's case this contribution was seen as extra work for solution managers and soliciting their support was difficult. Here, a clearly defined framework which states what resources or contributions are needed can bring credibility and trust to the project and provide a channel for coopration. Testing is step that repeatedly crops up in software development projects and having a documented way to do so is advantageous. 
