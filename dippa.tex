@@ -1328,7 +1328,9 @@ In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate},
 \section{Wärtsilä's integration testing framework}
 
 % todo mock service terminology
-There are a total of six processes and three objects involved in the the proposed framework, along with the system under test (SUT) and test resource database. The processes are divided into two steps, a preparatory one, and an execution step. In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Befire being added to the test resource database, created cases and surrogates are put through the execution step to make sure they work without error.
+There are a total of six processes and three objects involved in the the proposed framework, along with the system under test (SUT) and test resource database. The processes are divided into two steps, a preparatory one, and an execution step. 
+
+In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Before being added to the test resource database, created cases and surrogates are put through the execution step to make sure they work without error and are suitable for automation.
 
 The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
 
