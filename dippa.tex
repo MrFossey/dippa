@@ -1334,11 +1334,9 @@ There are a total of six processes and three objects involved in the the propose
 In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Consequently, 
 the selected testing tool(s) must support recording messages and the generation process. The generation phase is likely the most labour-consuming and must be planned and supported by clear documentation and accessibility to necessary tools and documents. It should be noted that the generation step is not entirely automatic, and the tester must specify which parts of the messages are examined. This involves the creation of assertions, or explicit logical expressions of the expected outcome, which can be computationally executed. Before being added to the test resource database, created cases and surrogates are put through the execution step to make sure they work without error and are suitable for automation.
 
-The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
-
-
-
 Theoretically, models, diagrams, and specifications can also be used for automatically producing test cases, but the reality at Wärtsilä is that these are not documented in such detail that would practically afford such generation. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behavior, and to communicate system structure and logic. 
+
+The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
 
 Since there are cases where correct system behaviour cannot be verified by examining an output, service mocking is required. Consequently, a framework also needs a component for the creation of such mock-ups, preferably using a strategy similar to the one in test case creation. Actual records from production can be used as basis for mock service emulation.
 
