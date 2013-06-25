@@ -1338,11 +1338,7 @@ Since there are cases where correct system behaviour cannot be verified by exami
 
 Theoretically, models, diagrams, and specifications can also be used for automatically producing test cases, but the reality at Wärtsilä is that these are not documented in such detail that would practically afford such generation. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behavior, and to communicate system structure and logic. 
 
-
-
 The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
-
-
 
 When cases or mock services are ready they are run and verified before being saved as test resources in the appropriate files or packages. Testing produces traces or logs which are used in the verification step. This concludes the pre-test setup work. The actual testing begins when scheduled test runs pick up cases or invoke mock services and they go through the testing sub-process again.
 
