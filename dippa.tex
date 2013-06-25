@@ -1330,6 +1330,7 @@ In the previous chapter \citet{fewster1999software}, \citet{huang2008surrogate},
 % todo mock service terminology
 There are a total of six processes and three objects involved in the the proposed framework, along with the system under test (SUT) and test resource database. The processes are divided into two steps, a preparatory one, and an execution step. 
 
+% assertioms
 In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Consequently, 
 the selected testing tool(s) must support recording messages and the generation process. The generation phase is likely the most labour-consuming and must be planned and supported by clear documentation and accessibility to necessary tools and documents. It should be noted that the generation step is not entirely automatic, and the tester must specify which parts of the messages are examined. This involves the creation of assertions, or explicit logical expressions of the expected outcome, which can be computationally executed. Before being added to the test resource database, created cases and surrogates are put through the execution step to make sure they work without error and are suitable for automation.
 
