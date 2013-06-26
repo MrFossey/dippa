@@ -1552,7 +1552,8 @@ Jenkins is used in conjunction with ANT, which while not necessary, is an indust
 The framework is evaluated mainly by qualitative measures, but a quick heuristic analysis is also used to validate to new model. This section compares the proposed framework to the requirements laid out in Section \ref{section:requirements}, and the presented framework models and framework theory.
 
 
-\begin{description}[rightmargin=\dimexpr\linewidth-5cm-\leftmargin\relax]
+\begin{description}
+\begin{addmargin}[0pt]{.5\linewidth}% indent 0pt left, .5\linewidth right
   \item[Requirement 1 -- It shall be possible to run test cases] \hfill \\
  SoapUI has the necessary functionality to run cases on command. There is also a program with which cases can be run outside the application.
   \item[Requirement 2 -- It shall be possible to schedule automatic test runs.] \hfill \\
@@ -1575,6 +1576,7 @@ stress tests] \hfill \\
    Stress tests are possible based on SoapUI test casesa and surrogates, using the LoadUI sister tool.
   \item[Requirement 10 -- It shall be possible to monitor test results and performance metrics.] \hfill \\
  LoadUI offers a dashboard and statistics view into performance metrics.
+ \end{addmargin}
 \end{description}
 
 Compared to the models by \citet{liu2009unified} and \citet{huang2008surrogate} in Chapter \ref{chapter:frameworktheory} the new model covers most the same ground with the addition of the surrogate generation process. 
