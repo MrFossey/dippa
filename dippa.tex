@@ -1550,30 +1550,30 @@ Jenkins is used in conjunction with ANT, which while not necessary, is an indust
 % todo: add comparison to reqs
 
 The framework is evaluated mainly by qualitative measures, but a quick heuristic analysis is also used to validate to new model. This section compares the proposed framework to the requirements laid out in Section \ref{section:requirements}, and the presented framework models and framework theory.
-%[Requirement 1 -- It shall be possible to run test cases]
+
 
 \begin{description}
-  \item This is a really really really long test requirement, simply for testing purposes it is, I assure you. \hfill \\
+  \item[R1 It shall be possible to run test cases] \hfill \\
  SoapUI has the necessary functionality to run cases on command. There is also a program with which cases can be run outside the application.
-  \item[Requirement 2 -- It shall be possible to schedule automatic test runs.] \hfill \\
+  \item[R2 It shall be possible to schedule automatic test runs.] \hfill \\
   Jenkins projects can be configured to create new builds regularly. The builds in turn can be configured to execute scripts, such as the one afforded by SoapUI, before each build.
-  \item[Requirement 3 -- It shall be possible to write and generate test cases.] \hfill \\
+  \item[R3 It shall be possible to write and generate test cases.] \hfill \\
   SoapUI is essentially an development enviroment and supports the creation of test cases.
-  \item[Requirement 4 -- It shall be possible to capture and replay messages.] \hfill \\
+  \item[R4 It shall be possible to capture and replay messages.] \hfill \\
   SoapUI has monitoring functionality which acts as a proxy and records and lists intercepted messages. Request messages can be rerun, if necessary.
-  \item[Requirement 5 -- It shall be possible to generate mock services or stubs.] \hfill \\
+  \item[R5 It shall be possible to generate mock services or stubs.] \hfill \\
   Messages recorded in SoapUI can be turned into cases or mock services through a wizard.
-  \item[Requirement 6 -- It shall be possible to validate test results automatically.] \hfill \\
+  \item[R6 It shall be possible to validate test results automatically.] \hfill \\
   SoapUI test cases can be supplemented with assertions for automatical verification.
-  \item[R7 -- HTTP/XML, JDBC, and (S)FTP messaging protocols shall be supported.]  \hfill \\
+  \item[R7 HTTP/XML, JDBC, and (S)FTP messaging protocols shall be supported.]  \hfill \\
   The necessary protocols can be through web services already implemented in the SUT.
-  \item[Requirement 8 -- It shall be possible to generate test loads, and conduct
+  \item[R8 It shall be possible to generate test loads, and conduct
 load tests.] \hfill \\
    Load tests are possible based on SoapUI test casesa and surrogates, using the LoadUI sister tool.
-  \item[Requirement 9 -- It shall be possible to generate test loads and conduct
+  \item[R9 It shall be possible to generate test loads and conduct
 stress tests] \hfill \\
    Stress tests are possible based on SoapUI test casesa and surrogates, using the LoadUI sister tool.
-  \item[Requirement 10 -- It shall be possible to monitor test results and performance metrics.] \hfill \\
+  \item[R10 It shall be possible to monitor test results and performance metrics.] \hfill \\
  LoadUI offers a dashboard and statistics view into performance metrics.
 \end{description}
 
