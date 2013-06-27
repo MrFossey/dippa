@@ -1769,11 +1769,12 @@ Looking at the research questions again:
 \textbf{1. What are the requirements for an automated integration testing framework?} \\
 \end{adjustwidth}
 
-Succintly  speaking the testing framework requirements include a test case / surrogate generator, a test engine, and an oracle verifying test results. 
+Succinctly speaking the testing framework requirements include a test case / surrogate generator, a test engine, and an oracle verifying test results. The generation is based on capture replay or formal models which allow for computational execution and thereby automation. WHile test execution is automatic, the creation will likely remain a mostly manual task. 
 
 \begin{adjustwidth}{2.5em}{0pt}
 \textbf{2. How should the testing framework be constructed and maintained?} \\
 \end{adjustwidth}
+
 
 
 One of the essential findings of this thesis is that Continuous Integration bridges the gaps in integration testing theory when examining the entire software lifecycle. Authors like Myers and Burnstein as well as textbooks (todo reference) still continue to perpetuate the image that integration testing is mere a software component assembly task and simply a staging post in software development. This is unfair because integrations should be tested regularly when there is even the slightest change in systems composition or source code. CI connects integration testing with functional, non-functional, and regression testing while adhering the tester's adage "test early and often". CI relies on automation to enable continuous testing.
