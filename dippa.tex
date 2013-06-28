@@ -1320,6 +1320,31 @@ The execution engine is the
 
 How to add assertions to the cases.
 % Only one assertion. Reference test data in cases. Optional: a separate database. Less hardcoded stuff. Matter of ambition.
+
+% Out of scope? move
+\section{Integration testing pitfalls}
+\label{section:pitfalls}
+
+Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008identifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, reducing it to a project's 'crushable zone'. According to \citet{van2008identifying}, not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation --- or sharing knowledge --- are also typical pitfalls, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
+
+There are also many potential stumbling blocks in automation. Algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense: as changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation  does not counteract inherently flawed software development or testing processes. \citep{jenkins2008software, zhang2011approach).
+
+\citet{leung1990study} present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups.  The error types are presented in figure \ref{fig:errors}.
+
+\begin{figure}[H]
+\begin{center}
+    \begin{tabular}{ l || >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | >{\raggedright\arraybackslash}p{3cm} }
+      & Interpretation error & Miscoded call error & Interface error \\ \hline \hline
+    Wrong & Incorrect functionality & Call instruction at wrong location on path & Standards or agreements are violated \\ \hline
+    Missing & Not all necessary functionality implemented & Call instruction missing on path & Standards or agreements are violated \\ 
+    \hline
+    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Standards or agreements are violated \\
+    \end{tabular}
+\end{center}
+\caption{Integration testing errors \citep{leung1990study}} \label{fig:errors}
+\end{figure}
+
+Analyzing defects is a possible quality assurance strategy: determining which kinds of errors are most common and testing for them in particular \citep{pezze2008software}. % TODO citation
   
 \chapter{Piecing together a new framework}
 \label{chapter:frameworkproposal}
@@ -1420,31 +1445,8 @@ The preparation and execution steps are clearly divided in the picture. The exec
 
 % Choose coverage, all calls or only most important ones, which integrations are more important, no relation -> relation -> all calls
 
-% Out of scope? move
-\section{Integration testing pitfalls}
-\label{section:pitfalls}
 
-Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. Indeed, integration testing can fail in many ways \citep{van2008identifying}. Testing may be overlooked as a non-value adding activity and integration considered done as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, reducing it to a project's 'crushable zone'. According to \citet{van2008identifying}, not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation --- or sharing knowledge --- are also typical pitfalls, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
-
-There are also many potential stumbling blocks in automation. Algorithms cannot match the intelligence and intuition of an experienced human tester, while some systems undergo so many changes that automation makes little sense: as changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach}. Automation  does not counteract inherently flawed software development or testing processes. \citep{jenkins2008software, zhang2011approach).
-
-\citet{leung1990study} present a typology of integration errors and classify them to interpretation errors, interface errors and miscoded call errors, which are again divided into subgroups.  The error types are presented in figure \ref{fig:errors}.
-
-\begin{figure}[H]
-\begin{center}
-    \begin{tabular}{ l || >{\raggedright}p{3cm} | >{\raggedright}p{3cm} | >{\raggedright\arraybackslash}p{3cm} }
-      & Interpretation error & Miscoded call error & Interface error \\ \hline \hline
-    Wrong & Incorrect functionality & Call instruction at wrong location on path & Standards or agreements are violated \\ \hline
-    Missing & Not all necessary functionality implemented & Call instruction missing on path & Standards or agreements are violated \\ 
-    \hline
-    Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Standards or agreements are violated \\
-    \end{tabular}
-\end{center}
-\caption{Integration testing errors \citep{leung1990study}} \label{fig:errors}
-\end{figure}
-
-Analyzing defects is a possible quality assurance strategy: determining which kinds of errors are most common and testing for them in particular \citep{pezze2008software}. % TODO citation
-
+% todo wtf doing here?
 % wtf is a proof of concepts
 This chapter presents a proof of concept construct built to address Wärtsilä's testing needs presented in Chapter \ref{chapter:background} and based on theoretical observations made earlier in Chapter \ref{chapter:frameworktheory}. The purpose of the construct is to act as proof of concept and, in true testing style, give early indicators of how valid the theoretical foundations are. The proof of concept is also ideal in highlighting practical concerns that arise during the experiment.
 
