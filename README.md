@@ -1,4 +1,0 @@
-dippa
-=====
-
-Diplomityö
