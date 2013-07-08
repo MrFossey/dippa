@@ -1370,7 +1370,7 @@ How to add assertions to the cases.
 \section{Integration testing pitfalls}
 \label{section:pitfalls}
 
-Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. A relatively small mistake can be costly and, indeed, integration testing can fail in many ways \citep{van2008identifying}. This section takes stock of the most common pitfalls in both testing, and implementing integrations.
+Testing management is no light matter: \citet{reid2005art} evaluated that about 50\% of system development time and more than 50\% of costs are spent on testing. A relatively small mistake can be costly and, indeed, integration testing can fail in many ways \citep{van2008identifying}. This section takes stock of the most common pitfalls in both testing and integrations.
 
 Testing may be overlooked as a non-value-adding activity and integration considered \emph{done} as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, reducing it to a project's \emph{'crushable zone'}. According to \citet{van2008identifying}, not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation --- or sharing knowledge --- are also typical pitfalls, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
 
@@ -1394,6 +1394,8 @@ There are also many potential stumbling blocks in automation. Algorithms cannot 
 % to avoid miscoded error call test test cases
 % to avoid standard violations test test cases
 % to avoid intepretation error focus on specification, test 
+
+The testing framework can serve to define common ways of working and alleviate the testing time crunch by speeding up testing.  It cannot only 
 
 Studying bugs has its merits. Retroactive analysis of defects is a possible quality assurance strategy. Determining which kinds of errors are most common and testing for them in particular is known as fault-based testing. It has been found quite promising but is not yet widely applied in the field of software testing. \citep{pezze2008software} Ideally, a test framework will collect information about execution so that defect analysis is possible. This can point to ways to improve integration quality and lighten the burden on testing.
   
