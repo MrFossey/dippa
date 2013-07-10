@@ -1574,6 +1574,10 @@ In the framework architecture, SoapUI contains script logic and in MVC terms act
 
 Execution engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine running the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in the Jenkins UI. Accordingly, what can only be called a gross initial oversight, visualizing the test results is added as a process to the overall framework process.
 
+In the construct managing the test packages and executing the tests are removed from the development environment for two reasons.
+
+% todo
+
 \subsection{SoapUI}
 
 \textbf{SoapUI}\footnote{http://www.soapui.org} is an IDE, or integrated development environment, and is used in constructing test scripts, both manually and through \emph{capture and playback}. Capture can also be used to to create scripts to simulate the behavior of systems thereby satisfying the requirement of having a surrogate engine. Effectively, SoapUI uses capture for both test case \emph{and surrogate component} generation. These mock service or surrogates components allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome, or what has happened across the integration black box.
@@ -1827,7 +1831,7 @@ To put it succinctly, testing framework requirements include a test case genetar
 
 The second research question is answered in part by the framework construct. The framework structure is dependent on the three core processes: generation, execution, verification, as well as the available and suitable tools. Special attention must be paid in adopting and aligning the framework for target organization.
 
-As test case creation is the most labour intesnive step and because it involves multiple parties of system administrators or managers, it should be well documented and supported. 
+As test case creation is the most labour intesnive step and because it involves multiple parties of system administrators or managers, it should be well documented and supported.  
 
 One of the essential findings of this thesis is that Continuous Integration bridges the gaps in integration testing theory when examining the entire software lifecycle. Authors like Myers and Burnstein as well as textbooks (todo reference) still continue to perpetuate the image that integration testing is mere a software component assembly task and simply a staging post in software development. This is unfair because integrations should be tested regularly when there is even the slightest change in systems composition or source code. CI connects integration testing with functional, non-functional, and regression testing while adhering the tester's adage "test early and often". CI relies on automation to enable continuous testing.
 % also automation
