@@ -1775,6 +1775,8 @@ Future research might also labour over collecting, combining, and comparing stra
 
 More focused areas like fault-based testing also merit research. The framework might supplemented by a set guidelines for creating fault-based test cases, for instance. This means creating tests cases based on defects detected in the system.
 
+Finally, it is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software} Implementing a testing framework is essentially a software development project with all associated risks and costs \citep{kaner1997pitfalls}. 
+
 % todo write about maintenance
 % todo rehman focusing on components but includes unit-integration-system
 
@@ -1795,7 +1797,7 @@ end-to-end tests are adequate if they can point to problem code accurately
 \chapter{Conclusions}
 \label{chapter:conclusions}
 
-It is not possible to go through every code branch or to test every possible input sequence. As \citet{myers1976software} put it, testing is a problem in economics. Test cases must provide a maximum yield on investment, where yield is measured as the probability that the case uncovers a new defect. \citep{myers1976software}
+
 
 % generalizable
 The thesis asserts that the devised framework presented in \ref{chapter:frameworkproposal} is generalizable and can benefit any party doing testing based on capture and replay. (Choosing the exact tools is a separate task and dependent on contextual factors of each individual case, however.) Testing as a process, is cemented in three steps, preparing necessary input and conditions, executing tests, and verifying results, perhaps with the addition of a clean-up step logging test results or creating test reports.
