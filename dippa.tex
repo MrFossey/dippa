@@ -1758,6 +1758,9 @@ The manual work belongs to the preparatory step of the framework and is required
 
 % component testing replacing integration testing
 % todo headline
+
+Integraton losing significance, capture and playback, 
+
 Software is abstracted and managed by splitting it to blocks. These blocks form a specific functional area that is a thematic whole and which can be assigned to responsible and which generally make the software easier to manage. In fact, integration might be thought to be not between systems but between software components, which respects interfaces more broadly. One may ask if integration testing scope will become too bloated in this vein of thought any transaction with two points constituting an "integration".
 
 % getting rid of the word integration literature
@@ -1768,7 +1771,7 @@ It is possible that \emph{integration} is a misleading term. Sometimes testing i
 % future: fault-based testing
 
 % capture playback and model generalizability, future resarch
-Capture and playback was the target of criticism but many commercial and non-commercial tools are based on it and while theoretically it may not be the best option, it arguably satisfies most companies' testing requirements and needs, at least temporarily. It remains to be seen if public opinion shifts after more is known about the lifecycle of such a tool and the maintenance requirements of such a strategy. The alternative, model-driven testing, requires an initial investment that is greater, but it might pay off. Perhaps system modeling will become so easy, and the philosophy of separating content with structure so prevalent as to enable test case and test data creation based specifications.
+Capture and playback is a frequent target of criticism but many commercial and non-commercial testing tools are based on it and while theoretically it may not be the best option, it arguably satisfies most companies' testing requirements and needs, at least temporarily. It remains to be seen if public opinion shifts after more is known about the lifecycle of such a tool and the maintenance requirements of such a strategy. The alternative, model-driven testing, requires an initial investment that is greater, but it might pay off. Perhaps system modeling will become so easy, and the philosophy of separating content with structure so prevalent as to enable test case and test data creation based specifications.
 
 In practice, integration testing might be skipped entirely in favor of end-to-end system tests which are thought to cover testing integrations. Once again testing is squeezed. Therefore, another area begging attention is whether integration testing should be conducted through end-to-end testing and what are the potential upsides and downsides. More accurately, this is to ask if integration testing should simply test the integration between two systems or if a whole chain of trans-system communication should be packaged into a test case. An end-to-end test case will give more coverage per case, and perhaps a more realistic test scenario, but also include a larger testing scope. If something goes awry can the test engineer or developer easily see what's wrong? Duvall advocates including only one assertion per case, which is counterproductive relative to the scale of an end-to-end case. If only a portion of system communication is relevant, the rest goes to waste.
 
