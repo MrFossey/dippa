@@ -1413,7 +1413,7 @@ Figure \ref{fig:framework} below synthesizes and combines integration testing th
 \begin{figure}[H]
 \centering
 \includegraphics[angle=90,width=12cm]{framework.png}
-\caption{Testing framework hypothesis}
+\caption{Original testing framework hypothesis}
 \label{fig:framework}
 \end{figure}
 
@@ -1550,7 +1550,7 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \path [line] (p4) -- (p7);
 
 \end{tikzpicture}
-\caption{Testing framework structure} \label{fig:structure}
+\caption{Technical framework implementaion} \label{fig:structure}
 \end{figure}
 
 In the framework architecture, SoapUI contains script logic and in MVC terms acts as model, while Jenkins provides a user interface for control and view. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing a feature like test execution requires cooperation between tools where one assumes part of the duties while the other fulfills the rest. Depending on the observers perspective either in true irony --- or an illustrative example --- implementing the integration testing framework already creates a number of system dependencies.
