@@ -726,12 +726,13 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 % -------------------------------------------------
 % Placing the nodes
 
-\node [proc, left=of thr] (int) {Interviews};
-\node [proc, left=of syn] (exp) {Experiment};
-\node [proc] (con) {Conclusions};
-\node [proc, right=of int] (thr) {Theory};
+\node [proc] (thr) {Theory};
 \node [proc] (anl) {Analysis};
 \node [proc] (syn) {Synthesis};
+\node [proc] (con) {Conclusions};
+
+\node [proc, right=of thr] (int) {Interviews};
+\node [proc, right=of syn] (exp) {Experiment};
 
 \path [line] (int) -- (anl);
 \path [line] (thr) -- (anl);
