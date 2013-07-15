@@ -713,7 +713,7 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 % -------------------------------------------------
 % Start the picture
 \begin{tikzpicture}[
-    start chain=going right,    % General flow is top-to-bottom
+    start chain=going down,    % General flow is top-to-bottom
     node distance=3mm and 25mm, % Global setup of box spacing
     ]
 % ------------------------------------------------- 
@@ -731,8 +731,8 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 \node [proc] (syn) {Synthesis};
 \node [proc] (con) {Conclusions};
 
-\node [proc, above=of thr] (int) {Interviews};
-\node [proc, above=of syn] (exp) {Experiment};
+\node [proc, right=of thr] (int) {Interviews};
+\node [proc, right=of syn] (exp) {Experiment};
 
 \path [line] (int) -- (anl);
 \path [line] (thr) -- (anl);
