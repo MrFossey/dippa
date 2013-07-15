@@ -720,7 +720,7 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=4ex},
   proc/.style={base, rectangle, minimum height=4em, text width=7em},
-  big/.style={base, rectangle, minimum height=8em, text width=10em},
+%  big/.style={base, rectangle, minimum height=8em, text width=10em},
    line/.style={draw, thick, -latex'}
 }
 % -------------------------------------------------
@@ -738,8 +738,6 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 \path [line] (anl) -- (syn);
 \path [line] (syn) -- (exp);
 \path [line] (exp) -- (con);
-
-\draw[->] (ctr.south) to [out=-160,in=-20] (con.south);
 
 \end{tikzpicture}
 \caption{Todo} \label{fig:todo}
