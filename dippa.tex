@@ -731,8 +731,8 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 \node [proc] (syn) {Synthesis};
 \node [proc] (con) {Conclusions};
 
-\node [proc, right=of thr] (int) {Interviews};
-\node [proc, right=of syn] (exp) {Experiment};
+\node [proc, below=of thr] (int) {Interviews};
+\node [proc, below=of syn] (exp) {Experiment};
 
 \path [line] (int) -- (anl);
 \path [line] (thr) -- (anl);
