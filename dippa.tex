@@ -1290,18 +1290,7 @@ A model can be used to implement automated testing or test case creation, and el
 % What are the methods of execution? (not technical, move to framework section in the automation part)
 % How are results used?
 %
-% Framework
-% Integration and testing strategy
-% Requirements for a framework - model-based testing, 
-% Testing process - verification, the framework verifying non-functionalities
-% Testing outcome
-% Testing pitfalls
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Testing framework synthesis
-%
 % regression strategy, code-based: cases selected to account for changed code, pezze 428 specification-based criteria selet a test case for execution if it is revelevant to a portion of the specification that has been changed. fault proneness, random sampling, priorities (recent has low), fault-based, coverage+age
-%
-%\section{input}
 
 \subsection{Test results}
 The purpose of testing is to reveal bugs in the software \citep{burnstein2003practical}. But what's next? The testing framework should deliver results so that they can help developers fix the found defects. As such, though, defect management is not in the scope of the testing framework. In Wärtsilä's case there already is a bug tracker tool in use and logging new defects is left to human discretion and manual work. The framework should, however, record test execution times, system version numbers, and other contextual metadata so that testers can manage system releases and defects \citep{jenkins2008software}.
