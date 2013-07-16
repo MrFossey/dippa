@@ -720,17 +720,19 @@ Reasoning follows an abductive logic path where an initial observation in the "r
 \tikzset{
   base/.style={draw, on chain, on grid, align=center, minimum height=3ex},
   proc/.style={base, rectangle, minimum height=3em, text width=5em},
-%  big/.style={base, rectangle, minimum height=8em, text width=10em},
+  blank/.style={base, rectangle, minimum height=8em, text width=10em},
    line/.style={draw, thick, -latex'}
 }
 % -------------------------------------------------
 % Placing the nodes
 
+\node [blank] (tpt) {Theory path};
 \node [proc] (thr) {Theory};
 \node [proc] (anl) {Analysis};
 \node [proc] (syn) {Synthesis};
 \node [proc] (con) {Conclusions};
 
+\node [blank, below=of tpt] (ept) {Empiric path};
 \node [proc, below=of thr] (int) {Interviews};
 \node [proc, below=of syn] (exp) {Experiment};
 
