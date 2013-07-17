@@ -1259,6 +1259,11 @@ Here, complex path sequences can be interpreted as system tests, whereas \emph{a
 
 In particular researchers advocate the creation of a call graph \citep{leung1990study, hurlburt2012not, linnenkugel1990test}, which explicitly maps interactions and relationships between integrated system components. The graph can serve as a foundation for organizing testing and setting test coverage criteria and strategy or test case creation \citep{benz2007combining, hura2011method, linnenkugel1990test}. In practice, a systematic testing sweep can be based on e.g. some of \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria. 
 
+%todo move to  chapter
+Deriving test cases from models or using models to represent the testing strategy is known as model-based testing and uses specifications or program code to first derive the model \citep{pezze2008software}. An accurate model has the benefit of reducing specification errors and misinterpretation by providing a common point of reference. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
+
+A model can be used to implement automated testing or test case creation, and elicit possible execution paths and plan coverage, and ensure that the system is adequately tested. For instance, a finite-state machine is a formal model which is depicts sequences of interactions between system components. Some systems, like those in banking and medicine, have very high availability requirements and therefore take advantage of formal models for comprehensive testing and significantly reduced risk. Models can also be less formal, for instance class diagrams or even constructed from documentation that is composed entirely of natural language. \citep{pezze2008software}
+
 \subsection{Integration test strategy}
 The way integration testing is conducted is linked to the integration strategy. Service-Oriented Architecture and Continuous Integration especially blur the line between development and integration \citep{huang2008surrogate, wieczorek2010model}. % todo continuous integration
 
@@ -1270,11 +1275,6 @@ In \emph{bottom-up} and \emph{top-down testing} integrations are put together an
 
 % literature development minded, regressions tests when systems are already put together, comes down to order of testing, but tests can be executed instantaneously. how realistic, how sophisticated, coverage of links
 The strategy typology is designed for integration in the development phase, rather than integration regression testing, which limits its applicability. An automatically executable test set may be capable of going through every integration in a matter of seconds or minutes, especially if only a few integrations are tested at a time. This makes the question of order (e.g. top-down or bottom-up) rather moot. The strategies, however, are worth considering when changes in systems call for testing many integrations (possibly all of them), for example when reassembling the system is required after a change with global effects. Integrations that are quick to run, or likely to fail should be run first \citep{duvall2007continuous} 
-
-%todo move to earlier chapter
-Deriving test cases from models or using models to represent the testing strategy is known as model-based testing and uses specifications or program code to first derive the model \citep{pezze2008software}. An accurate model has the benefit of reducing specification errors and misinterpretation by providing a common point of reference. Using model-driven integration \citet{wieczorek2010model} estimated savings of 50\% in time for test generation and concretization tasks.
-
-A model can be used to implement automated testing or test case creation, and elicit possible execution paths and plan coverage, and ensure that the system is adequately tested. For instance, a finite-state machine is a formal model which is depicts sequences of interactions between system components. Some systems, like those in banking and medicine, have very high availability requirements and therefore take advantage of formal models for comprehensive testing and significantly reduced risk. Models can also be less formal, for instance class diagrams or even constructed from documentation that is composed entirely of natural language. \citep{pezze2008software}
 
 %Theoretical number of states infinite 
 % Guide slection, specs are lacking, is the fsm feasible
