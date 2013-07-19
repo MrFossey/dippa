@@ -1334,7 +1334,9 @@ Colloquially, the step is often associated with \emph{test oracles} which analys
 
 Rather than talk about some revered oracles \citet{fewster1999testing} argue for the term 'comparison' since automated algorithms cannot assert success of failure, but only apply predefined rules to the test outcomes. It remains the test engineers responsibility to discern between success and failure. To the machine truth is just bits. Because comparison is a repetitive task requiring great attention detail and involves comparing digital, often explicit outputs, it is ideally suited to be automated. \citep{fewster1999testing}
 
-Comparison differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The apparoch is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how many comparisons are made. Having many comparisons makes for more high quality test cases but also increases their upkeep and creation costs. 
+\citet{fewster1999testing} make an important distinction between dynamic and post-execution comparisons. In the former, pass/fail rules are applied automatically as the cases are run. In the latter, the collected execution traces are subjected to a comparison engine after the execution. 
+
+Comparison also differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The apparoch is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how many comparisons are made. Having many comparisons makes for more high quality test cases but also increases their upkeep and creation costs. 
 
 % specific comparisons can be done, not verify outcome is right, puts empahsis on design
 
