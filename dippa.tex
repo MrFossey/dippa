@@ -1328,7 +1328,7 @@ Virtually any script of commands can be scheduled to run at set times and the te
 
 \subsection{Verification}
 
-Verification is the step that applies value to test execution. It transforms data from test runs to information with meanining. It is the culmination point of testing. Verification can be done ad hoc and manually, but here we examine the topic from the point of view of frameworks and testing tool and automation.
+Verification is the step that applies value to test execution. It transforms data from test runs to information with meanining. It is the culmination point of testing. Verification can be done ad hoc and manually, but here we examine the topic from the point of view of frameworks and testing tool and automation \citep{fewster1999testing}.
 
 Colloquially, the step is often associated with \emph{test oracles} which analyse results and apply pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. Essentially, oracles determine success and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks and test harnesses. They take as inputs the test case and the expected result. \citep{pezze2008software}
 
@@ -1336,7 +1336,6 @@ Rather than talk about some revered oracles \citep{fewster1999testing} argue for
 
 Comparison differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The apparoch is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how many comparisons are made. Having many comparisons makes for more high quality test cases but also increases their upkeep and creation costs. 
 
-% alternative to do ad hoc, in tester's head (fewster graham) but automation requries
 % specific comparisons can be done, not verify outcome is right, puts empahsis on design
 % captured outcomes must be verified manually (put to preparation part) (reference testing)
 
