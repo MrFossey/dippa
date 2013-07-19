@@ -1328,17 +1328,19 @@ Virtually any script of commands can be scheduled to run at set times and the te
 
 \subsection{Verification}
 
-Verification is the step that applies value to test execution. It transforms data from test runs to information with meanining. This is done through \emph{comparing} the execution outputs with expected outputs. Colloquially, the step is often associated with test oracles, though \citep{fewster1999testing} argue for the term comparison since automated algorithms cannot tell about success of failure, but only apply rules to the test results.
+Verification is the step that applies value to test execution. It transforms data from test runs to information with meanining. It is the culmination point of testing.
 
-Simple comparison looks for an identical meatch between ouutput and expected output. The apparoch is popular but inflexible. Complex comparison takes into account known difference in test results. 
+Colloquially, the step is often associated with \emph{test oracles} which analyse results and apply pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. Essentially, oracles determine success and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks and test harnesses. The framework inputs are the test case and the expected result. \citep{pezze2008software}. 
+
+Rather than talk about some revered oracles \citep{fewster1999testing} argue for the term 'comparison' since automated algorithms cannot tell about success of failure, but only apply predefined rules to the test outcomes. It remains the test engineers responsibility to discern between success and failure. To the machine truth is just bits.
+
+Comparison differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The apparoch is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how dep 
 
 % Verification is the final framework step where results from tests runs are 
 % alternative to do ad hoc, in tester's head (fewster graham) but automation requries
 % specific comparisons can be done, not verify outcome is right, puts empahsis on design
 % captured outcomes must be verified manually (put to preparation part) (reference testing)
 % comparison ideal for automation
-
-A testing oracle analyses testing results and applies pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. In one common approach, oracles determine success and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks and test harnesses. The framework inputs are the test case and the expected result. \citep{pezze2008software}. 
 
 Defining expected results naturally creates more work in test case creation. There are options to mitigate this, for example by using 'correct' output from previous versions of the system or a trusted alternative to the one tested. One can see that the oracle question is already present in case generation, for example when cases are first captured and created the output can be stored as exptected outcomes. In the most ambitious method, program execution is documented in a specification model in the full, so that the model can be used to both generate test cases and used as an oracle. \citep{pezze2008software}
 
