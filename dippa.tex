@@ -1397,18 +1397,16 @@ The execution engine is essentially to tool selected to serve as development env
 
 \subsection{Test comparison}
 
-Test comparison 
+Test comparison can be very detailed, or filter out irrelevant execution traces and only verify a portion of the results. The format of data is important both in terms of efficient storage and easy processing. Standard formats, like XML, are best suited for comparison.
 
-% filter, only compare parts that should be, xml makes easy
-
-\citet{fewster1999testing} present a helpful checklist for implementing a maintainable comparator.
+\citet{fewster1999testing} present a helpful checklist for implementing a maintainable comparator:
 \begin{enumerate}
-\item document, understand what is happening
-\item sensible naming conventions
-\item keep it simple
-\item introducition, 
-\item maintenance guidelines
-\item standardize e.g. regexp building blocks
+\item Document test resources so whoever uses it can understand what it does.
+\item Include an introduction to the test cases.
+\item Agree on and adhere to sensible naming conventions.
+\item Keep cases simple to make updates and changes easier to do.
+\item Draw up and communicate maintenance guidelines.
+\item Use standards and standardize to create building blocks for constructing the test resources (e.g. use of regular expressions).
 \item divide and conquer
 \end{enumerate}
 
