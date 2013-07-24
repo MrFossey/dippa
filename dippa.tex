@@ -1340,6 +1340,8 @@ Rather than talk about some revered oracles \citet{fewster1999testing} argue for
 
 \citet{fewster1999testing} make a distinction between dynamic and post-execution comparisons. In the former, pass/fail rules are applied automatically as the cases are run. In the latter, the collected execution traces are subjected to a comparison engine after the execution. Sometimes the distinction is less obvious, for instance when a comparator evaluates output after case execution but during the overall test run. It is largely an architectural question of where comparison logic should be stored. Some degree of verification during the run is advantageous as it can flag errors in the test configuration and abort a test run that would not provide any useful results \citep{fewster1999software}.
 
+It is more common for automated test cases to contain the logic statements, or assertions, of the expected outcome compared to the actual result, than for them to be  Comparison between actual and expected results can be done algorithmically if the information is in some structured form, like XML.
+
 Comparison also differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The approach is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how many comparisons are made. Having many comparisons makes for more high quality test cases but also increases their upkeep and creation costs \citep{fewster1999software}. 
 
 % specific comparisons can be done, not verify outcome is right, puts empahsis on design
@@ -1348,7 +1350,7 @@ Defining expected results naturally means more work in test case creation. There
 
 % todo model-based testing
 
-Test cases in automation contain assertions, logic statements, of the expected outcome compared to the actual result. Comparison between actual and expected results can be done algorithmically if the information is in some structured form, like XML.
+
 
 \section{Framework in use}
 
