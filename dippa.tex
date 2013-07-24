@@ -1336,11 +1336,9 @@ Verification is the step that applies value to test execution. It transforms dat
 
 Colloquially, the step is often associated with \emph{test oracles} which analyse results and apply pass/fail criteria to determine if a test was successful or not \citep{pezze2008software, burnstein2003practical}. Oracles determine success and failure by comparing program output to expectations. These comparison-based oracles are an essential part of testing frameworks and test harnesses. They take as inputs the test case and the expected result. \citep{pezze2008software}
 
-Rather than talk about some revered oracles \citet{fewster1999testing} argue for the term 'comparison' since automated algorithms cannot assert success of failure, but only apply predefined rules to the test outcomes. It remains the test engineers responsibility to discern between success and failure; to the machine truth is just bits. Because comparison is a repetitive task requiring great attention detail and involves comparing digital, often explicit outputs, it is ideally suited to be automated. \citep{fewster1999testing}
+Rather than talk about some revered oracles \citet{fewster1999testing} argue for the term 'comparison' since automated algorithms cannot assert success of failure, but only apply predefined rules to the test outcomes. It remains the test engineers responsibility to discern between success and failure; to the machine truth is just bits. Because comparison is a repetitive task requiring great attention detail and involves comparing digital, often explicit outputs in standard form (like XML), it is ideally suited to be automated. \citep{fewster1999testing}
 
 \citet{fewster1999testing} make a distinction between dynamic and post-execution comparisons. In the former, pass/fail rules are applied automatically as the cases are run. In the latter, the collected execution traces are subjected to a comparison engine after the execution. Sometimes the distinction is less obvious, for instance when a comparator evaluates output after case execution but during the overall test run. It is largely an architectural question of where comparison logic should be stored. Some degree of verification during the run is advantageous as it can flag errors in the test configuration and abort a test run that would not provide any useful results \citep{fewster1999software}.
-
-It is more common for automated test cases to contain the logic statements, or assertions, of the expected outcome compared to the actual result, than for them to be  Comparison between actual and expected results can be done algorithmically if the information is in some structured form, like XML.
 
 Comparison also differs in complexity. Simple comparison looks for an identical eatch between ouutput and expected output. The approach is effective but inflexible. Complex comparison takes into account known variance in test results. Testers also need to define the granularity of test scripts, or how many comparisons are made. Having many comparisons makes for more high quality test cases but also increases their upkeep and creation costs \citep{fewster1999software}. 
 
@@ -1349,8 +1347,6 @@ Comparison also differs in complexity. Simple comparison looks for an identical 
 Defining expected results naturally means more work in test case creation. There are options to mitigate this, for example by using 'correct' output from previous versions of the system or a trusted alternative to the one tested. One can see that the oracle/comparator question is already present in case generation, for example when cases are first captured and created the output can be stored as exptected outcomes. This first verification must be done manually before the test cases is stored for automated execution (\citet{fewster1999testing} call this 'reference testing) In the most ambitious method, program execution is documented in a specification model in the full, so that the model can be used to both generate test cases and used as an oracle. \citep{pezze2008software}
 
 % todo model-based testing
-
-
 
 \section{Framework in use}
 
