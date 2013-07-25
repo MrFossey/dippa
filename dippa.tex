@@ -957,7 +957,7 @@ test sets combined into test suites, specific task like test for a bug or a syst
 test results include outcomes, difference reports and tes tool log
 byproducts give an audit trail
 
-todo what is to measured number of scripts, automated tests, time to run, time or effor to maintenance
+what is to measured number of scripts, automated tests, time to run, time or effor to maintenance
 number of test faulires, passet tests, coverage, bytes
 
 defect detection percentage ddp = defects found by testing/total known defects
@@ -1279,7 +1279,6 @@ The most common way to evaluate coverage is based on control flow, which simply 
 \item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
 \end{itemize}
 Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing. The first item requires that each software module works, the second that at least one of the services between modules is tested, the third requirment is that all possible exchanges between two connected modules are tested, the fourth requirement includes all end-to-end exeuction paths without repetition or loops, and lastly end-to-end tests which may contain loops.
-% dumb down, link to finite state machine todo
 
 \citet{hewett2009automated} persuade testers to lay out and quantify components and their connections in a graph and use this information to design the most efficient order for testing, with a minimal need for creating test stubs. Likewise, \citet{leung1990study} and \citet{abdullah1995correcting} endorse the concept of a firewall, which draws a line between components and systems that are to be tested, and those that need not, based on where changes in code or specifications have occurred. This modeling both strengthens understanding of the inner workings of the tested system and reduces testing costs.
 
