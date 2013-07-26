@@ -1409,7 +1409,7 @@ Cost should be compared to benefits from test automation and any alternative too
 
 Second, the test manager must make sure everyone who needs the tools to create test cases or surrogate components has the means to do so. Availability might be bottlenecked by licensing or hardware concerns. Of course, in reality it might be that cases are constructed centralized by a test engineer rather than software application or service experts.
 
-Finally, everyone who uses te execution engine must know how to do. This is not just a task for the framework administrator but for anyone who contributes resources to the framework, though the mains responsibility of drawing up instructions does befall on the testing experts. As for support, a little work upstream avoids build-ups of work  at the downstream caused by negligence of correct practice.
+Finally, everyone who uses the execution engine must know how to do. This is not just a task for the framework administrator but for anyone who contributes resources to the framework, though the mains responsibility of drawing up instructions does befall on the testing experts. As for support, a little work upstream avoids build-ups of work at the downstream caused by negligence of correct practice.
 
 \subsection{Test comparison} 
 
@@ -1423,7 +1423,7 @@ Test comparison can be very detailed, or filter out irrelevant execution traces 
 \item For complicated or lengthy comparisons think if can be simplified manual comparison would make more sense.
 \item Standardize to create reusable building blocks for constructing the comparison logic statements (e.g. filters and regular expressions). 
 \item Use a balanced mix of sensitive and robust comparisons.
-\item Divide and conquer: create separate comprisons for each feature for easy set-up and matching to testing need.
+\item Divide and conquer: create separate comparisons for each feature for easy set-up and matching to testing need.
 \end{enumerate}
 
 % todo
@@ -1435,7 +1435,7 @@ Testing management is no light matter: \citet{reid2005art} evaluated that about 
 
 Testing may be overlooked as a non-value-adding activity and integration considered \emph{done} as soon as systems have been connected. Alternatively, testing resources are considered expendable, and testing given a low priority, reducing it to a project's \emph{'crushable zone'}. According to \citet{van2008identifying}, not identifying and communicating integration strategy, responsibilities and accountabilities, lines of reporting and escalation --- or sharing knowledge --- are also typical pitfalls, exacerbated by lack of expertise and good document management. Additional problems are caused by physically separated locations, and failing configuration or incident management. \citep{van2008identifying}.
 
-There are also many potential stumbling blocks in automation. Algorithms cannot match the intelligence and intuition of an experienced human tester and \citet{kaner1997pitfalls} points out that automated tests cases are usually simple in structure and consequently less likely to stumble upon a bug. Some systems undergo so many changes that automation makes little sense: as these changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach, kaner1997pitfalls}. Automation  does not counteract inherently flawed software development or testing processes. \citep{jenkins2008software, zhang2011approach).
+There are also many potential stumbling blocks in automation. Algorithms cannot match the intelligence and intuition of an experienced human tester and \citet{kaner1997pitfalls} points out that automated tests cases are usually simple in structure and consequently less likely to stumble upon a bug. Some systems undergo so many changes that automation makes little sense: as these changes are introduced into the systems and code, related test cases must be examined, their reusability ascertained, out-of-date cases should be discarded, and new cases created where necessary \citep{zhang2011approach, kaner1997pitfalls}. Automation does not counteract inherently flawed software development or testing processes. \citep{jenkins2008software, zhang2011approach).
 
 \citep{kaner1997pitfalls} reminds that automation takes time and can slow testing down at first. The typical implementation workflow is to first execute a test case manually to see that it passes and then automate it. This results in an effete set of test cases which finds bugs at reduced rate compared to manual testing \citep{kaner1997pitfalls}. Adding too many cases makes testing counterproductive because of difficult and expensive maintenance.
 
