@@ -1368,10 +1368,10 @@ Defining expected results naturally means more work in test case creation. There
 
 As new integrations are introduced, old ones go through changes, or some other trigger for testing occurs, the framework should provide a test harness that is easy to adopt. Integration test cases should have a template and their addition to the automatically executed test packages should involve a reasonable amount of work \citep{fewster1999software}. The case creation guidelines, especially when paired with capture techniques, can expedite the testing process when compared to ad hoc testing and add the security of control. All this procedure related to automated testing adds to the software maintenance costs. It is therefore essential to evaluate and discuss what the continued use of a testing framework would entail.
 
-% add mock service todo?
+
 
 \subsection{Test case management}
-
+% add mock service
 Test cases encompass requisite input information, script logic, and expected outcome for the execution of tests. The cases are the arrows in the quiver of the tester. Along with mock services or surrogates, they are strategic resources in that they determine the effectiveness of testing, but their creation, as well as maintenance, is also an investment.
 
 With an automated framework, one might be tempted to add more and more cases for "increased confidence in the SUT" especially when execution only takes seconds. This is a common error of judgement \citep{fewster1999software}. The amount of cases should be as small as possible for the least possible amount of maintenance work including test set-up and clean-up tasks. Tests should not overlap, or test the same features and functionalities, and they should contain as little script code as possible. To remedy the situation, \citet{fewster1999software} recommend reviewing new test cases before they are accepted and periodically weeding out less important cases. 
