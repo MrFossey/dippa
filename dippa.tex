@@ -1451,7 +1451,7 @@ There are also many potential stumbling blocks in automation. Algorithms cannot 
     Extra & Function performs more than what is expected or needed & Call instruction on a path which should not have it & Standards or agreements are violated \\
     \end{tabular} 
 \end{center}
-\caption{Integration testing errors, adpated from \citep{leung1990study}} \label{fig:errors}
+\caption{Integration testing errors, adapted from \citep{leung1990study}} \label{fig:errors}
 \end{figure}
 
 % to avoid miscoded error call test test cases
@@ -1471,7 +1471,7 @@ After a framework model is shown, the chapter continues to practical implementat
 
 \section{Wärtsilä's integration testing framework}
 
-There are a total of six processes and three objects involved in the the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while the second, the execution step, those resources are exercised in conducting integration tests.
+There are a total of six processes and three objects involved in the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while the second, the execution step, those resources are exercised in conducting integration tests.
 
 % assertions
 In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Consequently, 
@@ -1481,7 +1481,7 @@ The generation process is likely the most labour-consuming and must be planned a
 
 Since there are cases where correct system behaviour cannot be verified by examining an output, service mocking is required. Consequently, a framework also needs a component for the creation of such mock-ups, preferably using a strategy similar to the one in test case creation; actual records from production can be used as basis for mock service emulation.
 
-Theoretically, models, diagrams, and specifications can also be used for automatically producing test cases, but the reality at Wärtsilä is that these are not documented in such detail that would practically afford such generation. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behavior, and to communicate system structure and logic. 
+Theoretically, models, diagrams, and specifications can also be used for automatically producing test cases, but the reality at Wärtsilä is that these are not documented in such detail that would practically afford such generation. At least, models and specifications should be used to make sure the test cases address and measure correct things and defined behaviour, and to communicate system structure and logic. 
 
 The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
 
