@@ -1105,7 +1105,7 @@ In the surrogate apparatus, the environment is made of the application container
 
 The \citet{liu2009unified} model (Figure \ref{fig:liu}) includes processes, objects, and agents. Based on a UML sequence diagrams, the test generator semi-automatically creates test cases later submitted to the execution engine. Test runs are facilitated by a surrogate engine or engines which mock external systems. After execution, IBM's proprietary ITCAM technology aggregates execution traces together with the help of a trace correlator, which then pass the traces for transformation into a standard format. The test cycle is finished off by verification on the integration test case and execution trace and returning the result to the execution engine.
 
-The surrogate \emph{generator} was conspicuously left out of the model. The authors chose to scope out this part of the framework and focus on the testing execution process rather than preconfiguration. The framework is dubbed 'unified' because it is was designed to satisfy continuous integration testing requirements in a service-oriented environment.
+The surrogate \emph{generator} was conspicuously left out of the model. The authors chose to scope out this part of the framework and focus on the testing execution process rather than preconfiguration. The framework is dubbed 'unified' because it was designed to satisfy continuous integration testing requirements in a service-oriented environment.
 
 The researchers separated test case structure and logic for platform independence. The test logic and configuration settings were encoded in separate XML files. The unified testing framework was built to be technology independent so 
 separate plug-ins were created for the SOA context and technologies.
@@ -1144,7 +1144,7 @@ Where the two first models essentially depict a loop and treat continuous testin
 
 The testing frameworks or models introduced in this chapter have striking similarities and subtle individual connotations. All models save for \citeauthor{huang2008surrogate}'s \citeyearpar{huang2008surrogate} surrogate architecture really only a part of the whole continuous integration process they later touch on, can be argued to follow a three step process of \emph{generating necessary input} (cases, surrogates, test data), \emph{running the test scripts}, and finally \emph{verifying and comparing results}. The process funnels are comparable to e.g. \citeauthor{davenport1993process}'s \citeyearpar{davenport1993process} definition of a business process taking an input and producing a result or indeed a software method that takes some parameters and return some output.
 
-% Alternatively: So as not to get too distracted by the rather pragmatic and techincal models, a more holistic...
+% Alternatively: So as not to get too distracted by the rather pragmatic and technical models, a more holistic...
 Since all of the models are rather pragmatic and technical, a more holistic perspective is reserved for further analysis of the nature of the integration testing framework. Figure \ref{fig:funnel} presents a framework on three levels of abstraction (horizontal dimension) and the process dimension (vertical) just discussed.
 %Pace of integration, rate of automation, definition for I/O process
 
