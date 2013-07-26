@@ -1316,7 +1316,7 @@ The strategy typology is designed for integration in the development phase, rath
 %
 % regression strategy, code-based: cases selected to account for changed code, pezze 428 specification-based criteria select a test case for execution if it is relevant to a portion of the specification that has been changed. fault proneness, random sampling, priorities (recent has low), fault-based, coverage+age
 
-\subsection{Using test results}
+\subsection{Producing test results}
 The purpose of testing is to reveal bugs in the software \citep{burnstein2003practical}. But what's next? The testing framework should deliver results so that they can help developers fix the found defects. As such, though, defect management is not in the scope of the testing framework. In Wärtsilä's case there already is a bug tracker tool in use and logging new defects is left to human discretion and manual work. The framework should, however, record test execution times, system version numbers, and other contextual metadata so that testers can manage system releases and defects \citep{jenkins2008software}.
 
 Testing results can be used to evaluate and analyze the testing process and framework. \citet{jenkins2008software} advocates measuring found defects\footnote{Only those that have been confirmed as defects and have not been rejected.} per tester work hours, or how well are new issues are discovered, to determine if testing efficiency. Ideally, this figure would be compared to manual testing figures. \citep{jenkins2008software, fewster1999software}
@@ -1324,6 +1324,7 @@ Testing results can be used to evaluate and analyze the testing process and fram
 % more on fault based testing?
 Results can also guide further testing efforts. In \emph{fault-based testing}, new test cases (and more strict specifications) are designed for each problem areas, which are then more heavily tested. \citep{pezze2008software}
 
+% todo out of scope?
 Once the test cases have been created and chosen, the test set quality itself can be evaluated quantitatively and 'tested' based on test results. For example, in \citeauthor{delamaro2001interface}'s \citeyearpar{delamaro2001interface} \emph{mutation testing} the test set quality is evaluated by creating variations of the tested programs and running the cases against the mutated programs. If it succeeds against the mutated program, the case is considered live. Ideally, cases will fail when run against modified, 'erroneous' code. 
 
 \section{Framework composition}
