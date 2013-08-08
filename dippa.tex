@@ -2127,11 +2127,12 @@ See figures 3, 4, and 5.
 
 Example 3 – Configuring Jenkins
 See figures 6 and 7.
-1.	Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at http://jenkins-ci.org/. Afterwards open Jenkins at localhost:8080.
-2.	 In Jenkins, choose new job, give it a name, choose freestyle project and OK. 
-3.	Next, configure the Jenkins project to run windows bat file at every build. Paste the command given by SoapUI testrunner and before it add a line were you change directory to the folder where SoapUI’s testrunner.bat is located. For the setup to work SoapUI must be installed on the same machine as Jenkins.
-4.	Building the project is now possible. If you keep Jenkins running, you can schedule builds, too, in the project configuration window.
-
+\begin{enumerate} 
+\item Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at http://jenkins-ci.org/. Afterwards open Jenkins at localhost:8080.
+\item In Jenkins, choose new job, give it a name, choose freestyle project and OK. 
+\item Next, configure the Jenkins project to run windows bat file at every build. Paste the command given by SoapUI testrunner and before it add a line were you change directory to the folder where SoapUI’s testrunner.bat is located. For the setup to work SoapUI must be installed on the same machine as Jenkins.
+\item Building the project is now possible. If you keep Jenkins running, you can schedule builds, too, in the project configuration window.
+\end{enumerate}
 
 % End of document!
 % ------------------------------------------------------------------
