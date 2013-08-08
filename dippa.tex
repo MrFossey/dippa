@@ -2148,7 +2148,7 @@ See Figure \ref{fig:app_configuringmessage}.
 \end{figure}
 
 \section{Example 2 --– Creating and running a test case}
-See figures 3, 4, and 5.
+See Figures  \ref{fig:app_monitoringtraffic},  \ref{fig:app_addingassertions}, and  \ref{fig:app_testrunnerexecution}.
 \begin{enumerate}
 \item Right click the project you created and choose “launch SOAP monitor”. Use the default port and check the checkbox “use as global proxy”. 
 \item Then open the sample request with test data and run it. This should create a log entry in the monitor window. 
@@ -2160,35 +2160,51 @@ See figures 3, 4, and 5.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{monitoringtraffic.png}
-    \caption{Configuring the message}
-    \label{fig:app_configuringmessage}
+    \caption{Monitoring traffic}
+    \label{fig:app_monitoringthetraffic}
   \end{center}
 \end{figure}
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{addingassertions.png}
-    \caption{Configuring the message}
-    \label{fig:app_configuringmessage}
+    \caption{Adding assertions}
+    \label{fig:app_addingassertions}
   \end{center}
 \end{figure}
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=13cm]{testrunnerexecution.png}
-    \caption{Configuring the message}
+    \caption{Testrunner execution}
     \label{fig:app_testrunnerexecution}
   \end{center}
 \end{figure}
 
 \section{Example 3 – Configuring Jenkins}
-See figures 6 and 7.
+See Figure \ref{fig:app_jenkinsconfiguration} and \ref{fig:app_jenkinsprojectview}.
 \begin{enumerate} 
 \item Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at \url{<http://jenkins-ci.org/>}. Afterwards open Jenkins at localhost:8080.
 \item In Jenkins, choose new job, give it a name, choose freestyle project and OK. 
 \item Next, configure the Jenkins project to run windows bat file at every build. Paste the command given by SoapUI testrunner and before it add a line were you change directory to the folder where SoapUI’s testrunner.bat is located. For the setup to work SoapUI must be installed on the same machine as Jenkins.
 \item Building the project is now possible. If you keep Jenkins running, you can schedule builds, too, in the project configuration window.
 \end{enumerate}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=13cm]{jenkinsconfiguration.png}
+    \caption{Jenkins project configuration}
+    \label{fig:app_jenkinsconfiguration}
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=13cm]{jenkinsprojectview.png}
+    \caption{Jenkins project view}
+    \label{fig:app_jenkinsprojectview}
+  \end{center}
+\end{figure}
 
 % End of document!
 % ------------------------------------------------------------------
