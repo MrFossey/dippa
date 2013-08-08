@@ -2106,7 +2106,6 @@ Implementation priority could for example be based on the following criteria:
 
 \section{Example 1 –-- Configuring SoapUI with web service}
 See figure 2.
-
 \begin{enumerate}
 \item If you already haven’t, install the free version (not the pro version) of SoapUI from http://www.soapui.org/.
 \item For a SoapUI sample integration create a new project in SoapUI. Right click the project and choose “add WSDL” and add the web service description (e.g. the one attached to this document).  This creates a web service binding with a sample request. 
@@ -2116,13 +2115,16 @@ See figure 2.
 \item Now the request can be run by clicking the green arrow. You should get a return message with engine information.  
 \end{enumerate}
 
-Example 2 – Creating and running a test case
+\section{Example 2 --– Creating and running a test case}
 See figures 3, 4, and 5.
-1.	Right click the project you created and choose “launch SOAP monitor”. Use the default port and check the checkbox “use as global proxy”. 
-2.	Then open the sample request with test data and run it. This should create a log entry in the monitor window. 
-3.	In the monitor window click the button “add selected requests to test case”. Create new suite and test case in the wizard. Don’t leave any spaces in their names however!
-4.	 Now, if you open the test case and test step you can find “monitor request 1”. Add an assertion or two (click ‘Assertions’ to open the assertion view), like SOAP message or SLA level. Run the case again to see that it passes.
-5.	Try running the case by right clicking the project and choosing ‘launch testrunner’. Run the new suite and case. The subsequently opened dialog provides the command with parameters to run the case from command line (it is at the top, scroll there).
+\begin{enumerate}
+\item Right click the project you created and choose “launch SOAP monitor”. Use the default port and check the checkbox “use as global proxy”. 
+\item Then open the sample request with test data and run it. This should create a log entry in the monitor window. 
+\item In the monitor window click the button “add selected requests to test case”. Create new suite and test case in the wizard. Don’t leave any spaces in their names however!
+\item Now, if you open the test case and test step you can find “monitor request 1”. Add an assertion or two (click ‘Assertions’ to open the assertion view), like SOAP message or SLA level. Run the case again to see that it passes.
+\item Try running the case by right clicking the project and choosing ‘launch testrunner’. Run the new suite and case. The subsequently opened dialog provides the command with parameters to run the case from command line (it is at the top, scroll there).
+\end{enumerate}
+
 Example 3 – Configuring Jenkins
 See figures 6 and 7.
 1.	Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at http://jenkins-ci.org/. Afterwards open Jenkins at localhost:8080.
