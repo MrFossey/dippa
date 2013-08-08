@@ -2048,13 +2048,17 @@ The following chapter gives recommendations for integration testing practices ba
 \subsection{General strategy}
 
 \begin{description}
-\item[Plan coverage and relevant measures beforehand.] \hfill \\
+\item[Plan coverage and relevant measures beforehand.] \hfill 
+\\
 Define the test scope and roles, and solicit support from the parties that need to be involved in creating e.g. test cases. Relevant measures should be identified to set the stage and guide the whole implementation of the test framework.
-\item[Use capture/replay.] \hfill \\
+\item[Use capture/replay.] \hfill 
+\\
 Broadly speaking there are two general ways to satisfy the requirement of test case generation: capture/replay and model-based testing. The former is the better option in testing Wärtsilä’s system integrations because of cost-effectiveness: Based on experts’ statements integrations do not undergo many changes and therefore costly test resource maintenance work is minimal. Conversely, building sophisticated, machine- interpretable formal models for automatic test case extrapolation requires more investment upfront and is risky.
-\item[Draw call graph to visualize integrations.] \hfill \\
+\item[Draw call graph to visualize integrations.] \hfill 
+\\
 A call graph is a tool to visualize integrations. It should include systems, integrations, and different transactions passing through the integrations as well as any additional technical information. Note that the purpose of the call graph is not to document the technological specifics of integrations, but to discern dependencies and plan test scope.
-\item[Use continuous integration tool for automated test execution.] \hfill \\
+\item[Use continuous integration tool for automated test execution.] \hfill 
+\\
 Longer term goal to adopt continuous testing in development as well. Continuous integration provides the best quality in testing because bugs are found  and addressed as soon as they manifest themselves in the systems. Continuous integration also makes the most out of automated execution through frequent, systematic, and comprehensive test runs. In the future, continuous integration and test resources can be used already at the development stage benefitting the construction of new systems or the improvement of old ones.
 \end{description}
 
