@@ -2027,7 +2027,7 @@ Helsinki
 
 The following document gives guidelines and recommendations in testing Wärtsilä’s system integrations. It is based on the author’s Master’s Thesis research and experiments at the company during the Spring of 2013. 
 
-The distilled wisdom to come is not argued in lengthy detail and anyone interested in additional information or analysis is invited to read the thesis which is available at: http://dippaeditor.com/preview/eVW29cQ7gwyM/
+The distilled wisdom to come is not argued in lengthy detail and anyone interested in additional information or analysis is invited to read the thesis which is available at: \url{<http://dippaeditor.com/preview/eVW29cQ7gwyM/>}
 
 In this guideline document the reader is first presented with the key finding of the research – a process for integration testing on which the technical testing framework is implemented. Next, guidelines on general integration testing strategy, test resource management and preparation, test execution, and result verification are given. The compiled guidelines are grounded in a lifecycle perspective and take into account maintenance issues. Based on the thesis prototype framework, illustrated step-by-step instructions for test case construction are also provided.
 
@@ -2107,11 +2107,11 @@ Implementation priority could for example be based on the following criteria:
 \section{Example 1 –-- Configuring SoapUI with web service}
 See figure 2.
 \begin{enumerate}
-\item If you already haven’t, install the free version (not the pro version) of SoapUI from http://www.soapui.org/.
+\item If you already haven’t, install the free version (not the pro version) of SoapUI from \url{<http://www.soapui.org/>}.
 \item For a SoapUI sample integration create a new project in SoapUI. Right click the project and choose “add WSDL” and add the web service description (e.g. the one attached to this document).  This creates a web service binding with a sample request. 
 \item The request is missing test data which must be added. For the attached example service for instance, insert the following in the fields with ‘?’ in this order: ‘3333’, ‘32’, ‘GEN’, ‘False’, ‘True’.
 \item You must also add username ext_sco and password wm7qa in the ‘Aut’ authentication tab.  The test client must have the rights to access SUT services.
-\item Add the correct endpoint URL in the request edit window, e.g. for the example service: http://wesbqa.wartsila.com:5557/ws/sco.common.ws:SCOServiceProvider .
+\item Add the correct endpoint URL in the request edit window, e.g. for the example service: \url{<http://wesbqa.wartsila.com:5557/ws/sco.common.ws:SCOServiceProvider>}.
 \item Now the request can be run by clicking the green arrow. You should get a return message with engine information.  
 \end{enumerate}
 
@@ -2128,7 +2128,7 @@ See figures 3, 4, and 5.
 \section{Example 3 – Configuring Jenkins}
 See figures 6 and 7.
 \begin{enumerate} 
-\item Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at http://jenkins-ci.org/. Afterwards open Jenkins at localhost:8080.
+\item Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at \url{<http://jenkins-ci.org/>}. Afterwards open Jenkins at localhost:8080.
 \item In Jenkins, choose new job, give it a name, choose freestyle project and OK. 
 \item Next, configure the Jenkins project to run windows bat file at every build. Paste the command given by SoapUI testrunner and before it add a line were you change directory to the folder where SoapUI’s testrunner.bat is located. For the setup to work SoapUI must be installed on the same machine as Jenkins.
 \item Building the project is now possible. If you keep Jenkins running, you can schedule builds, too, in the project configuration window.
