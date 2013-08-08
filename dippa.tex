@@ -2089,15 +2089,20 @@ Continuous integration provides the best quality in testing because bugs are fou
 \item Divide and conquer: create separate comparisons for each feature for easy set-up and matching to testing need.
 \end{enumerate}
 
-
-What to test first?
+\subsection{What to test first?}
 Implementation priority could for example be based on the following criteria:
-Tests that are explicitly deemed important. E.g. some area that critical, has been recently changed, is prone to bugs or is known to have caused failures.
-A set of breadth tests that roughly cover all features in test scope. This will give minimum satisfaction of test objectives.
-Test for most important functions. Function importance may be attributed to e.g. message traffic, financial impact, etc.
-Tests that are easy to automate. Good for quick wins and return for investment. Also quickly ramps up the framework construction.
-Test that will give quickest payback. Implement test cases in projects which would otherwise require a lot of manual testing.
-Test that are run most often. If tests need to be run often, the tested area is likely subject to many changes thereby increasing risk.
+
+\textbf{Tests that are explicitly deemed important.} E.g. some area that critical, has been recently changed, is prone to bugs or is known to have caused failures.
+
+\textbf{A set of breadth tests that roughly cover all features in test scope.} This will give minimum satisfaction of test objectives. 
+
+\textbf{Test for most important functions.} Function importance may be attributed to e.g. message traffic, financial impact, etc.Tests that are easy to automate. Good for quick wins and return for investment. Also quickly ramps up the framework construction.
+
+\textbf{Test that will give quickest payback.} Implement test cases in projects which would otherwise require a lot of manual testing.
+
+\textbf{Test that are run most often.} If tests need to be run often, the tested area is likely subject to many changes thereby increasing risk.
+
+
 Example 1 – Configuring SoapUI with web service
 See figure 2.
 1.	If you already haven’t, install the free version (not the pro version) of SoapUI from http://www.soapui.org/.
