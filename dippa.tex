@@ -2034,7 +2034,15 @@ The distilled wisdom to come is not argued in lengthy detail and anyone interest
 In this guideline document the reader is first presented with the key finding of the research – a process for integration testing on which the technical testing framework is implemented. Next, guidelines on general integration testing strategy, test resource management and preparation, test execution, and result verification are given. The compiled guidelines are grounded in a lifecycle perspective and take into account maintenance issues. Based on the thesis prototype framework, illustrated step-by-step instructions for test case construction are also provided.
 
 \section{Recommended test process}
-The test process is divided in to a preparation step where test resources are created and an execution step in which test cases are run and rerun as the step is repeated. The whole process is pictured in Figure 1.
+The test process is divided in to a preparation step where test resources are created and an execution step in which test cases are run and rerun as the step is repeated. The whole process is pictured in Figure \ref{fig:app_framework}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=13cm]{framework.png}
+    \caption{Test framework}
+    \label{fig:app_framework}
+  \end{center}
+\end{figure}
 
 Testing begins with capture in which records of message transactions that are used to create a test case or mock service so the message exchange can be re-executed in the test environment.  New cases are proofed to see if they work and then committed to the test library.
 
