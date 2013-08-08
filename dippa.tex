@@ -1393,7 +1393,6 @@ The test resource library can also house related documents and records produced 
 % commercial tools usually dynamci
 % not too many complex cases
 % support, automated updates to test data and define standards and values
-% todo test set and suite?
 % todo add to conclusion: figure out most importnat automation concerns and focus on them
 
 As for test case logic structure, \citet{duvall2007continuous} recommends including only one assertion per case so that final results can easily be traced back to the underlying problem, though \citet{fewster1999software} write that some features require multiple checks to verify (e.g. inserting data into a database). Test case scripts can be designed so that they take into account certain circumstances and adjust to their conditions intelligently \citep{fewster1999software}, for instance reacting to a severed network connection. The added dynamic script logic bloats the cases and makes them more cumbersome to maintain, though. As reruns rack up the testing time, test execution time should be as quick as possible. If something is clearly wrong the run should stop so no time is wasted.
@@ -2053,8 +2052,6 @@ The test process is divided in to a preparation step where test resources are cr
 Testing begins with capture in which records of message transactions that are used to create a test case or mock service so the message exchange can be re-executed in the test environment.  New cases are proofed to see if they work and then committed to the test library.
 
 Cases are packaged into suites and suites divided into test sets which are configured to be executed automatically at regular intervals. Test logs and failed outcomes are also stored in the test library. If a bug is found an automatic report is sent to the bug tracker.
-
-% todo add test framework
 
 The recommended test process is described in more detail in the thesis.
 
