@@ -2098,17 +2098,27 @@ Longer term goal to adopt continuous testing in development as well. Continuous 
 \subsection{What to test first?}
 Implementation priority could for example be based on the following criteria:
 
-\textbf{Tests that are explicitly deemed important.} E.g. some area that critical, has been recently changed, is prone to bugs or is known to have caused failures.
+\begin{description}
+\item[Tests that are explicitly deemed important.] \hfill \\
+E.g. some area that critical, has been recently changed, is prone to bugs or is known to have caused failures.
 
-\textbf{A set of breadth tests that roughly cover all features in test scope.} This will give minimum satisfaction of test objectives. 
+\item[A set of breadth tests that roughly cover all features in test scope.] \hfill \\ 
+This will give minimum satisfaction of test objectives.
 
-\textbf{Test for most important functions.} Function importance may be attributed to e.g. message traffic, financial impact, etc.
+\item[Test for most important functions.] \hfill \\
+Function importance may be attributed to e.g. message traffic, financial impact, etc.
 
-\textbf{Tests that are easy to automate.} Good for quick wins and return for investment. Also quickly ramps up the framework construction.
 
-\textbf{Test that will give quickest payback.} Implement test cases in projects which would otherwise require a lot of manual testing.
+\item[Tests that are easy to automate.] \hfill \\
+Good for quick wins and return for investment. Also quickly ramps up the framework construction.
 
-\textbf{Test that are run most often.} If tests need to be run often, the tested area is likely subject to many changes thereby increasing risk.
+\item[Test that will give quickest payback.] \hfill \\ 
+Implement test cases in projects which would otherwise require a lot of manual testing.
+
+\item[Test that are run most often.] \hfill \\
+If tests need to be run often, the tested area is likely subject to many changes thereby increasing risk.
+
+\end{description}
 
 \section{Example 1 –-- Configuring SoapUI with web service}
 See figure 2.
