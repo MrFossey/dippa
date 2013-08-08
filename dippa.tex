@@ -2129,7 +2129,7 @@ If tests need to be run often, the tested area is likely subject to many changes
 \end{description}
 
 \section{Example 1 –-- Configuring SoapUI with web service}
-See figure 2.
+See Figure \ref{fig:app_configuringmessage}.
 \begin{enumerate}
 \item If you already haven’t, install the free version (not the pro version) of SoapUI from \url{<http://www.soapui.org/>}.
 \item For a SoapUI sample integration create a new project in SoapUI. Right click the project and choose “add WSDL” and add the web service description (e.g. the one attached to this document).  This creates a web service binding with a sample request. 
@@ -2138,6 +2138,14 @@ See figure 2.
 \item Add the correct endpoint URL in the request edit window, e.g. for the example service: \\ \censor{wesbqa.wartsila.com:5557/ws/sco.common.ws:SCOServiceProvider}.
 \item Now the request can be run by clicking the green arrow. You should get a return message with engine information.  
 \end{enumerate}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=13cm]{configuringmessage.png}
+    \caption{Configuring the message}
+    \label{fig:app_configuringmessage}
+  \end{center}
+\end{figure}
 
 \section{Example 2 --– Creating and running a test case}
 See figures 3, 4, and 5.
