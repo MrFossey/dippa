@@ -2019,6 +2019,109 @@ Wärtsilä Corporation\\
 Helsinki
 \end{tt}
 
+\chapter{Guidelines document}
+\label{chapter:second-appendix}
+
+\section{Introduction}
+
+The following document gives guidelines and recommendations in testing Wärtsilä’s system integrations. It is based on the author’s Master’s Thesis research and experiments at the company during the Spring of 2013. 
+
+The distilled wisdom to come is not argued in lengthy detail and anyone interested in additional information or analysis is invited to read the thesis which is available at: http://dippaeditor.com/preview/eVW29cQ7gwyM/
+
+In this guideline document the reader is first presented with the key finding of the research – a process for integration testing on which the technical testing framework is implemented. Next, guidelines on general integration testing strategy, test resource management and preparation, test execution, and result verification are given. The compiled guidelines are grounded in a lifecycle perspective and take into account maintenance issues. Based on the thesis prototype framework, illustrated step-by-step instructions for test case construction are also provided.
+
+\section{Recommended test process}
+The test process is divided in to a preparation step where test resources are created and an execution step in which test cases are run and rerun as the step is repeated. The whole process is pictured in Figure 1.
+
+Testing begins with capture in which records of message transactions that are used to create a test case or mock service so the message exchange can be re-executed in the test environment.  New cases are proofed to see if they work and then committed to the test library.
+
+Cases are packaged into suites and suites divided into test sets which are configured to be executed automatically at regular intervals. Test logs and failed outcomes are also stored in the test library. If a bug is found an automatic report is sent to the bug tracker.
+
+% todo add test framework
+
+The recommended test process is described in more detail in the thesis.
+
+\section{Recommendations}
+The following chapter gives recommendations for integration testing practices based on the research conducted at Wärtsilä. Recommendations are divided to general advice, recommendations in managing test cases, considerations in test case execution, and finally comparison/ verification precepts.
+
+\subsection{General strategy}
+
+\begin{enumerate}
+\item Plan coverage and relevant measures beforehand.
+Define the test scope and roles, and solicit support from the parties that need to be involved in creating e.g. test cases. Relevant measures should be identified to set the stage and guide the whole implementation of the test framework.
+\item Use capture/replay
+Broadly speaking there are two general ways to satisfy the requirement of test case generation: capture/replay and model-based testing. The former is the better option in testing Wärtsilä’s system integrations because of cost-effectiveness: Based on experts’ statements integrations do not undergo many changes and therefore costly test resource maintenance work is minimal. Conversely, building sophisticated, machine- interpretable formal models for automatic test case extrapolation requires more investment upfront and is risky.
+\item Draw call graph to visualize integrations.
+A call graph is a tool to visualize integrations. It should include systems, integrations, and different transactions passing through the integrations as well as any additional technical information. Note that the purpose of the call graph is not to document the technological specifics of integrations, but to discern dependencies and plan test scope.
+\item Use continuous integration tool for automated test execution. Longer term goal to adopt continuous testing in development as well.
+Continuous integration provides the best quality in testing because bugs are found  and addressed as soon as they manifest themselves in the systems. Continuous integration also makes the most out of automated execution through frequent, systematic, and comprehensive test runs. In the future, continuous integration and test resources can be used already at the development stage benefitting the construction of new systems or the improvement of old ones.
+\end{enumarate}
+
+\subsection{Test case management guidelines}
+\begin{enumerate}
+\item Keep number of cases low. More cases means more maintenance work.
+\item But keep granularity high. Cases can be handpicked and queued to test just the right things. 
+\item Prune cases periodically. Make sure they are up-to-date. Eliminate unnecessary ones that cause extra work.
+\item Check that there is no overlap. Redundant cases create problems in for example traceability (which case was run) and maintenance (which case was updated).
+\item Limit the number of assertions or comparisons per case. If the case fails, it is quick and easy to find the cause of the failure.
+\item Organize cases into logical sets and execution suites. This helps find the right cases and organize execution. Tests should be organized around features whereas suites should be based on test goals. Make sure test resources are added to the correct sets or suites.
+\item Make test resources easy to find. Use a centralized repository and make sure cases and other resources are commented and have enough meta-information to support searches.
+\item Choose a data format that is simple (low memory requirement) but practical (e.g. can be used by tools, are based on universal standards).
+\item Store test results thriftily. Keep log information on what has been tested, but only keep test results from failed test runs.
+\item Think of ways test scripts can be optimized (e.g. check and stop execution if test environment unavailable).
+\end{enumarate}
+
+\subsection{Test case execution guidelines}
+\begin{enumarate}
+\item Assign test execution responsibilities: who is responsible for that certain features are tested.
+\item Provide instructions how to use SoapUI for the creation of test resources or Jenkins to execute tests. (See end of this guide for step-by-step examples.)
+\end{enumerate}
+
+\subsection{Test result comparison/verification guidelines}
+\begin{enumrate}
+\item Remember that matching outcomes to previous outcomes is tricky. Dates and timestamps change.
+\item Document comparisons so whoever uses them understand what they do.
+\item Agree on and adhere to sensible naming conventions.
+\item Keep comparisons simple to make updates and changes easier to do. 
+\item For complicated or lengthy comparisons think if they can be simplified, or if manual comparison would make more sense.
+\item Standardize to create reusable building blocks for constructing the comparison logic statements (e.g. reusable filters and regular expressions).
+\item Use a balanced mix of sensitive and robust comparisons. If required by testing objectives, create different test cases for the two so they can be run separately.
+\item Divide and conquer: create separate comparisons for each feature for easy set-up and matching to testing need.
+\end{enumerate}
+
+
+What to test first?
+Implementation priority could for example be based on the following criteria:
+Tests that are explicitly deemed important. E.g. some area that critical, has been recently changed, is prone to bugs or is known to have caused failures.
+A set of breadth tests that roughly cover all features in test scope. This will give minimum satisfaction of test objectives.
+Test for most important functions. Function importance may be attributed to e.g. message traffic, financial impact, etc.
+Tests that are easy to automate. Good for quick wins and return for investment. Also quickly ramps up the framework construction.
+Test that will give quickest payback. Implement test cases in projects which would otherwise require a lot of manual testing.
+Test that are run most often. If tests need to be run often, the tested area is likely subject to many changes thereby increasing risk.
+Example 1 – Configuring SoapUI with web service
+See figure 2.
+1.	If you already haven’t, install the free version (not the pro version) of SoapUI from http://www.soapui.org/.
+2.	For a SoapUI sample integration create a new project in SoapUI. Right click the project and choose “add WSDL” and add the web service description (e.g. the one attached to this document).  This creates a web service binding with a sample request. 
+ 
+3.	The request is missing test data which must be added. For the attached example service for instance, insert the following in the fields with ‘?’ in this order: ‘3333’, ‘32’, ‘GEN’, ‘False’, ‘True’.
+4.	You must also add username ext_sco and password wm7qa in the ‘Aut’ authentication tab.  The test client must have the rights to access SUT services.
+5.	Add the correct endpoint URL in the request edit window, e.g. for the example service: http://wesbqa.wartsila.com:5557/ws/sco.common.ws:SCOServiceProvider 
+6.	 Now the request can be run by clicking the green arrow. You should get a return message with engine information.  
+Example 2 – Creating and running a test case
+See figures 3, 4, and 5.
+1.	Right click the project you created and choose “launch SOAP monitor”. Use the default port and check the checkbox “use as global proxy”. 
+2.	Then open the sample request with test data and run it. This should create a log entry in the monitor window. 
+3.	In the monitor window click the button “add selected requests to test case”. Create new suite and test case in the wizard. Don’t leave any spaces in their names however!
+4.	 Now, if you open the test case and test step you can find “monitor request 1”. Add an assertion or two (click ‘Assertions’ to open the assertion view), like SOAP message or SLA level. Run the case again to see that it passes.
+5.	Try running the case by right clicking the project and choosing ‘launch testrunner’. Run the new suite and case. The subsequently opened dialog provides the command with parameters to run the case from command line (it is at the top, scroll there).
+Example 3 – Configuring Jenkins
+See figures 6 and 7.
+1.	Installing Jenkins is easy. Just download the war-package and deploy it on the test machine. Follow the instructions at http://jenkins-ci.org/. Afterwards open Jenkins at localhost:8080.
+2.	 In Jenkins, choose new job, give it a name, choose freestyle project and OK. 
+3.	Next, configure the Jenkins project to run windows bat file at every build. Paste the command given by SoapUI testrunner and before it add a line were you change directory to the folder where SoapUI’s testrunner.bat is located. For the setup to work SoapUI must be installed on the same machine as Jenkins.
+4.	Building the project is now possible. If you keep Jenkins running, you can schedule builds, too, in the project configuration window.
+
+
 % End of document!
 % ------------------------------------------------------------------
 % The LastPage package automatically places a label on the last page.
