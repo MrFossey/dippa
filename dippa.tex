@@ -1391,7 +1391,7 @@ The test resource library can also house related documents and records produced 
 % commercial tools usually dynamci
 % not too many complex cases
 % support, automated updates to test data and define standards and values
-% todo add to conclusion: figure out most importnat automation concerns and focus on them
+% add to conclusion: figure out most importnat automation concerns and focus on them
 
 As for test case logic structure, \citet{duvall2007continuous} recommends including only one assertion per case so that final results can easily be traced back to the underlying problem, though \citet{fewster1999software} write that some features require multiple checks to verify (e.g. inserting data into a database). Test case scripts can be designed so that they take into account certain circumstances and adjust to their conditions intelligently \citep{fewster1999software}, for instance reacting to a severed network connection. The added dynamic script logic bloats the cases and makes them more cumbersome to maintain, though. As reruns rack up the testing time, test execution time should be as quick as possible. If something is clearly wrong the run should stop so no time is wasted.
 
