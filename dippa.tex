@@ -1426,16 +1426,17 @@ Test comparison can be very detailed, or filter out irrelevant execution traces 
 
 \citet{fewster1999software} present a helpful checklist for implementing a maintainable comparator:
 \begin{enumerate}
-\item Document comparisons so whoever uses them understand what they do.
+\item Remember that matching outcomes to previous outcomes is tricky. Dates and timestamps change.
+\item Document comparisons so whoever uses them understands what they do.
 \item Agree on and adhere to sensible naming conventions.
 \item Keep comparisons simple to make updates and changes easier to do. 
-\item For complicated or lengthy comparisons think if can be simplified manual comparison would make more sense.
-\item Standardize to create reusable building blocks for constructing the comparison logic statements (e.g. filters and regular expressions). 
-\item Use a balanced mix of sensitive and robust comparisons.
+\item For complicated or lengthy comparisons think if they can be simplified, or if manual comparison would make more sense.
+\item Standardize to create reusable building blocks for constructing the comparison logic statements (e.g. reusable filters and regular expressions).
+\item Use a balanced mix of sensitive and robust comparisons. If required by testing objectives, create different test cases for the two so they can be run separately.
 \item Divide and conquer: create separate comparisons for each feature for easy set-up and matching to testing need.
 \end{enumerate}
 
-% todo
+There is a delicate balance between % todo
 
 \section{Integration testing pitfalls}
 \label{section:pitfalls}
@@ -2113,7 +2114,7 @@ Longer term goal to adopt continuous testing in development as well. Continuous 
 \subsection{Test result comparison/verification guidelines}
 \begin{enumerate}
 \item Remember that matching outcomes to previous outcomes is tricky. Dates and timestamps change.
-\item Document comparisons so whoever uses them understand what they do.
+\item Document comparisons so whoever uses them understands what they do.
 \item Agree on and adhere to sensible naming conventions.
 \item Keep comparisons simple to make updates and changes easier to do. 
 \item For complicated or lengthy comparisons think if they can be simplified, or if manual comparison would make more sense.
