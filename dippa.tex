@@ -1650,13 +1650,13 @@ Please note that the evaluation of testing tools is omitted from this study. The
 \label{fig:structure}
 \end{figure}
 
-In the framework architecture, SoapUI provides an environment for test resources (e.g. test cases and scripts) development and storage. With Jenkins the test engineer can configure and execute test runs withouth the need --- or possibility--- to tamper with test resource code. The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing a feature like test execution requires cooperation between tools where one assumes part of the duties while the other fulfils the rest. Depending on the observers perspective either in true irony or an illustrative example implementing the integration testing framework already creates a number of system dependencies.
+In the framework architecture, SoapUI provides an environment for test resources (e.g. test cases and scripts) development and storage. With Jenkins the test engineer can configure and execute test runs withouth the need --- or possibility--- to tamper with test resource code. Those who only wish to examine the health of the systems can do so through a graphical UI. Restricting access to code is also a security measure.
 
-Execution engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine running the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in the Jenkins UI. 
+The experiment quickly showed the difficulty of dividing responsibility between software components. Implementing a feature like test execution requires cooperation between tools where one assumes part of the duties while the other fulfils the rest. Depending on the observers perspective either in true irony or an illustrative example implementing the integration testing framework already creates a number of system dependencies.
 
-Accordingly, what can only be called a gross initial oversight, visualizing the test results is added as a process to the overall framework process.
+Execution engine duties are split between the actual running of the tests and scheduling test cycles. The execution engine running the tests, SoapUI, also collects execution traces. These are transformed into legible form (simple text) and can be examined in the Jenkins UI. Visualizing the test results is considered implicit in the verification process.
 
-In the construct managing the test packages and executing the tests are removed from the development environment for two reasons. Firstly, testing and test case development is separated. Those who only wish to examine the health of the SUT can do so through a test execution controller with a graphical UI. Restricting access to code is also a security measure.
+In the construct managing the test packages and executing the tests are removed from the development environment for two reasons. Firstly, testing and test case development is separated. Those who only wish to examine the health of the systems can do so through the CI controller with a graphical UI. Restricting access to code is also a security measure.
 
 \subsection{SoapUI}
 
