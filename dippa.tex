@@ -1679,6 +1679,10 @@ It should be noted that Jenkins is made with software development rather than re
 
 Jenkins is used in conjunction with ANT, which while not necessary, is an industry best practice and contains advantages cross-system configuration. ANT is essentially an XML-format configuration file which specifies which steps are to be taken when a new build, i.e. updated version, is created. The build can be appended with software engineering tasks, including running a test execution script. 
 
+\subsection{Performance testing}
+
+Performance testing can be done with SoapUI’s sister tool \textbf{LoadUI}\footnotte{see \url{http://www.loadui.org/}}. Performance test based on SoapUI test cases can be configured with the tool’s graphical UI. Assertions, such as threshold limits for response time, can be added to the cases to establish pass/fail criteria. The execution of load tests and integration to Jenkins are analogous to SoapUI. As with SoapUI, the tool provides a program which can be run from the command line with the test run details as parameters.
+
 % muokka database kohta, ei ole laukkaen mallissa
 % lisää kuva project - suite - case suhteesta?
 
