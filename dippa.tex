@@ -486,8 +486,6 @@ Framework & An abstract design which can be extended by adding more or better co
 
 Functional testing & \emph{Black-box testing} conducted to evaluate the compliance of a system or component with specified functional requirements. \citep{ieee2010systems} \\[0.3cm] 
 
-%IDE & \textbf{I}ntegrated \textbf{D}evelopment \textbf{E}nvironment. A set of programming tools for creating software applications. Features include writing code, debugging, compiling, etc. \\[0.3cm]  % todo
-
 IEEE & \textbf{I}nstitute of \textbf{E}lectrical and \textbf{E}lectronics \textbf{E}ngineers. Professional association for the advancement of technology. IEEE issues publications, organizes conferences, compiles standards, and organizes various professional and educational activities. \citep{ieee2013} \\[0.3cm] 
 
 Integration testing & An orderly progression of testing where individual software and hardware elements are combined and tested until entire the system has been integrated. \citep{burnstein2003practical} Testing in which \emph{"software components, hardware components, or both are combined and tested to evaluate the interaction among them"} \citep{ieee2010systems} A level of test undertaken to validate the interface between internal components of a system. Typically based upon the system architecture. \citep{craig2002systematic} \\[0.3cm]
@@ -1356,7 +1354,7 @@ While extreme, CI's continuous testing can make integration more manageable with
 
 The most sophisticated execution methods include data and keyword-driven testing. The first means that script logic is separated from input data so that the same script can be reused because the input payload is not configured into each case. Keyword-driven testing is very complicated in involves creating a layer of abstractions so that test scripts can be written using predefined keywords which act as functions 
 
-The technical automated execution challenge is not as interesting as test case generation or oracle construction because scheduling is simply a technical requirement. Most operating systems can run commands or scripts at specified times. Accordingly, more attention is paid to the latter topics. It should be noted that execution is a de facto feature of IDE's where test resources, like cases, are created. Selecting this tool or technology is an important issue, which depends on the tool's additional features as well as other contextual factors, but will not be explored here.
+The technical automated execution challenge is not as interesting as test case generation or oracle construction because scheduling is simply a technical requirement. Most operating systems can run commands or scripts at specified times. Accordingly, more attention is paid to the latter topics. It should be noted that execution is a de facto feature of development environments where test resources, like cases, are created. Selecting this tool or technology is an important issue, which depends on the tool's additional features as well as other contextual factors, but will not be explored here.
 
 \subsection{Verification}
 
@@ -1657,7 +1655,7 @@ Execution engine duties are split between the actual running of the tests and sc
 
 \subsection{SoapUI}
 
-\textbf{SoapUI}\footnote{http://www.soapui.org} is an IDE, or integrated development environment, and is used in constructing test scripts, both manually and through \emph{capture and playback}. Capture can also be used to to create scripts to simulate the behaviour of systems thereby satisfying the requirement of having a surrogate engine. Effectively, SoapUI uses capture for both test case \emph{and surrogate component} generation. These mock service or surrogates components allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome, or what has happened across the integration black box.
+\textbf{SoapUI}\footnote{http://www.soapui.org} is an integrated development environment, and used in constructing test scripts, both manually and through \emph{capture and playback}. Capture can also be used to to create scripts to simulate the behaviour of systems thereby satisfying the requirement of having a surrogate engine. Effectively, SoapUI uses capture for both test case \emph{and surrogate component} generation. These mock service or surrogates components allow verification by providing an otherwise absent execution trail or returning courtesy messages of the test outcome, or what has happened across the integration black box.
 
 After their creation test cases can be run in SoapUI and the tool affords a program script that can be run on the command line simply by specifying which SoapUI project and which test suite or cases should be run.
 
