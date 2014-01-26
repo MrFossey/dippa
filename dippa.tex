@@ -1473,7 +1473,16 @@ In Chapter \ref{chapter:frameworktheory} \citet{fewster1999software}, \citet{hua
 
 \section{Wärtsilä's integration testing framework}
 
-There are a total of six processes and three objects involved in the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while the second, the execution step, those resources are exercised in conducting integration tests. The framework composition is presented in Figure \ref{fig:framework}.
+The framework composition hypothesis is presented in Figure \ref{fig:framework}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90,width=12cm]{framework.png}
+\caption{Original testing framework hypothesis}
+\label{fig:framework}
+\end{figure}
+
+There are a total of six processes and three objects involved in the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while the second, the execution step, those resources are exercised in conducting integration tests.
 
 % assertions
 In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Consequently, 
@@ -1491,12 +1500,6 @@ Figure \ref{fig:framework} below synthesizes and combines integration testing th
 
 % A surrogate engine refers to any scheme which is employed to act as a stand-in for unavailable, or testingwise unsuitable, systems. The surrogate engine's role is particularly important in the development phase, when not all components are fully ready.
 
-\begin{figure}[H]
-\centering
-\includegraphics[angle=90,width=12cm]{framework.png}
-\caption{Original testing framework hypothesis}
-\label{fig:framework}
-\end{figure}
 
 \begin{comment}
 \begin{figure}[H]
