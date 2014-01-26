@@ -1482,7 +1482,7 @@ The framework constructred for Wärtsilä synthesizes and combines integration t
 \label{fig:framework}
 \end{figure}
 
-There are a total of six processes and three objects involved in the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while in the second, the execution step, those resources are exercised in conducting integration tests.
+There are a total of six processes and three objects involved in the proposed framework, along with the system under test (SUT) and a test resource database. The processes are divided into two steps. The first, preparatory step, contains the creation and preparation of test resources while in the second, the execution step, those resources are exercised in conducting integration tests. The execution step repeats itself, depending on how the tests should be scheduled.
 
 % assertions
 In the preparation step a new test resource, that is to say a test case \emph{or} a mock service, is created first by capturing message records, and secondly using these to generate the desired test resource. Consequently, 
@@ -1558,8 +1558,6 @@ The framework enables automated integration testing by scheduling test runs. Eac
 \caption{Testing framework hypothesis, adapted from \citet{liu2009unified}} \label{fig:UTF}
 \end{figure}
 \end{comment}
-
-The preparation and execution steps are clearly divided in the picture. The execution is a step which repeats itself, depending on how the tests should be scheduled.
 
 % Choose coverage, all calls or only most important ones, which integrations are more important, no relation -> relation -> all calls
 
