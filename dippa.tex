@@ -1473,7 +1473,7 @@ In Chapter \ref{chapter:frameworktheory} \citet{fewster1999software}, \citet{hua
 
 \section{Wärtsilä's integration testing framework}
 
-The framework composition hypothesis is presented in Figure \ref{fig:framework}.
+The framework constructred for Wärtsilä synthesizes and combines integration testing theories and techniques introduced in Chapter \ref{chapter:frameworkanalysis}. The model is perhaps most inspired by the \citet{liu2009unified} unified testing framework model, but adapted to Wärtsilä's integration testing needs. As such, it is technology-agnostic, and only presents the steps, systems, system-document relationships, and processes required on an abstract level. The framework hypothesis is presented in Figure \ref{fig:framework}.
 
 \begin{figure}[H]
 \centering
@@ -1496,11 +1496,7 @@ Theoretically, models, diagrams, and specifications can also be used for automat
 
 The framework enables automated integration testing by scheduling test runs. Each run picks up a set of test cases which it then takes through the execution step. First, a testing tool runs the cases and collects execution traces as they are produced. The traces are used in the verification process and compared to expected results to determine if a case has failed or not. Finally, the results are logged in the test database.
 
-Figure \ref{fig:framework} below synthesizes and combines integration testing theories and techniques introduced in Chapter \ref{chapter:frameworkanalysis}. The model is perhaps most inspired by the \citet{liu2009unified} unified testing framework model, but adapted to Wärtsilä's integration testing needs. As such, the model is technology-agnostic, and only presents the steps, systems, system-document relationships, and processes required on an abstract level.
-
 % A surrogate engine refers to any scheme which is employed to act as a stand-in for unavailable, or testingwise unsuitable, systems. The surrogate engine's role is particularly important in the development phase, when not all components are fully ready.
-
-
 \begin{comment}
 \begin{figure}[H]
 \centering
