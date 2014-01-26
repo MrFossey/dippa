@@ -1198,12 +1198,12 @@ Since all of the models are rather pragmatic and technical, a more holistic pers
     \node [rect, yshift=-0.75cm, fill=white] (prc) {Process};
     \node [rect, yshift=-1.4cm, fill=white] (rlt) {Results};
     
-    \node [rect, right=of stg, fill=white] (fmw) {Process structure};
+    \node [rect, right=of stg, fill=white] (fmw) {Structure};
     \node [rect, right=of req, fill=white] (tcg) {Test case/stub generation};
     \node [rect, right=of prc, fill=white] (run) {Running tests};
     \node [rect, right=of rlt, fill=white] (mon) {Monitoring/ verification};
     
-    \node [rect, right=of fmw, fill=white] (art) {Objects};
+    \node [rect, right=of fmw, fill=white] (art) {Components};
     \node [rect, right=of tcg, fill=white] (tcs) {Test cases};
     \node [rect, right=of run, fill=white] (exe) {Execution engine};
     \node [rect, right=of mon, fill=white] (out) {Test oracle};
@@ -1251,7 +1251,7 @@ The framework is analyzed from a strategic, technical/structural, and component 
 
 The structure should be robust or modular enough to be separable into clear and concrete constituent parts, like test cases, in human or machine readable form. These should be constructed with regard to the framework strategy and structure scope. The modularity permits the fluent addition of new test cases, integrations, or other components to the framework.
 
-Finally, it should be remarked that the models do not address performance testing directly. Perhaps the model creators reasoned this was implicit in the frameworks, automation being the key enabler for load and stress tests. It all boils down to which measures should be followed. If the execution traces include relevant metrics then performance testing is logically possible through the framework.
+Also missing from the summary, it should be remarked that the models do not address performance testing directly. Perhaps the model creators reasoned this was implicit in the frameworks, automation being the key enabler for load and stress tests. It all boils down to which measures should be followed. If the execution traces include relevant metrics then performance testing is logically possible through the framework.
 
 \begin{comment}
 The testing process can vary in its mode of execution or degree of automation. In what is perhaps the most extreme case, test case are run automatically every time a change is committed to system source code. This approach is called continuous integration (CI). 
