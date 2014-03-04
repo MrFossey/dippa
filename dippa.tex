@@ -1273,15 +1273,15 @@ When tests compare as much information as possible, they are called sensitive te
 
 Overall test effectiveness can be measured by how many cases were executed out of the set of necessary cases, and feature testability by how many test cases are necessary for satisfying a criterion \citep{linnenkugel1990test}. Therefore attention must be spent on both selecting the method of execution, and test criteria. 
 
-The most common way to evaluate coverage is based on control flow, which simply means the order in which individual statements, instructions or function calls occur. Visualizing the program process flows can help understand the program logic, potential features to test, and guide the construction of test cases, too. \citep{burnstein2003practical} 
+The most common way to evaluate coverage is based on control flow, which simply means the order in which individual statements, instructions or function calls occur. Visualizing the program process flows can help understand the program logic, potential features to test, and guide the construction of test cases. \citep{burnstein2003practical} 
 
 \citet{linnenkugel1990test} present a flow-oriented coverage hierarchy of node, relation, call, sequence, and loop coverage measures. For integration testing, individual components (modules) are nodes and integrations are relations (call statements). \citeauthor{linnenkugel1990test}'s \citeyearpar{linnenkugel1990test} coverage criteria include:
 \begin{itemize}
-\item \emph{all-modules} requires that every module is executed at least once 
-\item \emph{all-relations} requires that the calling relation between modules is executed at least once
-\item \emph{all-multiple-relations} requires that every call between modules is executed at least once
-\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once
-\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once
+\item \emph{all-modules} requires that every module is executed at least once.
+\item \emph{all-relations} requires that the calling relation between modules is executed at least once.
+\item \emph{all-multiple-relations} requires that every call between modules is executed at least once.
+\item \emph{all-simple-call-sequences} requires that every sequence of (descending) calls without repetition of calls is executed at least once.
+\item \emph{all-call-sequences} requires that every sequence of (descending) calls is executed at least once.
 \end{itemize}
 Here, complex path sequences can be interpreted as system tests, whereas \emph{all-relations} and \emph{all-multiple-relations} fall under integration testing. The first item requires that each software module works, the second that at least one of the services between modules is tested, the third requirement is that all possible exchanges between two connected modules are tested, the fourth requirement includes all end-to-end execution paths without repetition or loops, and lastly end-to-end tests which may contain loops.
 
